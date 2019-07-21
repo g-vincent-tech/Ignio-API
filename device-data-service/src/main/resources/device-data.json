@@ -1,0 +1,30 @@
+{
+  "device_id": "ignio-node-f101",
+  "sensor_data": [
+    {
+      "temperature": 30.24,
+      "co_percentage": 10.34,
+      "lp_gas_percentage": 29.12,
+      "particle_percentage": 12.34
+    },
+    {
+      "temperature": 31.23,
+      "co_percentage": 11.14,
+      "lp_gas_percentage": 29.10,
+      "particle_percentage": 12.13
+    },
+    {
+      "temperature": 31.04,
+      "co_percentage": 11.11,
+      "lp_gas_percentage": 29.11,
+      "particle_percentage": 12.14
+    },
+    {
+      "temperature": 31.07,
+      "co_percentage": 11.14,
+      "lp_gas_percentage": 29.09,
+      "particle_percentage": 12.04
+    }
+  ],
+  "epoch": 328102338963
+}
