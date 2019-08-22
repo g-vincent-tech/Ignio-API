@@ -1,0 +1,11 @@
+{
+  "deviceId": "NODEIGNIOF101",
+  "consumerId": "CONSMRIGNIOF1",
+  "isActive": true,
+  "activatedOn": 328102338956,
+  "lastLog": 328102339002,
+  "outbreaks": 0,
+  "alerts": 12,
+  "totalLogs": 12000,
+  "totalMaintenance": 10
+}
