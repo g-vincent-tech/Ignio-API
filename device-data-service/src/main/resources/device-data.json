@@ -1,6 +1,6 @@
 {
-  "device_id": "ignio-node-f101",
-  "sensor_data": [
+  "deviceId": "ignio-node-f101",
+  "sensorData": [
     {
       "temperature": 30.24,
       "co_percentage": 10.34,
