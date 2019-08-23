@@ -14,27 +14,27 @@ class DeviceDataService {
     private DeviceDataRepository deviceDataRepository;
 
 
-    DeviceData saveDeviceData(DeviceData deviceData){
+    Optional<DeviceData> getDeviceData(String id) throws NoSuchElementException {
+        Optional<DeviceData> deviceData = deviceDataRepository.findById(id);
+        if (deviceData.isEmpty()) {
+            throw new NoSuchElementException("There is no Device Data element with the given id :" + id);
+        }
+        return deviceData;
+    }
+
+    DeviceData saveDeviceData(DeviceData deviceData) {
         return deviceDataRepository.save(deviceData);
     }
 
-    void deleteDeviceData(String id){
-        Optional<DeviceData> deviceDataOptional = verifyDeviceData(id);
-        if (deviceDataOptional.isPresent()){
+    void deleteDeviceData(String id) {
+        Optional<DeviceData> deviceDataOptional = getDeviceData(id);
+        if (deviceDataOptional.isPresent()) {
             deviceDataRepository.deleteById(id);
         }
     }
 
-    List<DeviceData> getAllDeviceData(String deviceId){
+    List<DeviceData> getAllDeviceData(String deviceId) {
         return deviceDataRepository.findAllByDeviceId(deviceId);
-    }
-
-    Optional<DeviceData> verifyDeviceData(String id) throws NoSuchElementException{
-        Optional<DeviceData> deviceData = deviceDataRepository.findById(id);
-        if (deviceData.isEmpty()){
-            throw new NoSuchElementException("There is no Device Data element with the given id :" +id);
-        }
-        return deviceData;
     }
 
 }
