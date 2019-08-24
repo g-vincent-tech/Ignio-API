@@ -15,7 +15,7 @@
 
 	<scm>
 		<developerConnection>scm:git:https://github.com/luk3Sky/Ignio-API</developerConnection>
-	  <tag>unit-release</tag>
+	  <tag>device-data-service-1.0.1</tag>
   </scm>
 
 	<properties>

@@ -9,13 +9,13 @@
 	</parent>
 	<groupId>com.foxploit.ignio</groupId>
 	<artifactId>device-data-service</artifactId>
-	<version>1.0.1</version>
+	<version>1.0.2-SNAPSHOT</version>
 	<name>device-data-service</name>
 	<description>Ignio API Discovery Server</description>
 
 	<scm>
 		<developerConnection>scm:git:https://github.com/luk3Sky/Ignio-API</developerConnection>
-	  <tag>unit-release</tag>
+	  <tag>HEAD</tag>
   </scm>
 
 	<properties>
