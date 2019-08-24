@@ -1,10 +1,11 @@
-package com.example.ec.repo;
+package com.foxploit.ignio.userinfoservice.repository;
 
-import com.example.ec.domain.Role;
-import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.foxploit.ignio.userinfoservice.domain.Role;
+import org.springframework.data.mongodb.repository.MongoRepository;
 
 import java.util.Optional;
 
-public interface RoleRepository extends JpaRepository<Role, Long> {
+public interface RoleRepository extends MongoRepository<Role, Long> {
     Optional<Role> findByRoleName(String name);
 }

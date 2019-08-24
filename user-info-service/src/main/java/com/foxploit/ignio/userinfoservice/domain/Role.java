@@ -1,36 +1,29 @@
-package com.example.ec.domain;
+package com.foxploit.ignio.userinfoservice.domain;
 
 import org.springframework.security.core.GrantedAuthority;
 
 import javax.persistence.*;
 
-/**
- * Entity of a Security Role
- * Created by Mary Ellen BOwman
- */
 @Entity
-@Table(name="security_role")
-public class Role  implements GrantedAuthority {
+public class Role implements GrantedAuthority {
+
     private static final long serialVersionUID = 1L;
+
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-
-    @Column(name="role_name")
+    private String id;
     private String roleName;
-
-    @Column(name="description")
     private String description;
 
     @Override
     public String getAuthority() {
         return roleName;
     }
-    public Long getId() {
+
+    public String getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(String id) {
         this.id = id;
     }
 

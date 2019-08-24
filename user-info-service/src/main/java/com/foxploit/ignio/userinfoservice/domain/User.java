@@ -1,4 +1,4 @@
-package com.example.ec.domain;
+package com.foxploit.ignio.userinfoservice.domain;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
@@ -6,18 +6,21 @@ import javax.persistence.*;
 import java.util.Arrays;
 import java.util.List;
 
-/**
- * Security User Entity.
- *
- * Created by Mary Ellen Bowman
- */
+
 @Entity
-@Table(name = "security_user")
+
 public class User {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id")
-    private Long id;
+    private String id;
+    private String username;
+
+    @JsonIgnore
+    private String password;
+    private String firstName;
+    private String lastName;
+
+    @ManyToMany(fetch = FetchType.EAGER)
+    private List<Role> roles;
 
     public User(String username, String password, Role role, String firstName, String lastName) {
         this.username = username;
@@ -27,40 +30,17 @@ public class User {
         this.lastName = lastName;
     }
 
-    @Column(name = "username")
-    private String username;
-
-    @Column(name = "password")
-    @JsonIgnore
-    private String password;
-
-    @Column(name = "first_name")
-    private String firstName;
-
-    @Column(name = "last_name")
-    private String lastName;
-
     /**
      * Default Constructor.
      */
     protected User() {
     }
 
-    @ManyToMany(fetch = FetchType.EAGER)
-    @JoinTable(name = "user_role", joinColumns
-            = @JoinColumn(name = "user_id",
-            referencedColumnName = "id"),
-            inverseJoinColumns = @JoinColumn(name = "role_id",
-                    referencedColumnName = "id"))
-
-
-    private List<Role> roles;
-
-    public Long getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(String id) {
         this.id = id;
     }
 

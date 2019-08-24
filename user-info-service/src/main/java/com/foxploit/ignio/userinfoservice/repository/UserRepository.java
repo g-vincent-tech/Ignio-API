@@ -1,15 +1,12 @@
-package com.example.ec.repo;
+package com.foxploit.ignio.userinfoservice.repository;
 
-import com.example.ec.domain.User;
-import org.springframework.data.jpa.repository.JpaRepository;
+import com.foxploit.ignio.userinfoservice.domain.User;
+import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 
 import java.util.Optional;
 
-/**
- * Created by Mary Ellen Bowman.
- */
 @RepositoryRestResource(exported = false)
-public interface UserRepository extends JpaRepository<User, Integer> {
+public interface UserRepository extends MongoRepository<User, Integer> {
     Optional<User> findByUsername(String userName);
 }

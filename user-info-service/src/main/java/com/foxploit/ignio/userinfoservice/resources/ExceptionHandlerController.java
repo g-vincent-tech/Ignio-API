@@ -1,4 +1,4 @@
-package com.example.ec.web;
+package com.foxploit.ignio.userinfoservice.resources;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -20,6 +20,7 @@ import java.util.Map;
 /**
  * Handle all Exceptions in for All controllers
  */
+
 @RestControllerAdvice
 public class ExceptionHandlerController {
     private static final Logger LOGGER = LoggerFactory.getLogger(ExceptionHandlerController.class);
@@ -46,7 +47,7 @@ public class ExceptionHandlerController {
 
     @ExceptionHandler(HttpServerErrorException.class)
     public void handleHttpServerErrorException(HttpServerErrorException ex, HttpServletResponse res) throws IOException {
-        res.sendError(ex.getStatusCode().value(),ex.getMessage());
+        res.sendError(ex.getStatusCode().value(), ex.getMessage());
     }
 
     @ExceptionHandler(InsufficientAuthenticationException.class)
