@@ -7,13 +7,14 @@ import javax.persistence.Entity;
 import java.util.List;
 
 @Entity
-public class AllDeviceData {
+public class DeviceDataDto {
 
     private String deviceId;
+
     private List<DeviceData> deviceData;
     private List<SensorData> sensorData;
 
-    public AllDeviceData(String deviceId, List<DeviceData> deviceData, List<SensorData> sensorData) {
+    public DeviceDataDto(String deviceId, List<DeviceData> deviceData, List<SensorData> sensorData) {
         this.deviceId = deviceId;
         this.deviceData = deviceData;
         this.sensorData = sensorData;

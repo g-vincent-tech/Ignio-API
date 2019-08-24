@@ -41,7 +41,7 @@ public class DeviceDataControllerTest {
 //    @Test
 //    public void getAllDeviceData() throws Exception {
 //
-//        given(deviceDataService.getAllDeviceData(anyString())).willReturn(new AllDeviceData(anyString(), new ArrayList<DeviceData>(), new ArrayList<SensorData>()));
+//        given(deviceDataService.getAllDeviceData(anyString())).willReturn(new DeviceDataDto(anyString(), new ArrayList<DeviceData>(), new ArrayList<SensorData>()));
 //
 //        mockMvc.perform(MockMvcRequestBuilders.get("/api/device/data/all/NODEIGNIOF103"))
 //                .andExpect(status().isOk())

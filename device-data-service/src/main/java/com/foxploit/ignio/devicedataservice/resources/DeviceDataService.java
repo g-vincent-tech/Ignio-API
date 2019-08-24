@@ -13,7 +13,6 @@ class DeviceDataService {
     @Autowired
     private DeviceDataRepository deviceDataRepository;
 
-
     Optional<DeviceData> getDeviceData(String id) throws NoSuchElementException {
         Optional<DeviceData> deviceData = deviceDataRepository.findById(id);
         if (deviceData.isEmpty()) {
