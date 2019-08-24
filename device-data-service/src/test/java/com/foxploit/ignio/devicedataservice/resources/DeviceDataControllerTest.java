@@ -1,6 +1,5 @@
 package com.foxploit.ignio.devicedataservice.resources;
 
-import com.foxploit.ignio.devicedataservice.models.AllDeviceData;
 import com.foxploit.ignio.devicedataservice.models.DeviceData;
 import com.foxploit.ignio.devicedataservice.models.SensorData;
 import org.junit.Test;
@@ -11,9 +10,6 @@ import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
-
-import java.util.ArrayList;
-import java.util.List;
 
 import static org.mockito.ArgumentMatchers.*;
 import static org.mockito.BDDMockito.given;

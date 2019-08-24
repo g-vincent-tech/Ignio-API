@@ -1,4 +1,7 @@
-package com.foxploit.ignio.devicedataservice.models;
+package com.foxploit.ignio.devicedataservice.resources;
+
+import com.foxploit.ignio.devicedataservice.models.DeviceData;
+import com.foxploit.ignio.devicedataservice.models.SensorData;
 
 import javax.persistence.Entity;
 import java.util.List;
