@@ -8,7 +8,6 @@ import java.util.List;
 
 
 @Entity
-
 public class User {
     @Id
     private String id;
@@ -16,16 +15,26 @@ public class User {
 
     @JsonIgnore
     private String password;
+    private String email;
     private String firstName;
     private String lastName;
 
     @ManyToMany(fetch = FetchType.EAGER)
     private List<Role> roles;
+    private List<String> ignios;
+    private String planType;
+    private String address;
+    private String postalCode;
+    private String country;
+    private BillingInfo billingInfo;
+    @OneToMany(fetch = FetchType.EAGER)
+    private List<Contact> emergencyContacts;
 
-    public User(String username, String password, Role role, String firstName, String lastName) {
+    public User(String username, String password, String email, List<Role> role, String firstName, String lastName) {
         this.username = username;
         this.password = password;
-        this.roles = Arrays.asList(role);
+        this.email = email;
+        this.roles = role;
         this.firstName = firstName;
         this.lastName = lastName;
     }
@@ -50,6 +59,14 @@ public class User {
 
     public void setUsername(String username) {
         this.username = username;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
     }
 
     public String getPassword() {
@@ -82,5 +99,61 @@ public class User {
 
     public void setRoles(List<Role> roles) {
         this.roles = roles;
+    }
+
+    public List<String> getIgnios() {
+        return ignios;
+    }
+
+    public void setIgnios(List<String> ignios) {
+        this.ignios = ignios;
+    }
+
+    public String getPlanType() {
+        return planType;
+    }
+
+    public void setPlanType(String planType) {
+        this.planType = planType;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
+    public String getPostalCode() {
+        return postalCode;
+    }
+
+    public void setPostalCode(String postalCode) {
+        this.postalCode = postalCode;
+    }
+
+    public String getCountry() {
+        return country;
+    }
+
+    public void setCountry(String country) {
+        this.country = country;
+    }
+
+    public BillingInfo getBillingInfo() {
+        return billingInfo;
+    }
+
+    public void setBillingInfo(BillingInfo billingInfo) {
+        this.billingInfo = billingInfo;
+    }
+
+    public List<Contact> getEmergencyContacts() {
+        return emergencyContacts;
+    }
+
+    public void setEmergencyContacts(List<Contact> emergencyContacts) {
+        this.emergencyContacts = emergencyContacts;
     }
 }
