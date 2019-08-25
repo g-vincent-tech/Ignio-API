@@ -10,6 +10,11 @@ public class UserDto extends User {
 
     private Optional<String> token;
 
+    /**
+     * Constructor for sign in / sign up
+     * @param user
+     * @param token
+     */
     public UserDto(Optional<User> user, Optional<String> token) {
         super(user.get().getUsername(), user.get().getPassword(), user.get().getEmail(), user.get().getRoles(), user.get().getFirstName(), user.get().getLastName());
         this.token = token;

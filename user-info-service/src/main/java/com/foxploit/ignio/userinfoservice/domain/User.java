@@ -30,6 +30,22 @@ public class User {
     @OneToMany(fetch = FetchType.EAGER)
     private List<Contact> emergencyContacts;
 
+
+    /**
+     * Default Constructor.
+     */
+    protected User() {
+    }
+
+    /**
+     * Constructor for Sign in
+     * @param username
+     * @param password
+     * @param email
+     * @param role
+     * @param firstName
+     * @param lastName
+     */
     public User(String username, String password, String email, List<Role> role, String firstName, String lastName) {
         this.username = username;
         this.password = password;
@@ -37,12 +53,6 @@ public class User {
         this.roles = role;
         this.firstName = firstName;
         this.lastName = lastName;
-    }
-
-    /**
-     * Default Constructor.
-     */
-    protected User() {
     }
 
     public String getId() {

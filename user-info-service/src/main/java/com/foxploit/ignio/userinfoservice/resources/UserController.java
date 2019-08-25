@@ -20,12 +20,12 @@ public class UserController {
     private UserService userService;
 
     @PostMapping("/signin")
+    @ResponseStatus(HttpStatus.OK)
     public UserDto login(@RequestBody @Valid LoginDto loginDto) {
         return userService.signin(loginDto.getUsername(), loginDto.getPassword()).orElseThrow(() -> new HttpServerErrorException(HttpStatus.FORBIDDEN, "Login Failed"));
     }
 
     @PostMapping("/signup")
-//    @PreAuthorize("hasRole('ROLE_ADMIN')")
     @ResponseStatus(HttpStatus.CREATED)
     public User signup(@RequestBody @Valid LoginDto loginDto) {
         return userService.signup(loginDto.getUsername(), loginDto.getPassword(), loginDto.getEmail(), loginDto.getFirstName(), loginDto.getLastName()).orElseThrow(() -> new HttpServerErrorException(HttpStatus.BAD_REQUEST, "User already exists"));

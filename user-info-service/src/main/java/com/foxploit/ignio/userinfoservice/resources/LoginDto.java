@@ -6,7 +6,6 @@ public class LoginDto {
 
     @NotNull
     private String username;
-    @NotNull
     private String password;
     private String email;
     private String firstName;
