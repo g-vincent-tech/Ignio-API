@@ -59,10 +59,10 @@ public class UserService {
         Optional<String> token = Optional.empty();
         Optional<User> user = userRepository.findByUsername(username);
         if (user.isPresent()) {
-            System.out.println(user.get().getRoles().get(0).getRoleName());
             try{
                 authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(username, password));
                 token = Optional.of(jwtProvider.createToken(username, user.get().getRoles()));
+                LOGGER.info(user.get().getRoles().get(0).getRoleName() + " signed in!");
             } catch (AuthenticationException e) {
                 LOGGER.info("Log in failed for user {}", username);
             }
@@ -83,16 +83,11 @@ public class UserService {
     public Optional<User> signup(String username, String password, String firstName, String lastName) {
         LOGGER.info("New user attempting to sign in");
         Optional<User> user = Optional.empty();
-        if (!userRepository.findByUsername(username).isPresent()) {
-            Optional<Role> role = roleRepository.findByRoleName("ROLE_CSR");
+        if (userRepository.findByUsername(username).isEmpty()) {
+            Optional<Role> role = roleRepository.findByRoleName("ROLE_CONSUMER");
 //            user = Optional.of(userRepository.save(new User(username, passwordEncoder.encode(password), role.get(), firstName, lastName)));
-            Role role1 = new Role();
-            role1.setRoleName("ROLE_ADMIN");
-            // 1, 'ROLE_ADMIN', 'Administrator'
-
-            role1.setId("1");
-            role1.setDescription("Administrator");
-            user = Optional.of(userRepository.save(new User(username, passwordEncoder.encode(password), role1, firstName, lastName)));
+            user = Optional.of(userRepository.save(new User(username, passwordEncoder.encode(password), role.get(), firstName, lastName)));
+            LOGGER.info(role.get().getRoleName() + " signed up!");
         }
         return user;
     }
