@@ -31,6 +31,13 @@ public class UserController {
         return userService.signup(loginDto.getUsername(), loginDto.getPassword(), loginDto.getEmail(), loginDto.getFirstName(), loginDto.getLastName()).orElseThrow(() -> new HttpServerErrorException(HttpStatus.BAD_REQUEST, "User already exists"));
     }
 
+    @PatchMapping("/update")
+    @PreAuthorize("hasRole('ROLE_CONSUMER')")
+    @ResponseStatus(HttpStatus.OK)
+    public User update(@RequestBody @Valid User user) {
+        return userService.update(user.getUsername(), user).orElseThrow(() -> new HttpServerErrorException(HttpStatus.PRECONDITION_FAILED, "User details update failed"));
+    }
+
     @GetMapping
     @PreAuthorize("hasRole('ROLE_ADMIN')")
     public Iterable<User> getAllUsers() {

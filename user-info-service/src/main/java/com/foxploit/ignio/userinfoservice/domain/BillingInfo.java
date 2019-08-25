@@ -1,10 +1,12 @@
 package com.foxploit.ignio.userinfoservice.domain;
 
-import javax.persistence.Entity;
+import javax.persistence.*;
 
 @Entity
 public class BillingInfo {
 
+    @Id
+    private String id;
     private String creditCardNumber;
     private String creditCardType;
     private String cvv2;
@@ -23,6 +25,17 @@ public class BillingInfo {
         this.city = city;
         this.country = country;
         this.postalCode = postalCode;
+    }
+
+    public BillingInfo() {
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
     }
 
     public String getCreditCardNumber() {

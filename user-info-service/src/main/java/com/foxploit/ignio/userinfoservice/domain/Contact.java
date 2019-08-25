@@ -1,11 +1,12 @@
 package com.foxploit.ignio.userinfoservice.domain;
 
-import javax.persistence.Entity;
+import javax.persistence.*;
 
 @Entity
 public class Contact {
 
-    private String contactId;
+    @Id
+    private String id;
     private String stationName;
     private String[] mobileNumbers;
     private String email;
@@ -13,8 +14,7 @@ public class Contact {
     private String address;
     private int postalCode;
 
-    public Contact(String contactId, String stationName, String[] mobileNumbers, String email, String city, String address, int postalCode) {
-        this.contactId = contactId;
+    public Contact(String stationName, String[] mobileNumbers, String email, String city, String address, int postalCode) {
         this.stationName = stationName;
         this.mobileNumbers = mobileNumbers;
         this.email = email;
@@ -23,12 +23,12 @@ public class Contact {
         this.postalCode = postalCode;
     }
 
-    public String getContactId() {
-        return contactId;
+    public String getId() {
+        return id;
     }
 
-    public void setContactId(String contactId) {
-        this.contactId = contactId;
+    public void setId(String id) {
+        this.id = id;
     }
 
     public String getStationName() {

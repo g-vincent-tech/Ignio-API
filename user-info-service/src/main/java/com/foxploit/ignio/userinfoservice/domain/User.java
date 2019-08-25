@@ -3,7 +3,6 @@ package com.foxploit.ignio.userinfoservice.domain;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import javax.persistence.*;
-import java.util.Arrays;
 import java.util.List;
 
 
@@ -46,7 +45,8 @@ public class User {
      * @param firstName
      * @param lastName
      */
-    public User(String username, String password, String email, List<Role> role, String firstName, String lastName) {
+    public User(String id, String username, String password, String email, List<Role> role, String firstName, String lastName) {
+        this.id = id;
         this.username = username;
         this.password = password;
         this.email = email;

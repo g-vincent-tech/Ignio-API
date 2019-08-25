@@ -1,7 +1,11 @@
 package com.foxploit.ignio.userinfoservice.resources;
 
+import com.foxploit.ignio.userinfoservice.domain.BillingInfo;
+import com.foxploit.ignio.userinfoservice.domain.Contact;
 import com.foxploit.ignio.userinfoservice.domain.Role;
 import com.foxploit.ignio.userinfoservice.domain.User;
+import com.foxploit.ignio.userinfoservice.repository.BillingInfoRepository;
+import com.foxploit.ignio.userinfoservice.repository.ContactRepository;
 import com.foxploit.ignio.userinfoservice.repository.RoleRepository;
 import com.foxploit.ignio.userinfoservice.repository.UserRepository;
 import com.foxploit.ignio.userinfoservice.security.JwtProvider;
@@ -14,6 +18,7 @@ import org.springframework.security.core.AuthenticationException;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
+import javax.validation.Valid;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
@@ -21,12 +26,19 @@ import java.util.Optional;
 @Service
 public class UserService {
     private static final Logger LOGGER = LoggerFactory.getLogger(UserService.class);
+    private static final String CONSUMER_ID_TAG = "CONSMRIGNIOF";
 
     @Autowired
     private UserRepository userRepository;
 
     @Autowired
     private RoleRepository roleRepository;
+
+    @Autowired
+    private BillingInfoRepository billingInfoRepository;
+
+    @Autowired
+    private ContactRepository contactRepository;
 
     @Autowired
     private AuthenticationManager authenticationManager;
@@ -99,7 +111,7 @@ public class UserService {
             List<Role> roleList = new ArrayList<>();
 
             roleList.add(role.get());
-            user = Optional.of(userRepository.save(new User(username, passwordEncoder.encode(password), email, roleList, firstName, lastName)));
+            user = Optional.of(userRepository.save(new User(generateConsumerID(), username, passwordEncoder.encode(password), email, roleList, firstName, lastName)));
 
             authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(username, password));
             token = Optional.of(jwtProvider.createToken(username, user.get().getRoles()));
@@ -110,7 +122,46 @@ public class UserService {
         return userDto;
     }
 
+    public Optional<User> update(String username, @Valid User updatedUser) {
+        LOGGER.info("User attempting to update user details");
+
+        Optional<User> oldUser = userRepository.findByUsername(username);
+        Optional<User> user = Optional.empty();
+
+        if (oldUser.isPresent()) {
+            try{
+
+                oldUser.get().setFirstName(updatedUser.getFirstName());
+                oldUser.get().setLastName(updatedUser.getLastName());
+                oldUser.get().setEmail(updatedUser.getEmail());
+                oldUser.get().setIgnios(updatedUser.getIgnios());
+                oldUser.get().setPlanType(updatedUser.getPlanType());
+                oldUser.get().setAddress(updatedUser.getAddress());
+                oldUser.get().setPostalCode(updatedUser.getPostalCode());
+                oldUser.get().setCountry(updatedUser.getCountry());
+                oldUser.get().setBillingInfo(billingInfoRepository.save(updatedUser.getBillingInfo()));
+
+                List<Contact> contactList = updatedUser.getEmergencyContacts();
+                contactList.forEach(contact -> contact = contactRepository.save(contact));
+
+                oldUser.get().setEmergencyContacts(contactList);
+                user = Optional.of(userRepository.save(oldUser.get()));
+                System.out.println(user.get().getUsername());
+                LOGGER.info(updatedUser.getUsername() + " details updated!");
+            } catch (AuthenticationException e) {
+                LOGGER.info("Update failed for user {}", username);
+            }
+        }
+        return user;
+    }
+
     public Iterable<User> getAll() {
         return userRepository.findAll();
+    }
+
+    public String generateConsumerID(){
+        int count = Math.toIntExact(userRepository.count());
+        String id = CONSUMER_ID_TAG + new String(String.valueOf(count));
+        return id;
     }
 }

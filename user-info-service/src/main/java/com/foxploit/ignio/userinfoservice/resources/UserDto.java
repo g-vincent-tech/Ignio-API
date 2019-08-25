@@ -16,7 +16,14 @@ public class UserDto extends User {
      * @param token
      */
     public UserDto(Optional<User> user, Optional<String> token) {
-        super(user.get().getUsername(), user.get().getPassword(), user.get().getEmail(), user.get().getRoles(), user.get().getFirstName(), user.get().getLastName());
+        super(user.get().getId(), user.get().getUsername(), user.get().getPassword(), user.get().getEmail(), user.get().getRoles(), user.get().getFirstName(), user.get().getLastName());
+        this.setIgnios(user.get().getIgnios());
+        this.setPlanType(user.get().getPlanType());
+        this.setAddress(user.get().getAddress());
+        this.setPostalCode(user.get().getPostalCode());
+        this.setCountry(user.get().getCountry());
+        this.setBillingInfo(user.get().getBillingInfo());
+        this.setEmergencyContacts(user.get().getEmergencyContacts());
         this.token = token;
     }
 

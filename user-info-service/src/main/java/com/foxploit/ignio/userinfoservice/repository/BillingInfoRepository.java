@@ -1,12 +1,12 @@
 package com.foxploit.ignio.userinfoservice.repository;
 
-import com.foxploit.ignio.userinfoservice.domain.Role;
+import com.foxploit.ignio.userinfoservice.domain.BillingInfo;
 import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.stereotype.Repository;
 
 import java.util.Optional;
 
 @Repository
-public interface RoleRepository extends MongoRepository<Role, Long> {
-    Optional<Role> findByRoleName(String name);
+public interface BillingInfoRepository extends MongoRepository<BillingInfo, String> {
+    Optional<BillingInfo> findById(String id);
 }
