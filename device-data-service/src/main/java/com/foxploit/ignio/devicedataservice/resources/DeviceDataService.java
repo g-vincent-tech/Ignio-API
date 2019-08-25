@@ -1,6 +1,6 @@
 package com.foxploit.ignio.devicedataservice.resources;
 
-import com.foxploit.ignio.devicedataservice.models.DeviceData;
+import com.foxploit.ignio.devicedataservice.domain.DeviceData;
 import com.foxploit.ignio.devicedataservice.repositories.DeviceDataRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -12,7 +12,6 @@ class DeviceDataService {
 
     @Autowired
     private DeviceDataRepository deviceDataRepository;
-
 
     Optional<DeviceData> getDeviceData(String id) throws NoSuchElementException {
         Optional<DeviceData> deviceData = deviceDataRepository.findById(id);

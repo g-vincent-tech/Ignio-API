@@ -1,4 +1,4 @@
-package com.foxploit.ignio.devicedataservice.models;
+package com.foxploit.ignio.devicedataservice.domain;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
@@ -10,9 +10,9 @@ public class DeviceData {
     private String _id;
     private String deviceId;
     private SensorData[] sensorData;
-    private long epoch;
+    private String epoch;
 
-    public DeviceData(String deviceId, SensorData[] sensorData, long epoch) {
+    public DeviceData(String deviceId, SensorData[] sensorData, String epoch) {
         this.deviceId = deviceId;
         this.sensorData = sensorData;
         this.epoch = epoch;
@@ -38,11 +38,11 @@ public class DeviceData {
         this.sensorData = sensorData;
     }
 
-    public long getEpoch() {
+    public String getEpoch() {
         return epoch;
     }
 
-    public void setEpoch(long epoch) {
+    public void setEpoch(String epoch) {
         this.epoch = epoch;
     }
 
