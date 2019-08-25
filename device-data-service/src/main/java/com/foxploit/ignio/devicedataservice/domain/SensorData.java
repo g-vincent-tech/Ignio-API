@@ -9,9 +9,9 @@ public class SensorData {
     private float co_percentage;
     private float lp_gas_percentage;
     private float particle_percentage;
-    private long epoch;
+    private String epoch;
 
-    public SensorData(float temperature, float co_percentage, float lp_gas_percentage, float particle_percentage, long epoch) {
+    public SensorData(float temperature, float co_percentage, float lp_gas_percentage, float particle_percentage, String epoch) {
         this.temperature = temperature;
         this.co_percentage = co_percentage;
         this.lp_gas_percentage = lp_gas_percentage;
@@ -51,11 +51,11 @@ public class SensorData {
         this.particle_percentage = particle_percentage;
     }
 
-    public long getEpoch() {
+    public String getEpoch() {
         return epoch;
     }
 
-    public void setEpoch(long epoch) {
+    public void setEpoch(String epoch) {
         this.epoch = epoch;
     }
 

@@ -29,13 +29,13 @@ public class DeviceDataControllerTest {
     @Test
     public void getDeviceData() throws Exception {
 
-        given(deviceDataService.getDeviceData(anyString())).willReturn(java.util.Optional.of(new DeviceData("NODEIGNIOF101", new SensorData[3], anyLong())));
+        given(deviceDataService.getDeviceData(anyString())).willReturn(java.util.Optional.of(new DeviceData("NODEIGNIOF101", new SensorData[3], anyString())));
 
-        mockMvc.perform(MockMvcRequestBuilders.get("/api/device/data/5d5ec615dceb96160ce73d31"))
+        mockMvc.perform(MockMvcRequestBuilders.get("/api/device/data/5d62cff41180184a00c0159a"))
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("deviceId").value("NODEIGNIOF101"))
                 .andExpect(jsonPath("sensorData").isArray())
-                .andExpect(jsonPath("epoch").isNumber());
+                .andExpect(jsonPath("epoch").isString());
     }
 
 //    @Test
