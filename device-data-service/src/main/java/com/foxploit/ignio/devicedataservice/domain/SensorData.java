@@ -1,4 +1,4 @@
-package com.foxploit.ignio.devicedataservice.models;
+package com.foxploit.ignio.devicedataservice.domain;
 
 import javax.persistence.Entity;
 

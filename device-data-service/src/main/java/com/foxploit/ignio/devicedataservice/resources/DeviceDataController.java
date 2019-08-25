@@ -1,7 +1,7 @@
 package com.foxploit.ignio.devicedataservice.resources;
 
-import com.foxploit.ignio.devicedataservice.models.DeviceData;
-import com.foxploit.ignio.devicedataservice.models.SensorData;
+import com.foxploit.ignio.devicedataservice.domain.DeviceData;
+import com.foxploit.ignio.devicedataservice.domain.SensorData;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
