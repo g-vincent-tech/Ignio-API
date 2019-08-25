@@ -25,8 +25,8 @@
   },
   "emergencyContacts": [
     {
-      "emContactId": "CONSMRIGNIOF1EM1",
-      "fireStationId": "Colombo14",
+      "emContactId": "EMCNTCTIGNIOF1",
+      "stationName": "Colombo14",
       "mobileNumbers": [
         "+9471 453 1280",
         "+9471 453 1281"
@@ -37,8 +37,8 @@
       "postalCode": 11200
     },
     {
-      "emContactId": "CONSMRIGNIOF1EM2",
-      "fireStationId": "Colombo14",
+      "emContactId": "EMCNTCTIGNIOF2",
+      "stationName": "Colombo14",
       "mobileNumbers": [
         "+9471 453 1290",
         "+9471 453 1291"
