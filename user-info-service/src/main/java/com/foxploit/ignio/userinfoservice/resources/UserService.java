@@ -139,10 +139,18 @@ public class UserService {
                 oldUser.get().setAddress(updatedUser.getAddress());
                 oldUser.get().setPostalCode(updatedUser.getPostalCode());
                 oldUser.get().setCountry(updatedUser.getCountry());
+                if ( (oldUser.get().getBillingInfo() != null) && (oldUser.get().getBillingInfo().getId() != null)) {
+                    billingInfoRepository.deleteById(oldUser.get().getBillingInfo().getId());
+                } else if(oldUser.get().getBillingInfo() != null) {
+                    billingInfoRepository.delete(oldUser.get().getBillingInfo());
+                }
                 oldUser.get().setBillingInfo(billingInfoRepository.save(updatedUser.getBillingInfo()));
 
                 List<Contact> contactList = updatedUser.getEmergencyContacts();
-                contactList.forEach(contact -> contact = contactRepository.save(contact));
+                contactList.forEach(contact -> {
+                    contactRepository.deleteAll(contactRepository.findByStationName(contact.getStationName()));
+                    contact = contactRepository.save(contact);
+                });
 
                 oldUser.get().setEmergencyContacts(contactList);
                 user = Optional.of(userRepository.save(oldUser.get()));
@@ -159,7 +167,7 @@ public class UserService {
         return userRepository.findAll();
     }
 
-    public String generateConsumerID(){
+    public String generateConsumerID() {
         int count = Math.toIntExact(userRepository.count());
         String id = CONSUMER_ID_TAG + new String(String.valueOf(count));
         return id;
