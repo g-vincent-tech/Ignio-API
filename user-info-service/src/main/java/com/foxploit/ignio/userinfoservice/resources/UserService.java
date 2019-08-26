@@ -154,7 +154,6 @@ public class UserService {
 
                 oldUser.get().setEmergencyContacts(contactList);
                 user = Optional.of(userRepository.save(oldUser.get()));
-                System.out.println(user.get().getUsername());
                 LOGGER.info(updatedUser.getUsername() + " details updated!");
             } catch (AuthenticationException e) {
                 LOGGER.info("Update failed for user {}", username);

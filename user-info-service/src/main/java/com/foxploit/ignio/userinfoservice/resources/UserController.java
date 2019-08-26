@@ -19,18 +19,21 @@ public class UserController {
     @Autowired
     private UserService userService;
 
+    @CrossOrigin(origins = "http://localhost:3000")
     @PostMapping("/signin")
     @ResponseStatus(HttpStatus.OK)
     public UserDto login(@RequestBody @Valid LoginDto loginDto) {
         return userService.signin(loginDto.getUsername(), loginDto.getPassword()).orElseThrow(() -> new HttpServerErrorException(HttpStatus.FORBIDDEN, "Login Failed"));
     }
 
+    @CrossOrigin(origins = "http://localhost:3000")
     @PostMapping("/signup")
     @ResponseStatus(HttpStatus.CREATED)
     public User signup(@RequestBody @Valid LoginDto loginDto) {
         return userService.signup(loginDto.getUsername(), loginDto.getPassword(), loginDto.getEmail(), loginDto.getFirstName(), loginDto.getLastName()).orElseThrow(() -> new HttpServerErrorException(HttpStatus.BAD_REQUEST, "User already exists"));
     }
 
+    @CrossOrigin(origins = "http://localhost:3000")
     @PatchMapping("/update")
     @PreAuthorize("hasRole('ROLE_CONSUMER')")
     @ResponseStatus(HttpStatus.OK)
