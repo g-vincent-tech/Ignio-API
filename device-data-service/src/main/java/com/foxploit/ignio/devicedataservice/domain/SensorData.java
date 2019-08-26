@@ -6,16 +6,16 @@ import javax.persistence.Entity;
 public class SensorData {
 
     private float temperature;
-    private float co_percentage;
-    private float lp_gas_percentage;
-    private float particle_percentage;
+    private float co_ppm;
+    private float lp_gas_ppm;
+    private float particle_ppm;
     private String epoch;
 
-    public SensorData(float temperature, float co_percentage, float lp_gas_percentage, float particle_percentage, String epoch) {
+    public SensorData(float temperature, float co_ppm, float lp_gas_ppm, float particle_ppm, String epoch) {
         this.temperature = temperature;
-        this.co_percentage = co_percentage;
-        this.lp_gas_percentage = lp_gas_percentage;
-        this.particle_percentage = particle_percentage;
+        this.co_ppm = co_ppm;
+        this.lp_gas_ppm = lp_gas_ppm;
+        this.particle_ppm = particle_ppm;
         this.epoch = epoch;
     }
 
@@ -27,28 +27,28 @@ public class SensorData {
         this.temperature = temperature;
     }
 
-    public float getCo_percentage() {
-        return co_percentage;
+    public float getCo_ppm() {
+        return co_ppm;
     }
 
-    public void setCo_percentage(float co_percentage) {
-        this.co_percentage = co_percentage;
+    public void setCo_ppm(float co_ppm) {
+        this.co_ppm = co_ppm;
     }
 
-    public float getLp_gas_percentage() {
-        return lp_gas_percentage;
+    public float getLp_gas_ppm() {
+        return lp_gas_ppm;
     }
 
-    public void setLp_gas_percentage(float lp_gas_percentage) {
-        this.lp_gas_percentage = lp_gas_percentage;
+    public void setLp_gas_ppm(float lp_gas_ppm) {
+        this.lp_gas_ppm = lp_gas_ppm;
     }
 
-    public float getParticle_percentage() {
-        return particle_percentage;
+    public float getParticle_ppm() {
+        return particle_ppm;
     }
 
-    public void setParticle_percentage(float particle_percentage) {
-        this.particle_percentage = particle_percentage;
+    public void setParticle_ppm(float particle_ppm) {
+        this.particle_ppm = particle_ppm;
     }
 
     public String getEpoch() {
