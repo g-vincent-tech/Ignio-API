@@ -1,6 +1,5 @@
 package com.foxploit.ignio.devicedataservice.resources;
 
-import com.foxploit.ignio.devicedataservice.domain.DeviceData;
 import com.foxploit.ignio.devicedataservice.domain.SensorData;
 
 import javax.persistence.Entity;
@@ -11,12 +10,10 @@ public class DeviceDataDto {
 
     private String deviceId;
 
-    private List<DeviceData> deviceData;
     private List<SensorData> sensorData;
 
-    public DeviceDataDto(String deviceId, List<DeviceData> deviceData, List<SensorData> sensorData) {
+    public DeviceDataDto(String deviceId, List<SensorData> sensorData) {
         this.deviceId = deviceId;
-        this.deviceData = deviceData;
         this.sensorData = sensorData;
     }
 
@@ -26,14 +23,6 @@ public class DeviceDataDto {
 
     public void setDeviceId(String deviceId) {
         this.deviceId = deviceId;
-    }
-
-    public List<DeviceData> getDeviceData() {
-        return deviceData;
-    }
-
-    public void setDeviceData(List<DeviceData> deviceData) {
-        this.deviceData = deviceData;
     }
 
     public List<SensorData> getSensorData() {

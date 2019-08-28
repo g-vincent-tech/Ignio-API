@@ -15,7 +15,7 @@
 
 	<scm>
 		<developerConnection>scm:git:https://github.com/luk3Sky/Ignio-API</developerConnection>
-	  <tag>unit-release</tag>
+	  	<tag>unit-release</tag>
   </scm>
 
 	<properties>

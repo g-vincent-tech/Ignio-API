@@ -21,6 +21,7 @@ class DeviceDataService {
         return deviceData;
     }
 
+    // TODO: save sensor data, then -> save device data [use constructors]
     DeviceData saveDeviceData(DeviceData deviceData) {
         return deviceDataRepository.save(deviceData);
     }

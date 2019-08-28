@@ -32,16 +32,14 @@ public class DeviceDataController {
     @RequestMapping(value = "/data/all/{deviceId}", method = RequestMethod.GET)
     public DeviceDataDto getAllDeviceData(@PathVariable String deviceId) {
         List<DeviceData> allDeviceDataList = deviceDataService.getAllDeviceData(deviceId);
-        List<DeviceData> deviceDataList = new ArrayList<>();
         List<SensorData> sensorDataList = new ArrayList<>();
-        deviceDataList.addAll(allDeviceDataList);
         allDeviceDataList.forEach(deviceData -> {
             for (SensorData sensorData : deviceData.getSensorData()) {
                 sensorDataList.add(sensorData);
             }
         });
 
-        return new DeviceDataDto(deviceId, deviceDataList, sensorDataList);
+        return new DeviceDataDto(deviceId, sensorDataList);
     }
 
     // Save device data response

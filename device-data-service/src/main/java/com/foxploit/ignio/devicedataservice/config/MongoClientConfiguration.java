@@ -15,8 +15,8 @@ public class MongoClientConfiguration extends AbstractMongoClientConfiguration {
 
     @Override
     public MongoClient mongoClient() {
-//        return MongoClients.create("mongodb://localhost:27017");
-        return MongoClients.create("mongodb://luk3Sky:mongoLuke@ignio-cluster-shard-00-00-iqx0b.mongodb.net:27017,ignio-cluster-shard-00-01-iqx0b.mongodb.net:27017,ignio-cluster-shard-00-02-iqx0b.mongodb.net:27017/test?ssl=true&replicaSet=Ignio-Cluster-shard-0&authSource=admin&retryWrites=true&w=majority");
+        //return MongoClients.create("mongodb://localhost:27017");
+        return MongoClients.create("mongodb://ignio-api:mongo-ignio-api@ignio-cluster-shard-00-00-iqx0b.mongodb.net:27017,ignio-cluster-shard-00-01-iqx0b.mongodb.net:27017,ignio-cluster-shard-00-02-iqx0b.mongodb.net:27017/test?ssl=true&replicaSet=Ignio-Cluster-shard-0&authSource=admin&retryWrites=true&w=majority");
     }
 
 }

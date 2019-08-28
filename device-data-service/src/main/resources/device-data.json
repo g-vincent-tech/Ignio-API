@@ -2,47 +2,47 @@
   "deviceId": "NODEIGNIOF101",
   "sensorData": [
     {
-      "temperature": 31.23,
-      "co_ppm": 11.14,
-      "lp_gas_ppm": 29.10,
-      "particle_ppm": 12.13,
-      "epoch": 328102338958
+      "temperature": 25.3125,
+      "co_ppm": 254.0,
+      "lp_gas_ppm": 44.0,
+      "particle_ppm": 12.3400001525879,
+      "epoch": "2019-08-27 23:20:11"
     },
     {
-      "temperature": 31.23,
-      "co_ppm": 11.14,
-      "lp_gas_ppm": 29.10,
-      "particle_ppm": 12.13,
-      "epoch": 328102338958
+      "temperature": 25.3125,
+      "co_ppm": 254.0,
+      "lp_gas_ppm": 44.0,
+      "particle_ppm": 12.3400001525879,
+      "epoch": "2019-08-27 23:20:11"
     },
     {
-      "temperature": 31.23,
-      "co_ppm": 11.14,
-      "lp_gas_ppm": 29.10,
-      "particle_ppm": 12.13,
-      "epoch": 328102338958
+      "temperature": 25.3125,
+      "co_ppm": 254.0,
+      "lp_gas_ppm": 44.0,
+      "particle_ppm": 12.3400001525879,
+      "epoch": "2019-08-27 23:20:11"
     },
     {
-      "temperature": 31.23,
-      "co_ppm": 11.14,
-      "lp_gas_ppm": 29.10,
-      "particle_ppm": 12.13,
-      "epoch": 328102338958
+      "temperature": 25.3125,
+      "co_ppm": 254.0,
+      "lp_gas_ppm": 44.0,
+      "particle_ppm": 12.3400001525879,
+      "epoch": "2019-08-27 23:20:11"
     },
     {
-      "temperature": 31.23,
-      "co_ppm": 11.14,
-      "lp_gas_ppm": 29.10,
-      "particle_ppm": 12.13,
-      "epoch": 328102338958
+      "temperature": 25.3125,
+      "co_ppm": 254.0,
+      "lp_gas_ppm": 44.0,
+      "particle_ppm": 12.3400001525879,
+      "epoch": "2019-08-27 23:20:11"
     },
     {
-      "temperature": 31.23,
-      "co_ppm": 11.14,
-      "lp_gas_ppm": 29.10,
-      "particle_ppm": 12.13,
-      "epoch": 328102338958
+      "temperature": 25.3125,
+      "co_ppm": 254.0,
+      "lp_gas_ppm": 44.0,
+      "particle_ppm": 12.3400001525879,
+      "epoch": "2019-08-27 23:20:11"
     }
   ],
-  "epoch": 328102338964
+  "epoch" : "2019-08-27 23:20:11"
 }
