@@ -27,6 +27,9 @@ public class UserDto extends User {
         this.token = token;
     }
 
+    public UserDto(User user) {
+    }
+
     public Optional<String> getToken() {
         return token;
     }

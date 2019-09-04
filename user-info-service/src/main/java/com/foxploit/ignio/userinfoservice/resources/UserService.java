@@ -12,6 +12,7 @@ import com.foxploit.ignio.userinfoservice.security.JwtProvider;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.AuthenticationException;
@@ -68,7 +69,7 @@ public class UserService {
 
     public Optional<UserDto> signin(String username, String password) {
         LOGGER.info("New user attempting to sign in");
-
+//        jwtProvider.get
         Optional<String> token = Optional.empty();
         Optional<User> user = userRepository.findByUsername(username);
         Optional<UserDto> userDto = Optional.empty();
@@ -164,6 +165,11 @@ public class UserService {
 
     public Iterable<User> getAll() {
         return userRepository.findAll();
+    }
+
+    public UserDto loadUser(User user){
+        System.out.println(user.getUsername());
+        return new UserDto(user);
     }
 
     public String generateConsumerID() {

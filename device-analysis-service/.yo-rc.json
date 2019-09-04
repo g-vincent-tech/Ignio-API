@@ -1,0 +1,35 @@
+{
+  "generator-jhipster": {
+    "promptValues": {
+      "packageName": "com.foxploit.ignio.deviceanalysisservice"
+    },
+    "jhipsterVersion": "6.1.2",
+    "applicationType": "microservice",
+    "baseName": "deviceanalysisservice",
+    "packageName": "com.foxploit.ignio.deviceanalysisservice",
+    "packageFolder": "com/foxploit/ignio/deviceanalysisservice",
+    "serverPort": "8083",
+    "authenticationType": "jwt",
+    "cacheProvider": "no",
+    "enableHibernateCache": false,
+    "websocket": false,
+    "databaseType": "mongodb",
+    "devDatabaseType": "mongodb",
+    "prodDatabaseType": "mongodb",
+    "searchEngine": false,
+    "messageBroker": false,
+    "serviceDiscoveryType": "eureka",
+    "buildTool": "maven",
+    "enableSwaggerCodegen": false,
+    "jwtSecretKey": "OWI0MWI4MmE3MWZkMTcxMjU0OGZhMjNmNDAzMjFlZTdjNDQ5Mjk0MzA5YTUxMGEzYjA5NmRjNWY4Njk3OTE5ZDExNDBiYjE0YTFkMzhiNjAzZTc1ODJhOTFmODg4YjI4ODRjMjZkM2U0MzJlYmEzZWU5ZTc2ZTY3Yzc4ZmM0NDQ=",
+    "testFrameworks": [],
+    "jhiPrefix": "jhi",
+    "entitySuffix": "",
+    "dtoSuffix": "DTO",
+    "otherModules": [],
+    "enableTranslation": false,
+    "clientPackageManager": "npm",
+    "skipClient": true,
+    "skipUserManagement": true
+  }
+}
