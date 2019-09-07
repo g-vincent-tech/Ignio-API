@@ -5,4 +5,6 @@
  _/ / / /_/ // / / // // /_/ /
 /___/ \__, //_/ /_//_/ \____/
 =====/____/=================
- :: IGNIO API ::    (v1.0.1.RELEASE)
+
+${AnsiColor.BRIGHT_BLUE}:: IGNIO API (v2.0.1.RELEASE) 🤓  :: Running Spring Boot ${spring-boot.version} ::
+:: https://www.foxploit.com ::${AnsiColor.DEFAULT}
