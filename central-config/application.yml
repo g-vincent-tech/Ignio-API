@@ -4,8 +4,8 @@
 
 # Property used on app startup to check the config server status
 configserver:
-    name: JHipster Registry config server
-    status: Connected to the JHipster Registry config server, using https://github.com/jhipster/jhipster-registry-sample-config !
+    name: IGNIO Registry config server
+    status: Connected to the Ignio Registry config server, using jhipster-sample-registry-config !
 
 # Default JWT secret token (to be changed in production!)
 jhipster:

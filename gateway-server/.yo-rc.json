@@ -1,0 +1,38 @@
+{
+  "generator-jhipster": {
+    "promptValues": {
+      "packageName": "com.foxploit.ignio.gateway"
+    },
+    "jhipsterVersion": "6.2.0",
+    "applicationType": "gateway",
+    "baseName": "igniogateway",
+    "packageName": "com.foxploit.ignio.gateway",
+    "packageFolder": "com/foxploit/ignio/gateway",
+    "serverPort": "8080",
+    "authenticationType": "jwt",
+    "cacheProvider": "no",
+    "enableHibernateCache": false,
+    "websocket": false,
+    "databaseType": "mongodb",
+    "devDatabaseType": "mongodb",
+    "prodDatabaseType": "mongodb",
+    "searchEngine": false,
+    "messageBroker": false,
+    "serviceDiscoveryType": "eureka",
+    "buildTool": "maven",
+    "enableSwaggerCodegen": false,
+    "jwtSecretKey": "YTIwMzg5MDM2OTY5MTA2Zjk0MDg3NmE3MWYzOWMyODMxNGIyZjYyZDU2MDM0ODRkMDgyZmE0OTQxOTU1NGUwNzQ5NWM2NmRhN2EzMTdmZjA1YWMyZDU5NDE5OWExMGIzNDhjMWNlNGQzY2IzNmY2MDk0NDk3NGUwN2M5MDE3Yzk=",
+    "useSass": true,
+    "clientPackageManager": "npm",
+    "clientFramework": "react",
+    "clientTheme": "none",
+    "clientThemeVariant": "",
+    "testFrameworks": ["gatling", "protractor"],
+    "jhiPrefix": "jhi",
+    "entitySuffix": "",
+    "dtoSuffix": "DTO",
+    "otherModules": [],
+    "enableTranslation": false,
+    "blueprints": []
+  }
+}
