@@ -15,7 +15,7 @@ class DeviceDataService {
 
     Optional<DeviceData> getDeviceData(String id) throws NoSuchElementException {
         Optional<DeviceData> deviceData = deviceDataRepository.findById(id);
-        if (deviceData.isEmpty()) {
+        if (!deviceData.isPresent()) {
             throw new NoSuchElementException("There is no Device Data element with the given id :" + id);
         }
         return deviceData;
