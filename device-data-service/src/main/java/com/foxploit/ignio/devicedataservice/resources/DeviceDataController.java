@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
 
@@ -34,9 +35,7 @@ public class DeviceDataController {
         List<DeviceData> allDeviceDataList = deviceDataService.getAllDeviceData(deviceId);
         List<SensorData> sensorDataList = new ArrayList<>();
         allDeviceDataList.forEach(deviceData -> {
-            for (SensorData sensorData : deviceData.getSensorData()) {
-                sensorDataList.add(sensorData);
-            }
+            sensorDataList.addAll(Arrays.asList(deviceData.getSensorData()));
         });
 
         return new DeviceDataDto(deviceId, sensorDataList);

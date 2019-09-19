@@ -147,7 +147,7 @@ info:
 
 jhipster:
   clientApp:
-    name: 'deviceanalysisserviceApp'
+    name: deviceanalysisserviceApp
   # By default CORS is disabled. Uncomment to enable.
   # cors:
   #     allowed-origins: "*"
