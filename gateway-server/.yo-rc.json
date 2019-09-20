@@ -1,7 +1,8 @@
 {
   "generator-jhipster": {
     "promptValues": {
-      "packageName": "com.foxploit.ignio.gateway"
+      "packageName": "com.foxploit.ignio.gateway",
+      "microservicePath": "..\\device-data-service"
     },
     "jhipsterVersion": "6.2.0",
     "applicationType": "gateway",
