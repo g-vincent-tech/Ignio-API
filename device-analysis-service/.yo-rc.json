@@ -3,12 +3,12 @@
     "promptValues": {
       "packageName": "com.foxploit.ignio.deviceanalysisservice"
     },
-    "jhipsterVersion": "6.1.2",
+    "jhipsterVersion": "6.2.0",
     "applicationType": "microservice",
     "baseName": "deviceanalysisservice",
     "packageName": "com.foxploit.ignio.deviceanalysisservice",
     "packageFolder": "com/foxploit/ignio/deviceanalysisservice",
-    "serverPort": "8083",
+    "serverPort": "8082",
     "authenticationType": "jwt",
     "cacheProvider": "no",
     "enableHibernateCache": false,
@@ -21,14 +21,17 @@
     "serviceDiscoveryType": "eureka",
     "buildTool": "maven",
     "enableSwaggerCodegen": false,
-    "jwtSecretKey": "OWI0MWI4MmE3MWZkMTcxMjU0OGZhMjNmNDAzMjFlZTdjNDQ5Mjk0MzA5YTUxMGEzYjA5NmRjNWY4Njk3OTE5ZDExNDBiYjE0YTFkMzhiNjAzZTc1ODJhOTFmODg4YjI4ODRjMjZkM2U0MzJlYmEzZWU5ZTc2ZTY3Yzc4ZmM0NDQ=",
-    "testFrameworks": [],
+    "jwtSecretKey": "ZjQzNmY1YjI3MmFjNGQ1MWE5YjhhZGJkN2U2MGFmMjdiZTU2ZGFiYjNiNDkxOTkxMDg3MjliZDEzZDZiYjhmMTY3ODhjMzgzMzBhZDU0MTI1ZWIxM2VlNjQyODdlMTdlY2I3MTU0MjRjZDU0MjQ1YjY2ZWQxMzM3OWMwZTdlZjU=",
+    "testFrameworks": [
+      "gatling"
+    ],
     "jhiPrefix": "jhi",
     "entitySuffix": "",
     "dtoSuffix": "DTO",
     "otherModules": [],
     "enableTranslation": false,
     "clientPackageManager": "npm",
+    "blueprints": [],
     "skipClient": true,
     "skipUserManagement": true
   }
