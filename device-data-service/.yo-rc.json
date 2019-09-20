@@ -1,0 +1,37 @@
+{
+  "generator-jhipster": {
+    "promptValues": {
+      "packageName": "com.foxploit.ignio.devicedataservice"
+    },
+    "jhipsterVersion": "6.1.2",
+    "applicationType": "microservice",
+    "baseName": "devicedataservice",
+    "packageName": "com.foxploit.ignio.devicedataservice",
+    "packageFolder": "com/foxploit/ignio/devicedataservice",
+    "serverPort": "8081",
+    "authenticationType": "jwt",
+    "cacheProvider": "no",
+    "enableHibernateCache": false,
+    "websocket": false,
+    "databaseType": "mongodb",
+    "devDatabaseType": "mongodb",
+    "prodDatabaseType": "mongodb",
+    "searchEngine": false,
+    "messageBroker": false,
+    "serviceDiscoveryType": "eureka",
+    "buildTool": "maven",
+    "enableSwaggerCodegen": false,
+    "jwtSecretKey": "ZTNjOThhOGQ4YjJhMGFlYzQ3YzVkMDJlYmJlODE3YmJlYTgyZGI1YjJkNzg5NzE1ZmEyY2NkNTdjYzUxYjdiODAxYzkzMmM0ZGY4NjJhNDhjNzEzNmEyOTAyMTQzNDQzYmU3NWJjZGE2ZDU5ZWRkODJiZDk0OWUyOWZkMmEyYzc=",
+    "testFrameworks": [
+      "gatling"
+    ],
+    "jhiPrefix": "jhi",
+    "entitySuffix": "",
+    "dtoSuffix": "DTO",
+    "otherModules": [],
+    "enableTranslation": false,
+    "clientPackageManager": "npm",
+    "skipClient": true,
+    "skipUserManagement": true
+  }
+}

@@ -1,0 +1,35 @@
+{
+    "fluentMethods": true,
+    "clientRootFolder": "devicedataservice",
+    "relationships": [],
+    "fields": [
+        {
+            "fieldName": "deviceId",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required",
+                "unique"
+            ]
+        },
+        {
+            "fieldName": "ownerId",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "created",
+            "fieldType": "LocalDate"
+        },
+        {
+            "fieldName": "purchased",
+            "fieldType": "LocalDate"
+        }
+    ],
+    "dto": "mapstruct",
+    "searchEngine": false,
+    "service": "serviceImpl",
+    "entityTableName": "device",
+    "databaseType": "mongodb",
+    "jpaMetamodelFiltering": false,
+    "pagination": "pagination",
+    "microserviceName": "devicedataservice"
+}
