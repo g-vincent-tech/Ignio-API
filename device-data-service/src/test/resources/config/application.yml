@@ -27,7 +27,7 @@ spring:
     mongodb:
       host: localhost
       port: 0
-      database: devicedataservice
+      database: Ignio-DeviceStore
   mail:
     host: localhost
   main:
