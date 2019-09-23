@@ -79,6 +79,6 @@ public class DeviceDataDTO implements Serializable {
 
     @Override
     public String toString() {
-        return "DeviceDataDTO{" + "id=" + getId() + ", deviceId='" + getDeviceId() + "'" + ", epoch='" + getEpoch() + "'" + "}";
+        return "DeviceDataDTO{" + "id=" + getId() + ", deviceId='" + getDeviceId() + "'" + ", sensorData=" + getSensorData().toString() + ", epoch='" + getEpoch() + "'" + "}";
     }
 }

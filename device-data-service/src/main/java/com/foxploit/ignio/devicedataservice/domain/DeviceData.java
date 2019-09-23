@@ -115,7 +115,7 @@ public class DeviceData implements Serializable {
 
     @Override
     public String toString() {
-        return "DeviceData{" + "id=" + getId() + ", deviceId='" + getDeviceId() + "'" + ", epoch='" + getEpoch() + "'" + "}";
+        return "DeviceData{" + "id=" + getId() + ", deviceId='" + getDeviceId() + "'" + ", sensorData=" + getSensorData().toString() + ", epoch='" + getEpoch() + "'" + "}";
     }
 
 }

@@ -35,6 +35,9 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 @SpringBootTest(classes = DevicedataserviceApp.class)
 public class SensorDataResourceIT {
 
+    private static final String DEFAULT_DEVICE_ID = "NODEIGNIOF105";
+    private static final String UPDATED_DEVICE_ID = "NODEIGNIOF106";
+
     private static final Float DEFAULT_TEMPERATURE = 1F;
     private static final Float UPDATED_TEMPERATURE = 2F;
 
@@ -47,8 +50,8 @@ public class SensorDataResourceIT {
     private static final Float DEFAULT_PARTICLE_PPM = 1F;
     private static final Float UPDATED_PARTICLE_PPM = 2F;
 
-    private static final String DEFAULT_EPOCH = "AAAAAAAAAA";
-    private static final String UPDATED_EPOCH = "BBBBBBBBBB";
+    private static final String DEFAULT_EPOCH = "2019-08-27 23:20:11";
+    private static final String UPDATED_EPOCH = "2019-09-23 23:20:12";
 
     @Autowired
     private SensorDataRepository sensorDataRepository;
@@ -94,13 +97,13 @@ public class SensorDataResourceIT {
      * if they test an entity which requires the current entity.
      */
     public static SensorData createEntity() {
-        SensorData sensorData = new SensorData()
+        return new SensorData()
+            .deviceId(DEFAULT_DEVICE_ID)
             .temperature(DEFAULT_TEMPERATURE)
             .co_ppm(DEFAULT_CO_PPM)
             .lp_gas_ppm(DEFAULT_LP_GAS_PPM)
             .particle_ppm(DEFAULT_PARTICLE_PPM)
             .epoch(DEFAULT_EPOCH);
-        return sensorData;
     }
     /**
      * Create an updated entity for this test.
@@ -109,13 +112,13 @@ public class SensorDataResourceIT {
      * if they test an entity which requires the current entity.
      */
     public static SensorData createUpdatedEntity() {
-        SensorData sensorData = new SensorData()
+        return new SensorData()
+            .deviceId(UPDATED_DEVICE_ID)
             .temperature(UPDATED_TEMPERATURE)
             .co_ppm(UPDATED_CO_PPM)
             .lp_gas_ppm(UPDATED_LP_GAS_PPM)
             .particle_ppm(UPDATED_PARTICLE_PPM)
             .epoch(UPDATED_EPOCH);
-        return sensorData;
     }
 
     @BeforeEach
