@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title th:text="#{email.activated.title}">Ignio Consumer Account Activated</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <link rel="shortcut icon" th:href="@{|${baseUrl}/favicon.ico|}" />
+    </head>
+    <body>
+        <p th:text="#{email.activated.greeting(${user.login})}">
+            Dear
+        </p>
+        <p th:text="#{email.activated.text1}">
+            Your Ignio Consumer Account has been activated and thank you for choosing to be with us.
+            Please click on the URL below to access our web portal to review your Ignios and stay alert!
+        </p>
+        <p>
+            Login to <a href="https://ignio-web.herokuapp.com/auth/login">Ignio portal</a> now!
+        </p>
+        <p>
+            If you have any questions regarding your Ignio Account, please contact us at contact@foxploit.com.
+        </p>
+        <p>
+            And remember, Be Safe and welcome to Ignio.
+        </p>
+        <p>
+            <span>Regards, </span>
+            <br/>
+            <em th:text="#{email.signature}">Ignio@Foxploit Team.</em>
+        </p>
+    </body>
+</html>
