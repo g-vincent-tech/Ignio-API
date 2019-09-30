@@ -15,6 +15,10 @@ import { RouterModule } from '@angular/router';
       {
         path: 'device-data',
         loadChildren: () => import('./devicedataservice/device-data/device-data.module').then(m => m.DevicedataserviceDeviceDataModule)
+      },
+      {
+        path: 'billing-info',
+        loadChildren: () => import('./billing-info/billing-info.module').then(m => m.IgniogatewayBillingInfoModule)
       }
       /* jhipster-needle-add-entity-route - JHipster will add entity modules routes here */
     ])
