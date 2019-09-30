@@ -155,7 +155,7 @@ jhipster:
   #     allow-credentials: true
   #     max-age: 1800
   mail:
-    from: igniogateway@localhost
+    from: admin@foxploit.com
   swagger:
     default-include-pattern: /api/.*
     title: igniogateway API

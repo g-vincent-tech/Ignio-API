@@ -2,9 +2,7 @@ package com.foxploit.ignio.deviceanalysisservice;
 
 import com.foxploit.ignio.deviceanalysisservice.config.ApplicationProperties;
 import com.foxploit.ignio.deviceanalysisservice.config.DefaultProfileUtil;
-
 import io.github.jhipster.config.JHipsterConstants;
-
 import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
