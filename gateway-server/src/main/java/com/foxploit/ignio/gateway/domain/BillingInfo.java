@@ -57,21 +57,23 @@ public class BillingInfo implements Serializable {
         return ignios;
     }
 
+    public void setIgnios(Set<String> ignios) {
+        this.ignios = ignios;
+    }
+
     public BillingInfo ignios(Set<String> ignios) {
         this.ignios = ignios;
         return this;
     }
 
-    public void setIgnios(Set<String> ignios) {
-        this.ignios = ignios;
-    }
-
-    public void addIgnio(String ignio){
+    public BillingInfo addIgnio(String ignio){
         this.ignios.add(ignio);
+        return this;
     }
 
-    public void removeIgnio(String ignio){
+    public BillingInfo removeIgnio(String ignio){
         this.ignios.remove(ignio);
+        return this;
     }
 
     public Long getCreditCardNumber() {

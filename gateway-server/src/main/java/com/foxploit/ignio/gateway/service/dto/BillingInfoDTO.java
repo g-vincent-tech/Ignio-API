@@ -28,7 +28,6 @@ public class BillingInfoDTO implements Serializable {
 
     private Integer postalCode;
 
-
     public String getId() {
         return id;
     }
