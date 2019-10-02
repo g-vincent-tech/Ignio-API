@@ -1,0 +1,19 @@
+{
+  "generator-jhipster": {
+    "appsFolders": [
+      "device-analysis-service",
+      "device-data-service",
+      "gateway-server"
+    ],
+    "directoryPath": "../",
+    "gatewayType": "zuul",
+    "clusteredDbApps": [
+      "device-data-service",
+      "gateway-server"
+    ],
+    "monitoring": "elk",
+    "consoleOptions": [],
+    "serviceDiscoveryType": "eureka",
+    "jwtSecretKey": "YjUyMDQzYzkyMzRlYzEyZjlkY2I4Zjk1YmM4YTJhODk5ZDBlZjM5NGQyZDU4OWY5ZWMzNDBiZDYxMzg2MDg1NDhlOTliMjc4ZjM2MGJjNTdkZDAxMmY2MzEyNDdmNjk5MDA3ZQ=="
+  }
+}
