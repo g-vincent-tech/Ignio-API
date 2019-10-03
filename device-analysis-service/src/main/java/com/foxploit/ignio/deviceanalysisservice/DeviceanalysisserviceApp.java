@@ -12,6 +12,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.core.env.Environment;
+import org.springframework.scheduling.annotation.EnableScheduling;
 
 import java.net.InetAddress;
 import java.net.UnknownHostException;
@@ -21,13 +22,14 @@ import java.util.Collection;
 @SpringBootApplication
 @EnableConfigurationProperties({ApplicationProperties.class})
 @EnableDiscoveryClient
-public class DeviceanalysisserviceApp implements InitializingBean {
+@EnableScheduling
+public class DeviceAnalysisServiceApp implements InitializingBean {
 
-    private static final Logger log = LoggerFactory.getLogger(DeviceanalysisserviceApp.class);
+    private static final Logger log = LoggerFactory.getLogger(DeviceAnalysisServiceApp.class);
 
     private final Environment env;
 
-    public DeviceanalysisserviceApp(Environment env) {
+    public DeviceAnalysisServiceApp(Environment env) {
         this.env = env;
     }
 
@@ -57,7 +59,7 @@ public class DeviceanalysisserviceApp implements InitializingBean {
      * @param args the command line arguments.
      */
     public static void main(String[] args) {
-        SpringApplication app = new SpringApplication(DeviceanalysisserviceApp.class);
+        SpringApplication app = new SpringApplication(DeviceAnalysisServiceApp.class);
         DefaultProfileUtil.addDefaultProfile(app);
         Environment env = app.run(args).getEnvironment();
         logApplicationStartup(env);
