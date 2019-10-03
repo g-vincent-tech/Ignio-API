@@ -44,18 +44,8 @@ services:
       - JHIPSTER_REGISTRY_PASSWORD=ignioadmin
     ports:
       - '8080:8080'
-  igniogateway-mongodb-node:
-    build:
-      context: ..\gateway-server\src\main\docker
-      dockerfile: mongodb/MongoDB.Dockerfile
-    command: mongod --replSet rs1 --noprealloc --smallfiles
-  igniogateway-mongodb-config:
-    image: 'mongo:4.0.10'
-    container_name: igniogateway-mongodb-config
-    command: mongod --noprealloc --smallfiles --configsvr --dbpath /data/db
   igniogateway-mongodb:
     image: 'mongo:4.0.10'
-    command: mongos --configdb igniogateway-mongodb-config
 
   jhipster-registry:
     extends:
@@ -82,5 +72,11 @@ services:
     extends:
       file: jhipster-console.yml
       service: jhipster-import-dashboards
+    depends_on:
+      - jhipster-elasticsearch
+  jhipster-zipkin:
+    extends:
+      file: jhipster-console.yml
+      service: jhipster-zipkin
     depends_on:
       - jhipster-elasticsearch

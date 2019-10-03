@@ -7,13 +7,12 @@
     ],
     "directoryPath": "../",
     "gatewayType": "zuul",
-    "clusteredDbApps": [
-      "device-data-service",
-      "gateway-server"
-    ],
+    "clusteredDbApps": [],
     "monitoring": "elk",
-    "consoleOptions": [],
+    "consoleOptions": [
+      "zipkin"
+    ],
     "serviceDiscoveryType": "eureka",
-    "jwtSecretKey": "YjUyMDQzYzkyMzRlYzEyZjlkY2I4Zjk1YmM4YTJhODk5ZDBlZjM5NGQyZDU4OWY5ZWMzNDBiZDYxMzg2MDg1NDhlOTliMjc4ZjM2MGJjNTdkZDAxMmY2MzEyNDdmNjk5MDA3ZQ=="
+    "jwtSecretKey": "MmViNWFmMjQ4ZmUwN2FjM2NmZTdlOTU4M2RjNWYzNmRkMWNkYzVhNDAxMzZiZjFmMDY2NDBmZTk1MTk2OGI3NjhkN2U4NDlmYjAxMGM2YzQ4MjRhZTAyNzkzNGQ1MDBhN2IyZA=="
   }
 }
