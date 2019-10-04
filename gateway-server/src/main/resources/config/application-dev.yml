@@ -46,16 +46,10 @@ spring:
       uri: mongodb://localhost:27017
       database: igniogateway
   mail:
-    host: smtp.zoho.com
-    port: 587
-    username: ganindudananja@gmail.com #Replace this field with your Zoho username.
-    password: adminLuke@Foxploit.com #Replace this field with your Zoho password.
-    protocol: smtp
-    tls: true
-    properties.mail.smtp:
-      auth: true
-      starttls.enable: true
-      ssl.trust: smtp.zoho.com
+    host: localhost
+    port: 25
+    username:
+    password:
   messages:
     cache-duration: PT1S # 1 second, see the ISO 8601 standard
   thymeleaf:
@@ -116,6 +110,9 @@ jhipster:
       host: localhost
       port: 5000
       queue-size: 512
+  audit-events:
+    retention-period: 30 # Number of days before audit events are deleted.
+
 # ===================================================================
 # Application specific properties
 # Add your own application properties here, see the ApplicationProperties class

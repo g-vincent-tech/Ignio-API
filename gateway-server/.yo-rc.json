@@ -4,7 +4,7 @@
       "packageName": "com.foxploit.ignio.gateway",
       "microservicePath": "..\\device-data-service"
     },
-    "jhipsterVersion": "6.2.0",
+    "jhipsterVersion": "6.3.1",
     "applicationType": "gateway",
     "baseName": "igniogateway",
     "packageName": "com.foxploit.ignio.gateway",
@@ -28,12 +28,17 @@
     "clientFramework": "angularX",
     "clientTheme": "none",
     "clientThemeVariant": "",
-    "testFrameworks": ["gatling", "cucumber", "protractor"],
+    "testFrameworks": [
+      "gatling",
+      "cucumber",
+      "protractor"
+    ],
     "jhiPrefix": "jhi",
     "entitySuffix": "",
     "dtoSuffix": "DTO",
     "otherModules": [],
     "enableTranslation": false,
-    "blueprints": []
+    "blueprints": [],
+    "embeddableLaunchScript": false
   }
 }

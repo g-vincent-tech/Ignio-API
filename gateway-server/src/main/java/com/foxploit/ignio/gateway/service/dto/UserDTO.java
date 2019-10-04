@@ -3,7 +3,6 @@ package com.foxploit.ignio.gateway.service.dto;
 import com.foxploit.ignio.gateway.config.Constants;
 
 import com.foxploit.ignio.gateway.domain.Authority;
-import com.foxploit.ignio.gateway.domain.BillingInfo;
 import com.foxploit.ignio.gateway.domain.User;
 
 import javax.validation.constraints.Email;
@@ -54,8 +53,6 @@ public class UserDTO {
 
     private Set<String> authorities;
 
-    private BillingInfo billingInfo;
-
     public UserDTO() {
         // Empty constructor needed for Jackson.
     }
@@ -76,7 +73,6 @@ public class UserDTO {
         this.authorities = user.getAuthorities().stream()
             .map(Authority::getName)
             .collect(Collectors.toSet());
-        this.billingInfo = user.getBillingInfo();
     }
 
     public String getId() {
@@ -183,14 +179,6 @@ public class UserDTO {
         this.authorities = authorities;
     }
 
-    public BillingInfo getBillingInfo() {
-        return billingInfo;
-    }
-
-    public void setBillingInfo(BillingInfo billingInfo) {
-        this.billingInfo = billingInfo;
-    }
-
     @Override
     public String toString() {
         return "UserDTO{" +
@@ -206,7 +194,6 @@ public class UserDTO {
             ", lastModifiedBy='" + lastModifiedBy + '\'' +
             ", lastModifiedDate=" + lastModifiedDate +
             ", authorities=" + authorities +
-            ", billingInfo=" + billingInfo +
             "}";
     }
 }
