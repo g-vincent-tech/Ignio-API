@@ -1,11 +1,7 @@
 package com.foxploit.ignio.devicedataservice.domain;
-
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Field;
 import org.springframework.data.mongodb.core.mapping.Document;
-import org.springframework.data.mongodb.core.mapping.DBRef;
-
 import javax.validation.constraints.*;
 
 import java.io.Serializable;
@@ -22,7 +18,7 @@ public class SensorData implements Serializable {
     private String id;
 
     @NotNull
-    @Field("deviceId")
+    @Field("device_id")
     private String deviceId;
 
     @NotNull
@@ -45,6 +41,7 @@ public class SensorData implements Serializable {
     @Field("epoch")
     private String epoch;
 
+    // jhipster-needle-entity-add-field - JHipster will add fields here, do not remove
     public String getId() {
         return id;
     }
@@ -57,21 +54,17 @@ public class SensorData implements Serializable {
         return deviceId;
     }
 
-    public void setDeviceId(String deviceId) {
-        this.deviceId = deviceId;
-    }
-
     public SensorData deviceId(String deviceId) {
         this.deviceId = deviceId;
         return this;
     }
 
-    public Float getTemperature() {
-        return temperature;
+    public void setDeviceId(String deviceId) {
+        this.deviceId = deviceId;
     }
 
-    public void setTemperature(Float temperature) {
-        this.temperature = temperature;
+    public Float getTemperature() {
+        return temperature;
     }
 
     public SensorData temperature(Float temperature) {
@@ -79,12 +72,12 @@ public class SensorData implements Serializable {
         return this;
     }
 
-    public Float getCo_ppm() {
-        return co_ppm;
+    public void setTemperature(Float temperature) {
+        this.temperature = temperature;
     }
 
-    public void setCo_ppm(Float co_ppm) {
-        this.co_ppm = co_ppm;
+    public Float getCo_ppm() {
+        return co_ppm;
     }
 
     public SensorData co_ppm(Float co_ppm) {
@@ -92,12 +85,12 @@ public class SensorData implements Serializable {
         return this;
     }
 
-    public Float getLp_gas_ppm() {
-        return lp_gas_ppm;
+    public void setCo_ppm(Float co_ppm) {
+        this.co_ppm = co_ppm;
     }
 
-    public void setLp_gas_ppm(Float lp_gas_ppm) {
-        this.lp_gas_ppm = lp_gas_ppm;
+    public Float getLp_gas_ppm() {
+        return lp_gas_ppm;
     }
 
     public SensorData lp_gas_ppm(Float lp_gas_ppm) {
@@ -105,12 +98,12 @@ public class SensorData implements Serializable {
         return this;
     }
 
-    public Float getParticle_ppm() {
-        return particle_ppm;
+    public void setLp_gas_ppm(Float lp_gas_ppm) {
+        this.lp_gas_ppm = lp_gas_ppm;
     }
 
-    public void setParticle_ppm(Float particle_ppm) {
-        this.particle_ppm = particle_ppm;
+    public Float getParticle_ppm() {
+        return particle_ppm;
     }
 
     public SensorData particle_ppm(Float particle_ppm) {
@@ -118,18 +111,23 @@ public class SensorData implements Serializable {
         return this;
     }
 
-    public String getEpoch() {
-        return epoch;
+    public void setParticle_ppm(Float particle_ppm) {
+        this.particle_ppm = particle_ppm;
     }
 
-    public void setEpoch(String epoch) {
-        this.epoch = epoch;
+    public String getEpoch() {
+        return epoch;
     }
 
     public SensorData epoch(String epoch) {
         this.epoch = epoch;
         return this;
     }
+
+    public void setEpoch(String epoch) {
+        this.epoch = epoch;
+    }
+    // jhipster-needle-entity-add-getters-setters - JHipster will add getters and setters here, do not remove
 
     @Override
     public boolean equals(Object o) {
@@ -149,6 +147,14 @@ public class SensorData implements Serializable {
 
     @Override
     public String toString() {
-        return "SensorData{" + "id=" + getId() + ", deviceId='" + getDeviceId() + "'" + ", temperature=" + getTemperature() + ", co_ppm=" + getCo_ppm() + ", lp_gas_ppm=" + getLp_gas_ppm() + ", particle_ppm=" + getParticle_ppm() + ", epoch='" + getEpoch() + "'" + "}";
+        return "SensorData{" +
+            "id=" + getId() +
+            ", deviceId='" + getDeviceId() + "'" +
+            ", temperature=" + getTemperature() +
+            ", co_ppm=" + getCo_ppm() +
+            ", lp_gas_ppm=" + getLp_gas_ppm() +
+            ", particle_ppm=" + getParticle_ppm() +
+            ", epoch='" + getEpoch() + "'" +
+            "}";
     }
 }

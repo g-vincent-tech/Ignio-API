@@ -63,15 +63,16 @@ class SensorDataGatlingTest extends Simulation {
         .pause(10)
         .repeat(2) {
             exec(http("Get all sensorData")
-            .get("/devicedataservice/api/sensor-data")
+            .get("/services/devicedataservice/api/sensor-data")
             .headers(headers_http_authenticated)
             .check(status.is(200)))
             .pause(10 seconds, 20 seconds)
             .exec(http("Create new sensorData")
-            .post("/devicedataservice/api/sensor-data")
+            .post("/services/devicedataservice/api/sensor-data")
             .headers(headers_http_authenticated)
             .body(StringBody("""{
                 "id":null
+                , "deviceId":"SAMPLE_TEXT"
                 , "temperature":null
                 , "co_ppm":null
                 , "lp_gas_ppm":null
@@ -83,12 +84,12 @@ class SensorDataGatlingTest extends Simulation {
             .pause(10)
             .repeat(5) {
                 exec(http("Get created sensorData")
-                .get("/devicedataservice${new_sensorData_url}")
+                .get("/services/devicedataservice${new_sensorData_url}")
                 .headers(headers_http_authenticated))
                 .pause(10)
             }
             .exec(http("Delete created sensorData")
-            .delete("/devicedataservice${new_sensorData_url}")
+            .delete("/services/devicedataservice${new_sensorData_url}")
             .headers(headers_http_authenticated))
             .pause(10)
         }

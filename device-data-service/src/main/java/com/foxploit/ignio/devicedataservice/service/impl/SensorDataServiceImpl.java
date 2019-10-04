@@ -73,21 +73,6 @@ public class SensorDataServiceImpl implements SensorDataService {
     }
 
     /**
-     * Get all sensorData by deviceId.
-     *
-     *
-     * @param pageable the pagination information.
-     * @param deviceId the deviceId of the entity.
-     * @return the list of entities.
-     */
-    @Override
-    public Page<SensorDataDTO> findByDeviceId(Pageable pageable, String deviceId) {
-        log.debug("Request to get all SensorData by deviceId");
-        return sensorDataRepository.findByDeviceId(pageable, deviceId)
-            .map(sensorDataMapper::toDto);
-    }
-
-    /**
      * Delete the sensorData by id.
      *
      * @param id the id of the entity.

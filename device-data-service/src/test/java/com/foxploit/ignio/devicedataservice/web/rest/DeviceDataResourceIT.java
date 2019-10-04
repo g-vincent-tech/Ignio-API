@@ -1,13 +1,9 @@
 package com.foxploit.ignio.devicedataservice.web.rest;
 
 import com.foxploit.ignio.devicedataservice.DevicedataserviceApp;
-import com.foxploit.ignio.devicedataservice.domain.Device;
 import com.foxploit.ignio.devicedataservice.domain.DeviceData;
-import com.foxploit.ignio.devicedataservice.domain.SensorData;
 import com.foxploit.ignio.devicedataservice.repository.DeviceDataRepository;
-import com.foxploit.ignio.devicedataservice.repository.DeviceRepository;
 import com.foxploit.ignio.devicedataservice.service.DeviceDataService;
-import com.foxploit.ignio.devicedataservice.service.DeviceService;
 import com.foxploit.ignio.devicedataservice.service.dto.DeviceDataDTO;
 import com.foxploit.ignio.devicedataservice.service.mapper.DeviceDataMapper;
 import com.foxploit.ignio.devicedataservice.web.rest.errors.ExceptionTranslator;
@@ -25,10 +21,7 @@ import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 import org.springframework.validation.Validator;
 
 
-import java.time.LocalDate;
-import java.util.HashSet;
 import java.util.List;
-import java.util.Set;
 
 import static com.foxploit.ignio.devicedataservice.web.rest.TestUtil.createFormattingConversionService;
 import static org.assertj.core.api.Assertions.assertThat;
@@ -37,36 +30,22 @@ import static org.springframework.test.web.servlet.request.MockMvcRequestBuilder
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 
 /**
- * Integration tests for the {@Link DeviceDataResource} REST controller.
+ * Integration tests for the {@link DeviceDataResource} REST controller.
  */
 @SpringBootTest(classes = DevicedataserviceApp.class)
 public class DeviceDataResourceIT {
 
-    private static final String DEFAULT_DEVICE_ID = "NODEIGNIOF105";
-    private static final String UPDATED_DEVICE_ID = "NODEIGNIOF106";
+    private static final String DEFAULT_DEVICE_ID = "AAAAAAAAAA";
+    private static final String UPDATED_DEVICE_ID = "BBBBBBBBBB";
 
-    private static final String DEFAULT_OWNER_ID = "CONSMRIGNIOF1";
-
-    private static final LocalDate DEFAULT_CREATED = LocalDate.ofEpochDay(0L);
-    private static final LocalDate DEFAULT_PURCHASED = LocalDate.ofEpochDay(0L);
-
-    private static final String DEFAULT_EPOCH = "2019-08-27 23:20:11";
-    private static final String UPDATED_EPOCH = "2019-09-23 23:20:12";
-
-    private static final Set<SensorData> DEFAULT_SENSOR_DATA = new HashSet<>();
-    private static final Set<SensorData> UPDATED_SENSOR_DATA = new HashSet<>();
-
-    @Autowired
-    private DeviceRepository deviceRepository;
+    private static final String DEFAULT_EPOCH = "AAAAAAAAAA";
+    private static final String UPDATED_EPOCH = "BBBBBBBBBB";
 
     @Autowired
     private DeviceDataRepository deviceDataRepository;
 
     @Autowired
     private DeviceDataMapper deviceDataMapper;
-
-    @Autowired
-    private DeviceService deviceService;
 
     @Autowired
     private DeviceDataService deviceDataService;
@@ -83,11 +62,7 @@ public class DeviceDataResourceIT {
     @Autowired
     private Validator validator;
 
-    private MockMvc restDeviceMockMvc;
-
     private MockMvc restDeviceDataMockMvc;
-
-    private Device device;
 
     private DeviceData deviceData;
 
@@ -110,20 +85,11 @@ public class DeviceDataResourceIT {
      * if they test an entity which requires the current entity.
      */
     public static DeviceData createEntity() {
-        return new DeviceData()
+        DeviceData deviceData = new DeviceData()
             .deviceId(DEFAULT_DEVICE_ID)
-            .sensorData(DEFAULT_SENSOR_DATA)
             .epoch(DEFAULT_EPOCH);
+        return deviceData;
     }
-
-    public static Device createSubEntity() {
-        return new Device()
-            .deviceId(DEFAULT_DEVICE_ID)
-            .ownerId(DEFAULT_OWNER_ID)
-            .created(DEFAULT_CREATED)
-            .purchased(DEFAULT_PURCHASED);
-    }
-
     /**
      * Create an updated entity for this test.
      *
@@ -131,19 +97,16 @@ public class DeviceDataResourceIT {
      * if they test an entity which requires the current entity.
      */
     public static DeviceData createUpdatedEntity() {
-        return new DeviceData()
+        DeviceData deviceData = new DeviceData()
             .deviceId(UPDATED_DEVICE_ID)
-            .sensorData(UPDATED_SENSOR_DATA)
             .epoch(UPDATED_EPOCH);
+        return deviceData;
     }
 
     @BeforeEach
     public void initTest() {
         deviceDataRepository.deleteAll();
-        deviceRepository.deleteAll();
         deviceData = createEntity();
-        device = createSubEntity();
-        deviceRepository.save(device);
     }
 
     @Test
@@ -152,7 +115,6 @@ public class DeviceDataResourceIT {
 
         // Create the DeviceData
         DeviceDataDTO deviceDataDTO = deviceDataMapper.toDto(deviceData);
-
         restDeviceDataMockMvc.perform(post("/api/device-data")
             .contentType(TestUtil.APPLICATION_JSON_UTF8)
             .content(TestUtil.convertObjectToJsonBytes(deviceDataDTO)))
@@ -239,7 +201,7 @@ public class DeviceDataResourceIT {
     @Test
     public void getDeviceData() throws Exception {
         // Initialize the database
-        deviceData = deviceDataRepository.save(deviceData);
+        deviceDataRepository.save(deviceData);
 
         // Get the deviceData
         restDeviceDataMockMvc.perform(get("/api/device-data/{id}", deviceData.getId()))
@@ -267,6 +229,7 @@ public class DeviceDataResourceIT {
         // Update the deviceData
         DeviceData updatedDeviceData = deviceDataRepository.findById(deviceData.getId()).get();
         updatedDeviceData
+            .deviceId(UPDATED_DEVICE_ID)
             .epoch(UPDATED_EPOCH);
         DeviceDataDTO deviceDataDTO = deviceDataMapper.toDto(updatedDeviceData);
 
@@ -279,7 +242,7 @@ public class DeviceDataResourceIT {
         List<DeviceData> deviceDataList = deviceDataRepository.findAll();
         assertThat(deviceDataList).hasSize(databaseSizeBeforeUpdate);
         DeviceData testDeviceData = deviceDataList.get(deviceDataList.size() - 1);
-        assertThat(testDeviceData.getDeviceId()).isEqualTo(DEFAULT_DEVICE_ID);
+        assertThat(testDeviceData.getDeviceId()).isEqualTo(UPDATED_DEVICE_ID);
         assertThat(testDeviceData.getEpoch()).isEqualTo(UPDATED_EPOCH);
     }
 

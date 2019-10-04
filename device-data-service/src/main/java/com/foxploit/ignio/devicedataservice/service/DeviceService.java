@@ -21,14 +21,6 @@ public interface DeviceService {
     DeviceDTO save(DeviceDTO deviceDTO);
 
     /**
-     * Update a device.
-     *
-     * @param deviceDTO the entity to update.
-     * @return the persisted entity.
-     */
-    DeviceDTO update(DeviceDTO deviceDTO);
-
-    /**
      * Get all the devices.
      *
      * @param pageable the pagination information.

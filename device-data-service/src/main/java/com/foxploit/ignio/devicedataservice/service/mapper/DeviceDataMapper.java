@@ -11,6 +11,9 @@ import org.mapstruct.*;
 @Mapper(componentModel = "spring", uses = {})
 public interface DeviceDataMapper extends EntityMapper<DeviceDataDTO, DeviceData> {
 
+
+    @Mapping(target = "sensorData", ignore = true)
+    @Mapping(target = "removeSensorData", ignore = true)
     DeviceData toEntity(DeviceDataDTO deviceDataDTO);
 
     default DeviceData fromId(String id) {
