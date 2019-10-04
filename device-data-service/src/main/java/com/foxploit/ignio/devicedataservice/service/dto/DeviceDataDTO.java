@@ -1,7 +1,12 @@
 package com.foxploit.ignio.devicedataservice.service.dto;
+
+import com.foxploit.ignio.devicedataservice.domain.SensorData;
+
 import javax.validation.constraints.*;
 import java.io.Serializable;
+import java.util.HashSet;
 import java.util.Objects;
+import java.util.Set;
 
 /**
  * A DTO for the {@link com.foxploit.ignio.devicedataservice.domain.DeviceData} entity.
@@ -14,8 +19,10 @@ public class DeviceDataDTO implements Serializable {
     private String deviceId;
 
     @NotNull
-    private String epoch;
+    private Set<SensorData> sensorData = new HashSet<>();
 
+    @NotNull
+    private String epoch;
 
     public String getId() {
         return id;
@@ -31,6 +38,14 @@ public class DeviceDataDTO implements Serializable {
 
     public void setDeviceId(String deviceId) {
         this.deviceId = deviceId;
+    }
+
+    public Set<SensorData> getSensorData() {
+        return sensorData;
+    }
+
+    public void setSensorData(Set<SensorData> sensorData) {
+        this.sensorData = sensorData;
     }
 
     public String getEpoch() {
@@ -64,10 +79,6 @@ public class DeviceDataDTO implements Serializable {
 
     @Override
     public String toString() {
-        return "DeviceDataDTO{" +
-            "id=" + getId() +
-            ", deviceId='" + getDeviceId() + "'" +
-            ", epoch='" + getEpoch() + "'" +
-            "}";
+        return "DeviceDataDTO{" + "id=" + getId() + ", deviceId='" + getDeviceId() + "'" + ", sensorData=" + getSensorData().toString() + ", epoch='" + getEpoch() + "'" + "}";
     }
 }

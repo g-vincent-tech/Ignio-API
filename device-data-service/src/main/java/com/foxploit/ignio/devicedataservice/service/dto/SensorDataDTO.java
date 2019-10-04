@@ -1,4 +1,5 @@
 package com.foxploit.ignio.devicedataservice.service.dto;
+
 import javax.validation.constraints.*;
 import java.io.Serializable;
 import java.util.Objects;
@@ -27,7 +28,6 @@ public class SensorDataDTO implements Serializable {
 
     @NotNull
     private String epoch;
-
 
     public String getId() {
         return id;
@@ -108,14 +108,7 @@ public class SensorDataDTO implements Serializable {
 
     @Override
     public String toString() {
-        return "SensorDataDTO{" +
-            "id=" + getId() +
-            ", deviceId='" + getDeviceId() + "'" +
-            ", temperature=" + getTemperature() +
-            ", co_ppm=" + getCo_ppm() +
-            ", lp_gas_ppm=" + getLp_gas_ppm() +
-            ", particle_ppm=" + getParticle_ppm() +
-            ", epoch='" + getEpoch() + "'" +
-            "}";
+        return "SensorDataDTO{" + "id=" + getId() + ", deviceId='" + getDeviceId() + "'" + ", temperature=" + getTemperature() + ", co_ppm=" + getCo_ppm() + ", lp_gas_ppm=" + getLp_gas_ppm() + ", particle_ppm=" + getParticle_ppm() + ", epoch='" + getEpoch() + "'" + "}";
     }
+
 }

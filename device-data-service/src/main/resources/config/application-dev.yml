@@ -37,14 +37,14 @@ spring:
     restart:
       enabled: true
     livereload:
-      enabled: false # we use Webpack dev server + BrowserSync for livereload
+      enabled: true # we use Webpack dev server + BrowserSync for livereload
   jackson:
     serialization:
       indent-output: true
   data:
     mongodb:
       uri: mongodb://localhost:27017
-      database: devicedataservice
+      database: Ignio-DeviceStore
   mail:
     host: localhost
     port: 25

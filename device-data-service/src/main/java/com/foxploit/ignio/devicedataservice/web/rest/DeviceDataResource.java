@@ -14,7 +14,8 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
-import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
+import org.springframework.util.MultiValueMap;
+import org.springframework.web.util.UriComponentsBuilder;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -68,6 +69,7 @@ public class DeviceDataResource {
      * {@code PUT  /device-data} : Updates an existing deviceData.
      *
      * @param deviceDataDTO the deviceDataDTO to update.
+     * @request_body id of the deviceDataDTO
      * @return the {@link ResponseEntity} with status {@code 200 (OK)} and with body the updated deviceDataDTO,
      * or with status {@code 400 (Bad Request)} if the deviceDataDTO is not valid,
      * or with status {@code 500 (Internal Server Error)} if the deviceDataDTO couldn't be updated.
@@ -88,16 +90,16 @@ public class DeviceDataResource {
     /**
      * {@code GET  /device-data} : get all the deviceData.
      *
-
      * @param pageable the pagination information.
-
+     * @param queryParams a {@link MultiValueMap} query parameters.
+     * @param uriBuilder a {@link UriComponentsBuilder} URI builder.
      * @return the {@link ResponseEntity} with status {@code 200 (OK)} and the list of deviceData in body.
      */
     @GetMapping("/device-data")
-    public ResponseEntity<List<DeviceDataDTO>> getAllDeviceData(Pageable pageable) {
+    public ResponseEntity<List<DeviceDataDTO>> getAllDeviceData(Pageable pageable, @RequestParam MultiValueMap<String, String> queryParams, UriComponentsBuilder uriBuilder) {
         log.debug("REST request to get a page of DeviceData");
         Page<DeviceDataDTO> page = deviceDataService.findAll(pageable);
-        HttpHeaders headers = PaginationUtil.generatePaginationHttpHeaders(ServletUriComponentsBuilder.fromCurrentRequest(), page);
+        HttpHeaders headers = PaginationUtil.generatePaginationHttpHeaders(uriBuilder.queryParams(queryParams), page);
         return ResponseEntity.ok().headers(headers).body(page.getContent());
     }
 

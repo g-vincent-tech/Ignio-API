@@ -43,4 +43,13 @@ public interface SensorDataService {
      * @param id the id of the entity.
      */
     void delete(String id);
+
+    /**
+     * Get all the sensorData by deviceId
+     *
+     * @param pageable the pagination information.
+     * @param deviceId the deviceId os sensorData.
+     * @return the list of entities.
+     */
+    Page<SensorDataDTO> findByDeviceId(Pageable pageable, String deviceId);
 }

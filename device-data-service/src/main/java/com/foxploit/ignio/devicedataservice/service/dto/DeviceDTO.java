@@ -1,4 +1,5 @@
 package com.foxploit.ignio.devicedataservice.service.dto;
+
 import java.time.LocalDate;
 import javax.validation.constraints.*;
 import java.io.Serializable;
@@ -19,7 +20,6 @@ public class DeviceDTO implements Serializable {
     private LocalDate created;
 
     private LocalDate purchased;
-
 
     public String getId() {
         return id;
@@ -84,12 +84,7 @@ public class DeviceDTO implements Serializable {
 
     @Override
     public String toString() {
-        return "DeviceDTO{" +
-            "id=" + getId() +
-            ", deviceId='" + getDeviceId() + "'" +
-            ", ownerId='" + getOwnerId() + "'" +
-            ", created='" + getCreated() + "'" +
-            ", purchased='" + getPurchased() + "'" +
-            "}";
+        return "DeviceDTO{" + "id=" + getId() + ", deviceId='" + getDeviceId() + "'" + ", ownerId='" + getOwnerId() + "'" + ", created='" + getCreated() + "'" + ", purchased='" + getPurchased() + "'" + "}";
     }
+
 }

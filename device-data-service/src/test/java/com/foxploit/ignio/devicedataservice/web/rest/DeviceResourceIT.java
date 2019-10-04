@@ -32,24 +32,22 @@ import static org.springframework.test.web.servlet.request.MockMvcRequestBuilder
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 
 /**
- * Integration tests for the {@link DeviceResource} REST controller.
+ * Integration tests for the {@Link DeviceResource} REST controller.
  */
 @SpringBootTest(classes = DevicedataserviceApp.class)
 public class DeviceResourceIT {
 
-    private static final String DEFAULT_DEVICE_ID = "AAAAAAAAAA";
-    private static final String UPDATED_DEVICE_ID = "BBBBBBBBBB";
+    private static final String DEFAULT_DEVICE_ID = "NODEIGNIOF105";
+    private static final String UPDATED_DEVICE_ID = "NODEIGNIOF106";
 
-    private static final String DEFAULT_OWNER_ID = "AAAAAAAAAA";
-    private static final String UPDATED_OWNER_ID = "BBBBBBBBBB";
+    private static final String DEFAULT_OWNER_ID = "CONSMRIGNIOF1";
+    private static final String UPDATED_OWNER_ID = "CONSMRIGNIOF2";
 
     private static final LocalDate DEFAULT_CREATED = LocalDate.ofEpochDay(0L);
     private static final LocalDate UPDATED_CREATED = LocalDate.now(ZoneId.systemDefault());
-    private static final LocalDate SMALLER_CREATED = LocalDate.ofEpochDay(-1L);
 
     private static final LocalDate DEFAULT_PURCHASED = LocalDate.ofEpochDay(0L);
     private static final LocalDate UPDATED_PURCHASED = LocalDate.now(ZoneId.systemDefault());
-    private static final LocalDate SMALLER_PURCHASED = LocalDate.ofEpochDay(-1L);
 
     @Autowired
     private DeviceRepository deviceRepository;
@@ -95,12 +93,11 @@ public class DeviceResourceIT {
      * if they test an entity which requires the current entity.
      */
     public static Device createEntity() {
-        Device device = new Device()
+        return new Device()
             .deviceId(DEFAULT_DEVICE_ID)
             .ownerId(DEFAULT_OWNER_ID)
             .created(DEFAULT_CREATED)
             .purchased(DEFAULT_PURCHASED);
-        return device;
     }
     /**
      * Create an updated entity for this test.
@@ -109,12 +106,11 @@ public class DeviceResourceIT {
      * if they test an entity which requires the current entity.
      */
     public static Device createUpdatedEntity() {
-        Device device = new Device()
+        return new Device()
             .deviceId(UPDATED_DEVICE_ID)
             .ownerId(UPDATED_OWNER_ID)
             .created(UPDATED_CREATED)
             .purchased(UPDATED_PURCHASED);
-        return device;
     }
 
     @BeforeEach
@@ -231,7 +227,6 @@ public class DeviceResourceIT {
         // Update the device
         Device updatedDevice = deviceRepository.findById(device.getId()).get();
         updatedDevice
-            .deviceId(UPDATED_DEVICE_ID)
             .ownerId(UPDATED_OWNER_ID)
             .created(UPDATED_CREATED)
             .purchased(UPDATED_PURCHASED);
@@ -246,7 +241,7 @@ public class DeviceResourceIT {
         List<Device> deviceList = deviceRepository.findAll();
         assertThat(deviceList).hasSize(databaseSizeBeforeUpdate);
         Device testDevice = deviceList.get(deviceList.size() - 1);
-        assertThat(testDevice.getDeviceId()).isEqualTo(UPDATED_DEVICE_ID);
+        assertThat(testDevice.getDeviceId()).isEqualTo(DEFAULT_DEVICE_ID);
         assertThat(testDevice.getOwnerId()).isEqualTo(UPDATED_OWNER_ID);
         assertThat(testDevice.getCreated()).isEqualTo(UPDATED_CREATED);
         assertThat(testDevice.getPurchased()).isEqualTo(UPDATED_PURCHASED);

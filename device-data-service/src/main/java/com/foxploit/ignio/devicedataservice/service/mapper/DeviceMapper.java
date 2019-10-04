@@ -11,8 +11,6 @@ import org.mapstruct.*;
 @Mapper(componentModel = "spring", uses = {})
 public interface DeviceMapper extends EntityMapper<DeviceDTO, Device> {
 
-
-
     default Device fromId(String id) {
         if (id == null) {
             return null;
