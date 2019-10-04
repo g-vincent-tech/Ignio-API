@@ -14,7 +14,6 @@ import java.util.Date;
 /**
  * Service Implementation for managing Predictions.
  */
-
 @Service
 @Component
 public class PredictServiceImpl implements PredictService {
@@ -23,9 +22,9 @@ public class PredictServiceImpl implements PredictService {
 
     private static final SimpleDateFormat dateFormat = new SimpleDateFormat("dd-M-yyyy HH:mm:ss");
 
-    @Scheduled(fixedRate = 30000)
+    @Scheduled(fixedRate = 120000)
     public void predict() {
-        log.info("The Prediction Service Initiated {}", dateFormat.format(new Date()));
+        log.info("The Prediction Task Initiated {}", dateFormat.format(new Date()));
     }
 
 }
