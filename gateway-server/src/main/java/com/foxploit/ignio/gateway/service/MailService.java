@@ -1,7 +1,13 @@
 package com.foxploit.ignio.gateway.service;
 
 import com.foxploit.ignio.gateway.domain.User;
+
 import io.github.jhipster.config.JHipsterProperties;
+
+import java.nio.charset.StandardCharsets;
+import java.util.Locale;
+import javax.mail.internet.MimeMessage;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.context.MessageSource;
@@ -12,10 +18,6 @@ import org.springframework.stereotype.Service;
 import org.thymeleaf.context.Context;
 import org.thymeleaf.spring5.SpringTemplateEngine;
 
-import javax.mail.internet.MimeMessage;
-import java.nio.charset.StandardCharsets;
-import java.util.Locale;
-
 /**
  * Service for sending emails.
  * <p>
@@ -24,9 +26,12 @@ import java.util.Locale;
 @Service
 public class MailService {
 
-    private static final String USER = "user";
-    private static final String BASE_URL = "baseUrl";
     private final Logger log = LoggerFactory.getLogger(MailService.class);
+
+    private static final String USER = "user";
+
+    private static final String BASE_URL = "baseUrl";
+
     private final JHipsterProperties jHipsterProperties;
 
     private final JavaMailSender javaMailSender;
@@ -35,7 +40,8 @@ public class MailService {
 
     private final SpringTemplateEngine templateEngine;
 
-    public MailService(JHipsterProperties jHipsterProperties, JavaMailSender javaMailSender, MessageSource messageSource, SpringTemplateEngine templateEngine) {
+    public MailService(JHipsterProperties jHipsterProperties, JavaMailSender javaMailSender,
+            MessageSource messageSource, SpringTemplateEngine templateEngine) {
 
         this.jHipsterProperties = jHipsterProperties;
         this.javaMailSender = javaMailSender;
@@ -45,11 +51,12 @@ public class MailService {
 
     @Async
     public void sendEmail(String to, String subject, String content, boolean isMultipart, boolean isHtml) {
-        log.debug("Send email[multipart '{}' and html '{}'] to '{}' with subject '{}' and content={}", isMultipart, isHtml, to, subject, content);
+        log.debug("Send email[multipart '{}' and html '{}'] to '{}' with subject '{}' and content={}",
+            isMultipart, isHtml, to, subject, content);
 
         // Prepare message using a Spring helper
         MimeMessage mimeMessage = javaMailSender.createMimeMessage();
-        try{
+        try {
             MimeMessageHelper message = new MimeMessageHelper(mimeMessage, isMultipart, StandardCharsets.UTF_8.name());
             message.setTo(to);
             message.setFrom(jHipsterProperties.getMail().getFrom());
@@ -86,13 +93,7 @@ public class MailService {
     @Async
     public void sendCreationEmail(User user) {
         log.debug("Sending creation email to '{}'", user.getEmail());
-        sendEmailFromTemplate(user, "mail/creationEmail", "email.creation.title");
-    }
-
-    @Async
-    public void sendActivatedEmail(User user) {
-        log.debug("Sending activation success email to '{}'", user.getEmail());
-        sendEmailFromTemplate(user, "mail/activatedEmail", "email.activated.title");
+        sendEmailFromTemplate(user, "mail/creationEmail", "email.activation.title");
     }
 
     @Async

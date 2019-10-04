@@ -6,7 +6,6 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.index.Indexed;
-import org.springframework.data.mongodb.core.mapping.DBRef;
 import org.springframework.data.mongodb.core.mapping.Field;
 
 import javax.validation.constraints.Email;
@@ -79,10 +78,6 @@ public class User extends AbstractAuditingEntity implements Serializable {
 
     @JsonIgnore
     private Set<Authority> authorities = new HashSet<>();
-
-    @DBRef
-    @Field("billing_info")
-    private BillingInfo billingInfo;
 
     public String getId() {
         return id;
@@ -189,14 +184,6 @@ public class User extends AbstractAuditingEntity implements Serializable {
         this.authorities = authorities;
     }
 
-    public BillingInfo getBillingInfo() {
-        return billingInfo;
-    }
-
-    public void setBillingInfo(BillingInfo billingInfo) {
-        this.billingInfo = billingInfo;
-    }
-
     @Override
     public boolean equals(Object o) {
         if (this == o) {
@@ -224,7 +211,6 @@ public class User extends AbstractAuditingEntity implements Serializable {
             ", activated='" + activated + '\'' +
             ", langKey='" + langKey + '\'' +
             ", activationKey='" + activationKey + '\'' +
-            ", billingInfo='" + billingInfo + '\'' +
             "}";
     }
 }

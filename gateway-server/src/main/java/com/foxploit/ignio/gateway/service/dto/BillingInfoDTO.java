@@ -1,7 +1,6 @@
 package com.foxploit.ignio.gateway.service.dto;
 import java.io.Serializable;
 import java.util.Objects;
-import java.util.Set;
 
 /**
  * A DTO for the {@link com.foxploit.ignio.gateway.domain.BillingInfo} entity.
@@ -10,7 +9,7 @@ public class BillingInfoDTO implements Serializable {
 
     private String id;
 
-    private Set<String> ignios;
+    private String ignios;
 
     private Long creditCardNumber;
 
@@ -28,6 +27,7 @@ public class BillingInfoDTO implements Serializable {
 
     private Integer postalCode;
 
+
     public String getId() {
         return id;
     }
@@ -36,11 +36,11 @@ public class BillingInfoDTO implements Serializable {
         this.id = id;
     }
 
-    public Set<String> getIgnios() {
+    public String getIgnios() {
         return ignios;
     }
 
-    public void setIgnios(Set<String> ignios) {
+    public void setIgnios(String ignios) {
         this.ignios = ignios;
     }
 
