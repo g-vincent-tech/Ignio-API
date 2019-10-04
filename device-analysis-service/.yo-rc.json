@@ -3,7 +3,7 @@
     "promptValues": {
       "packageName": "com.foxploit.ignio.deviceanalysisservice"
     },
-    "jhipsterVersion": "6.2.0",
+    "jhipsterVersion": "6.3.1",
     "applicationType": "microservice",
     "baseName": "deviceanalysisservice",
     "packageName": "com.foxploit.ignio.deviceanalysisservice",
@@ -33,6 +33,7 @@
     "clientPackageManager": "npm",
     "blueprints": [],
     "skipClient": true,
-    "skipUserManagement": true
+    "skipUserManagement": true,
+    "embeddableLaunchScript": false
   }
 }
