@@ -3,24 +3,31 @@ package com.foxploit.ignio.gateway.web.rest;
 
 import com.foxploit.ignio.gateway.domain.User;
 import com.foxploit.ignio.gateway.repository.UserRepository;
+import com.foxploit.ignio.gateway.security.AuthoritiesConstants;
 import com.foxploit.ignio.gateway.security.SecurityUtils;
 import com.foxploit.ignio.gateway.service.MailService;
 import com.foxploit.ignio.gateway.service.UserService;
 import com.foxploit.ignio.gateway.service.dto.PasswordChangeDTO;
 import com.foxploit.ignio.gateway.service.dto.UserDTO;
-import com.foxploit.ignio.gateway.web.rest.errors.*;
+import com.foxploit.ignio.gateway.web.rest.errors.EmailAlreadyUsedException;
+import com.foxploit.ignio.gateway.web.rest.errors.EmailNotFoundException;
+import com.foxploit.ignio.gateway.web.rest.errors.InvalidPasswordException;
+import com.foxploit.ignio.gateway.web.rest.errors.LoginAlreadyUsedException;
 import com.foxploit.ignio.gateway.web.rest.vm.KeyAndPasswordVM;
 import com.foxploit.ignio.gateway.web.rest.vm.ManagedUserVM;
-
+import io.github.jhipster.web.util.HeaderUtil;
+import io.github.jhipster.web.util.ResponseUtil;
 import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
-import java.util.*;
+import java.util.Optional;
 
 /**
  * REST controller for managing the current user's account.
@@ -65,7 +72,9 @@ public class AccountResource {
             throw new InvalidPasswordException();
         }
         User user = userService.registerUser(managedUserVM, managedUserVM.getPassword());
-        mailService.sendActivationEmail(user);
+        if(!user.getActivated()){
+            mailService.sendActivationEmail(user);
+        }
     }
 
     /**
@@ -79,6 +88,8 @@ public class AccountResource {
         Optional<User> user = userService.activateRegistration(key);
         if (!user.isPresent()) {
             throw new AccountResourceException("No user was found for this activation key");
+        }else{
+            mailService.sendActivatedEmail(user.get());
         }
     }
 
@@ -127,6 +138,27 @@ public class AccountResource {
         }
         userService.updateUser(userDTO.getFirstName(), userDTO.getLastName(), userDTO.getEmail(),
             userDTO.getLangKey(), userDTO.getImageUrl());
+    }
+
+    /**
+     * {@code PUT  /account} : update the current user information.
+     *
+     * @param userDTO the current user information.
+     * @throws RuntimeException {@code 500 (Internal Server Error)} if the user login wasn't found.
+     */
+    @PutMapping("/account")
+    @PreAuthorize("hasRole(\"" + AuthoritiesConstants.USER + "\")")
+    public ResponseEntity<UserDTO> updateAccount(@Valid @RequestBody UserDTO userDTO) {
+        String userLogin = SecurityUtils.getCurrentUserLogin().orElseThrow(() -> new AccountResourceException("Current user login not found"));
+        Optional<User> existingUser = userRepository.findOneByEmailIgnoreCase(userDTO.getEmail());
+        Optional<User> user = userRepository.findOneByLogin(userLogin);
+        if (!user.isPresent()) {
+            throw new AccountResourceException("User account could not be found");
+        }
+        Optional<UserDTO> updatedUser = userService.updateUserAccount(userDTO);
+
+        return ResponseUtil.wrapOrNotFound(updatedUser,
+            HeaderUtil.createAlert("Ignio Gateway Server", "A user is updated with identifier " + userDTO.getLogin(), userDTO.getLogin()));
     }
 
     /**

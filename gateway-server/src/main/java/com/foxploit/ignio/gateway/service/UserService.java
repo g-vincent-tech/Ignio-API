@@ -4,12 +4,15 @@ import com.foxploit.ignio.gateway.config.Constants;
 import com.foxploit.ignio.gateway.domain.Authority;
 import com.foxploit.ignio.gateway.domain.User;
 import com.foxploit.ignio.gateway.repository.AuthorityRepository;
+import com.foxploit.ignio.gateway.repository.BillingInfoRepository;
 import com.foxploit.ignio.gateway.repository.UserRepository;
 import com.foxploit.ignio.gateway.security.AuthoritiesConstants;
 import com.foxploit.ignio.gateway.security.SecurityUtils;
 import com.foxploit.ignio.gateway.service.dto.UserDTO;
 import com.foxploit.ignio.gateway.service.util.RandomUtil;
-
+import com.foxploit.ignio.gateway.web.rest.errors.EmailAlreadyUsedException;
+import com.foxploit.ignio.gateway.web.rest.errors.InvalidPasswordException;
+import com.foxploit.ignio.gateway.web.rest.errors.LoginAlreadyUsedException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.data.domain.Page;
@@ -20,7 +23,10 @@ import org.springframework.stereotype.Service;
 
 import java.time.Instant;
 import java.time.temporal.ChronoUnit;
-import java.util.*;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Optional;
+import java.util.Set;
 import java.util.stream.Collectors;
 
 /**
@@ -33,12 +39,15 @@ public class UserService {
 
     private final UserRepository userRepository;
 
+    private final BillingInfoRepository billingInfoRepository;
+
     private final PasswordEncoder passwordEncoder;
 
     private final AuthorityRepository authorityRepository;
 
-    public UserService(UserRepository userRepository, PasswordEncoder passwordEncoder, AuthorityRepository authorityRepository) {
+    public UserService(UserRepository userRepository, BillingInfoRepository billingInfoRepository, PasswordEncoder passwordEncoder, AuthorityRepository authorityRepository) {
         this.userRepository = userRepository;
+        this.billingInfoRepository = billingInfoRepository;
         this.passwordEncoder = passwordEncoder;
         this.authorityRepository = authorityRepository;
     }
@@ -84,7 +93,7 @@ public class UserService {
         userRepository.findOneByLogin(userDTO.getLogin().toLowerCase()).ifPresent(existingUser -> {
             boolean removed = removeNonActivatedUser(existingUser);
             if (!removed) {
-                throw new UsernameAlreadyUsedException();
+                throw new LoginAlreadyUsedException();
             }
         });
         userRepository.findOneByEmailIgnoreCase(userDTO.getEmail()).ifPresent(existingUser -> {
@@ -174,6 +183,33 @@ public class UserService {
                 userRepository.save(user);
                 log.debug("Changed Information for User: {}", user);
             });
+    }
+
+    /**
+     * Update certain information for a specific user, and return the modified user.
+     *
+     * @param userDTO user to update.
+     * @return updated user.
+     */
+    public Optional<UserDTO> updateUserAccount(UserDTO userDTO) {
+        return Optional.of(userRepository
+            .findById(userDTO.getId()))
+            .filter(Optional::isPresent)
+            .map(Optional::get)
+            .map(user -> {
+                user.setId(userDTO.getId());
+                user.setLogin(userDTO.getLogin());
+                user.setFirstName(userDTO.getFirstName());
+                user.setLastName(userDTO.getLastName());
+                user.setEmail(userDTO.getEmail().toLowerCase());
+                user.setImageUrl(userDTO.getImageUrl());
+                user.setLangKey(userDTO.getLangKey());
+                user.setBillingInfo(billingInfoRepository.save(userDTO.getBillingInfo()));
+                user = userRepository.save(user);
+                log.debug("Changed Information for User: {}", user);
+                return user;
+            })
+            .map(UserDTO::new);
     }
 
     /**

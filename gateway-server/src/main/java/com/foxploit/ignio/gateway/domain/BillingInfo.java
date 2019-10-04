@@ -4,6 +4,7 @@ import org.springframework.data.mongodb.core.mapping.Field;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 import java.io.Serializable;
+import java.util.Set;
 
 /**
  * A BillingInfo.
@@ -17,7 +18,7 @@ public class BillingInfo implements Serializable {
     private String id;
 
     @Field("ignios")
-    private String ignios;
+    private Set<String> ignios;
 
     @Field("credit_card_number")
     private Long creditCardNumber;
@@ -52,17 +53,27 @@ public class BillingInfo implements Serializable {
         this.id = id;
     }
 
-    public String getIgnios() {
+    public Set<String> getIgnios() {
         return ignios;
     }
 
-    public BillingInfo ignios(String ignios) {
+    public void setIgnios(Set<String> ignios) {
+        this.ignios = ignios;
+    }
+
+    public BillingInfo ignios(Set<String> ignios) {
         this.ignios = ignios;
         return this;
     }
 
-    public void setIgnios(String ignios) {
-        this.ignios = ignios;
+    public BillingInfo addIgnio(String ignio){
+        this.ignios.add(ignio);
+        return this;
+    }
+
+    public BillingInfo removeIgnio(String ignio){
+        this.ignios.remove(ignio);
+        return this;
     }
 
     public Long getCreditCardNumber() {
