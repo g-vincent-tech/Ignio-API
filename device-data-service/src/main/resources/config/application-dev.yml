@@ -37,14 +37,14 @@ spring:
     restart:
       enabled: true
     livereload:
-      enabled: true # we use Webpack dev server + BrowserSync for livereload
+      enabled: false # we use Webpack dev server + BrowserSync for livereload
   jackson:
     serialization:
       indent-output: true
   data:
     mongodb:
       uri: mongodb://localhost:27017
-      database: Ignio-DeviceStore
+      database: devicedataservice
   mail:
     host: localhost
     port: 25
@@ -92,7 +92,6 @@ jhipster:
         token-validity-in-seconds: 86400
         token-validity-in-seconds-for-remember-me: 2592000
   mail: # specific JHipster mail property, for standard properties see MailProperties
-    from: devicedataservice@localhost
     base-url: http://127.0.0.1:8081
   metrics:
     logs: # Reports metrics in the logs
@@ -105,6 +104,9 @@ jhipster:
       host: localhost
       port: 5000
       queue-size: 512
+  audit-events:
+    retention-period: 30 # Number of days before audit events are deleted.
+
 # ===================================================================
 # Application specific properties
 # Add your own application properties here, see the ApplicationProperties class

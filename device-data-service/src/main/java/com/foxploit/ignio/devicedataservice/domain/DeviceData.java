@@ -1,11 +1,8 @@
 package com.foxploit.ignio.devicedataservice.domain;
-
 import org.springframework.data.annotation.Id;
-import org.springframework.data.mongodb.core.index.Indexed;
 import org.springframework.data.mongodb.core.mapping.Field;
 import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.data.mongodb.core.mapping.DBRef;
-
 import javax.validation.constraints.*;
 
 import java.io.Serializable;
@@ -24,22 +21,18 @@ public class DeviceData implements Serializable {
     private String id;
 
     @NotNull
-    @Field("deviceId")
+    @Field("device_id")
     private String deviceId;
+
+    @NotNull
+    @Field("epoch")
+    private String epoch;
 
     @DBRef
     @Field("sensorData")
     private Set<SensorData> sensorData = new HashSet<>();
 
-    @NotNull
-    @Field("epoch")
-    @Indexed(name = "timestamp", expireAfterSeconds = 432000)
-    private String epoch;
-
-    public static long getSerialVersionUID() {
-        return serialVersionUID;
-    }
-
+    // jhipster-needle-entity-add-field - JHipster will add fields here, do not remove
     public String getId() {
         return id;
     }
@@ -52,21 +45,17 @@ public class DeviceData implements Serializable {
         return deviceId;
     }
 
-    public void setDeviceId(String deviceId) {
-        this.deviceId = deviceId;
-    }
-
     public DeviceData deviceId(String deviceId) {
         this.deviceId = deviceId;
         return this;
     }
 
-    public String getEpoch() {
-        return epoch;
+    public void setDeviceId(String deviceId) {
+        this.deviceId = deviceId;
     }
 
-    public void setEpoch(String epoch) {
-        this.epoch = epoch;
+    public String getEpoch() {
+        return epoch;
     }
 
     public DeviceData epoch(String epoch) {
@@ -74,12 +63,12 @@ public class DeviceData implements Serializable {
         return this;
     }
 
-    public Set<SensorData> getSensorData() {
-        return sensorData;
+    public void setEpoch(String epoch) {
+        this.epoch = epoch;
     }
 
-    public void setSensorData(Set<SensorData> sensorData) {
-        this.sensorData = sensorData;
+    public Set<SensorData> getSensorData() {
+        return sensorData;
     }
 
     public DeviceData sensorData(Set<SensorData> sensorData) {
@@ -89,13 +78,20 @@ public class DeviceData implements Serializable {
 
     public DeviceData addSensorData(SensorData sensorData) {
         this.sensorData.add(sensorData);
+        sensorData.setDeviceData(this);
         return this;
     }
 
     public DeviceData removeSensorData(SensorData sensorData) {
         this.sensorData.remove(sensorData);
+        sensorData.setDeviceData(null);
         return this;
     }
+
+    public void setSensorData(Set<SensorData> sensorData) {
+        this.sensorData = sensorData;
+    }
+    // jhipster-needle-entity-add-getters-setters - JHipster will add getters and setters here, do not remove
 
     @Override
     public boolean equals(Object o) {
@@ -115,7 +111,10 @@ public class DeviceData implements Serializable {
 
     @Override
     public String toString() {
-        return "DeviceData{" + "id=" + getId() + ", deviceId='" + getDeviceId() + "'" + ", sensorData=" + getSensorData().toString() + ", epoch='" + getEpoch() + "'" + "}";
+        return "DeviceData{" +
+            "id=" + getId() +
+            ", deviceId='" + getDeviceId() + "'" +
+            ", epoch='" + getEpoch() + "'" +
+            "}";
     }
-
 }

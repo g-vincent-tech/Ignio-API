@@ -27,7 +27,7 @@ spring:
     mongodb:
       host: localhost
       port: 0
-      database: Ignio-DeviceStore
+      database: devicedataservice
   mail:
     host: localhost
   main:
@@ -67,7 +67,6 @@ jhipster:
   logging:
     # To test json console appender
     use-json-format: true # By default, logs are in Json format
-    # To test logstash appender
     logstash:
       enabled: false
       host: localhost

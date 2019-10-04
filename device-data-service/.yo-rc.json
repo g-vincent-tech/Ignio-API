@@ -3,7 +3,7 @@
     "promptValues": {
       "packageName": "com.foxploit.ignio.devicedataservice"
     },
-    "jhipsterVersion": "6.1.2",
+    "jhipsterVersion": "6.3.1",
     "applicationType": "microservice",
     "baseName": "devicedataservice",
     "packageName": "com.foxploit.ignio.devicedataservice",
@@ -32,6 +32,8 @@
     "enableTranslation": false,
     "clientPackageManager": "npm",
     "skipClient": true,
-    "skipUserManagement": true
+    "skipUserManagement": true,
+    "embeddableLaunchScript": false,
+    "blueprints": []
   }
 }

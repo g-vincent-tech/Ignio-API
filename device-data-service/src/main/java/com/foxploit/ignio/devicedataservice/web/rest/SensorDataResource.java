@@ -14,8 +14,7 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
-import org.springframework.util.MultiValueMap;
-import org.springframework.web.util.UriComponentsBuilder;
+import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -89,16 +88,16 @@ public class SensorDataResource {
     /**
      * {@code GET  /sensor-data} : get all the sensorData.
      *
+
      * @param pageable the pagination information.
-     * @param queryParams a {@link MultiValueMap} query parameters.
-     * @param uriBuilder a {@link UriComponentsBuilder} URI builder.
+
      * @return the {@link ResponseEntity} with status {@code 200 (OK)} and the list of sensorData in body.
      */
     @GetMapping("/sensor-data")
-    public ResponseEntity<List<SensorDataDTO>> getAllSensorData(Pageable pageable, @RequestParam MultiValueMap<String, String> queryParams, UriComponentsBuilder uriBuilder) {
+    public ResponseEntity<List<SensorDataDTO>> getAllSensorData(Pageable pageable) {
         log.debug("REST request to get a page of SensorData");
         Page<SensorDataDTO> page = sensorDataService.findAll(pageable);
-        HttpHeaders headers = PaginationUtil.generatePaginationHttpHeaders(uriBuilder.queryParams(queryParams), page);
+        HttpHeaders headers = PaginationUtil.generatePaginationHttpHeaders(ServletUriComponentsBuilder.fromCurrentRequest(), page);
         return ResponseEntity.ok().headers(headers).body(page.getContent());
     }
 
@@ -113,23 +112,6 @@ public class SensorDataResource {
         log.debug("REST request to get SensorData : {}", id);
         Optional<SensorDataDTO> sensorDataDTO = sensorDataService.findOne(id);
         return ResponseUtil.wrapOrNotFound(sensorDataDTO);
-    }
-
-    /**
-     * {@code GET  /sensor-data/all/:deviceId} : get the "deviceId" sensorData.
-     *
-     * @param pageable the pagination information.
-     * @param queryParams a {@link MultiValueMap} query parameters.
-     * @param uriBuilder a {@link UriComponentsBuilder} URI builder.
-     * @param deviceId the deviceId of the sensorDataDTO to retrieve.
-     * @return the {@link ResponseEntity} with status {@code 200 (OK)} and with body the sensorDataDTO, or with status {@code 404 (Not Found)}.
-     */
-    @GetMapping("/sensor-data/all/{deviceId}")
-    public ResponseEntity<List<SensorDataDTO>> getAllSensorDataByDeviceId(Pageable pageable, @RequestParam MultiValueMap<String, String> queryParams, UriComponentsBuilder uriBuilder, @PathVariable String deviceId) {
-        log.debug("REST request to get a page of SensorData by deviceId : {}", deviceId);
-        Page<SensorDataDTO> page = sensorDataService.findByDeviceId(pageable, deviceId);
-        HttpHeaders headers = PaginationUtil.generatePaginationHttpHeaders(uriBuilder.queryParams(queryParams), page);
-        return ResponseEntity.ok().headers(headers).body(page.getContent());
     }
 
     /**

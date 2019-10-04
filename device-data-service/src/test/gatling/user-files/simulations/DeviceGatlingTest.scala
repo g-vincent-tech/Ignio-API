@@ -63,12 +63,12 @@ class DeviceGatlingTest extends Simulation {
         .pause(10)
         .repeat(2) {
             exec(http("Get all devices")
-            .get("/devicedataservice/api/devices")
+            .get("/services/devicedataservice/api/devices")
             .headers(headers_http_authenticated)
             .check(status.is(200)))
             .pause(10 seconds, 20 seconds)
             .exec(http("Create new device")
-            .post("/devicedataservice/api/devices")
+            .post("/services/devicedataservice/api/devices")
             .headers(headers_http_authenticated)
             .body(StringBody("""{
                 "id":null
@@ -82,12 +82,12 @@ class DeviceGatlingTest extends Simulation {
             .pause(10)
             .repeat(5) {
                 exec(http("Get created device")
-                .get("/devicedataservice${new_device_url}")
+                .get("/services/devicedataservice${new_device_url}")
                 .headers(headers_http_authenticated))
                 .pause(10)
             }
             .exec(http("Delete created device")
-            .delete("/devicedataservice${new_device_url}")
+            .delete("/services/devicedataservice${new_device_url}")
             .headers(headers_http_authenticated))
             .pause(10)
         }
