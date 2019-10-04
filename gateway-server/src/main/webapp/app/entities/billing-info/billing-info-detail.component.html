@@ -1,0 +1,59 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="billingInfo">
+            <h2><span>Billing Info</span> {{billingInfo.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span>Ignios</span></dt>
+                <dd>
+                    <span>{{billingInfo.ignios}}</span>
+                </dd>
+                <dt><span>Credit Card Number</span></dt>
+                <dd>
+                    <span>{{billingInfo.creditCardNumber}}</span>
+                </dd>
+                <dt><span>Credit Card Type</span></dt>
+                <dd>
+                    <span>{{billingInfo.creditCardType}}</span>
+                </dd>
+                <dt><span>Cvv 2</span></dt>
+                <dd>
+                    <span>{{billingInfo.cvv2}}</span>
+                </dd>
+                <dt><span>Expires On</span></dt>
+                <dd>
+                    <span>{{billingInfo.expiresOn}}</span>
+                </dd>
+                <dt><span>Billing Address</span></dt>
+                <dd>
+                    <span>{{billingInfo.billingAddress}}</span>
+                </dd>
+                <dt><span>City</span></dt>
+                <dd>
+                    <span>{{billingInfo.city}}</span>
+                </dd>
+                <dt><span>Country</span></dt>
+                <dd>
+                    <span>{{billingInfo.country}}</span>
+                </dd>
+                <dt><span>Postal Code</span></dt>
+                <dd>
+                    <span>{{billingInfo.postalCode}}</span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/billing-info', billingInfo.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

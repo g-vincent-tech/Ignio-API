@@ -1,0 +1,47 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="sensorData">
+            <h2><span>Sensor Data</span> {{sensorData.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span>Device Id</span></dt>
+                <dd>
+                    <span>{{sensorData.deviceId}}</span>
+                </dd>
+                <dt><span>Temperature</span></dt>
+                <dd>
+                    <span>{{sensorData.temperature}}</span>
+                </dd>
+                <dt><span>Co Ppm</span></dt>
+                <dd>
+                    <span>{{sensorData.co_ppm}}</span>
+                </dd>
+                <dt><span>Lp Gas Ppm</span></dt>
+                <dd>
+                    <span>{{sensorData.lp_gas_ppm}}</span>
+                </dd>
+                <dt><span>Particle Ppm</span></dt>
+                <dd>
+                    <span>{{sensorData.particle_ppm}}</span>
+                </dd>
+                <dt><span>Epoch</span></dt>
+                <dd>
+                    <span>{{sensorData.epoch}}</span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/sensor-data', sensorData.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,50 @@
+{
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "relationships": [],
+    "fields": [
+        {
+            "fieldName": "ignios",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "creditCardNumber",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "creditCardType",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "cvv2",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "expiresOn",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "billingAddress",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "city",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "country",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "postalCode",
+            "fieldType": "Integer"
+        }
+    ],
+    "dto": "mapstruct",
+    "searchEngine": false,
+    "service": "serviceImpl",
+    "entityTableName": "billing_info",
+    "databaseType": "mongodb",
+    "jpaMetamodelFiltering": false,
+    "pagination": "pagination"
+}
