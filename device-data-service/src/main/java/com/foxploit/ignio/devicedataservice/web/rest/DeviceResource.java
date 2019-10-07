@@ -1,9 +1,8 @@
 package com.foxploit.ignio.devicedataservice.web.rest;
 
 import com.foxploit.ignio.devicedataservice.service.DeviceService;
-import com.foxploit.ignio.devicedataservice.web.rest.errors.BadRequestAlertException;
 import com.foxploit.ignio.devicedataservice.service.dto.DeviceDTO;
-
+import com.foxploit.ignio.devicedataservice.web.rest.errors.BadRequestAlertException;
 import io.github.jhipster.web.util.HeaderUtil;
 import io.github.jhipster.web.util.PaginationUtil;
 import io.github.jhipster.web.util.ResponseUtil;
@@ -13,16 +12,14 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.http.HttpHeaders;
-import org.springframework.http.HttpStatus;
-import org.springframework.util.MultiValueMap;
-import org.springframework.web.util.UriComponentsBuilder;
 import org.springframework.http.ResponseEntity;
+import org.springframework.util.MultiValueMap;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.util.UriComponentsBuilder;
 
 import javax.validation.Valid;
 import java.net.URI;
 import java.net.URISyntaxException;
-
 import java.util.List;
 import java.util.Optional;
 
@@ -112,6 +109,19 @@ public class DeviceResource {
     public ResponseEntity<DeviceDTO> getDevice(@PathVariable String id) {
         log.debug("REST request to get Device : {}", id);
         Optional<DeviceDTO> deviceDTO = deviceService.findOne(id);
+        return ResponseUtil.wrapOrNotFound(deviceDTO);
+    }
+
+    /**
+     * {@code GET  /device/:deviceId} : get the "deviceId" device.
+     *
+     * @param deviceId the deviceId of the deviceDTO to retrieve.
+     * @return the {@link ResponseEntity} with status {@code 200 (OK)} and with body the deviceDTO, or with status {@code 404 (Not Found)}.
+     */
+    @GetMapping("/device/{deviceId}")
+    public ResponseEntity<DeviceDTO> getDeviceByDeviceId(@PathVariable String deviceId) {
+        log.debug("REST request to get Device : {}", deviceId);
+        Optional<DeviceDTO> deviceDTO = deviceService.findOneByDeviceId(deviceId);
         return ResponseUtil.wrapOrNotFound(deviceDTO);
     }
 

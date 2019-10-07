@@ -46,6 +46,14 @@ public interface DeviceService {
     Optional<DeviceDTO> findOne(String id);
 
     /**
+     * Get the "deviceId" device.
+     *
+     * @param deviceId the deviceId of the entity.
+     * @return the entity.
+     */
+    Optional<DeviceDTO> findOneByDeviceId(String deviceId);
+
+    /**
      * Delete the "id" device.
      *
      * @param id the id of the entity.

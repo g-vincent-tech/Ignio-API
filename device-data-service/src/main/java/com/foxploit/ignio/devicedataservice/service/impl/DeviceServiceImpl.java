@@ -1,21 +1,17 @@
 package com.foxploit.ignio.devicedataservice.service.impl;
 
-import com.foxploit.ignio.devicedataservice.domain.DeviceData;
-import com.foxploit.ignio.devicedataservice.service.DeviceService;
 import com.foxploit.ignio.devicedataservice.domain.Device;
 import com.foxploit.ignio.devicedataservice.repository.DeviceRepository;
+import com.foxploit.ignio.devicedataservice.service.DeviceService;
 import com.foxploit.ignio.devicedataservice.service.dto.DeviceDTO;
 import com.foxploit.ignio.devicedataservice.service.mapper.DeviceMapper;
 import com.foxploit.ignio.devicedataservice.web.rest.errors.BadRequestAlertException;
-import javassist.tools.reflect.CannotCreateException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
-import java.util.NoSuchElementException;
 import java.util.Optional;
 
 /**
@@ -78,6 +74,19 @@ public class DeviceServiceImpl implements DeviceService {
     public Optional<DeviceDTO> findOne(String id) {
         log.debug("Request to get Device : {}", id);
         return deviceRepository.findById(id)
+            .map(deviceMapper::toDto);
+    }
+
+    /**
+     * Get one device by deviceId.
+     *
+     * @param deviceId the deviceId of the entity.
+     * @return the entity.
+     */
+    @Override
+    public Optional<DeviceDTO> findOneByDeviceId(String deviceId) {
+        log.debug("Request to get Device : {}", deviceId);
+        return deviceRepository.findByDeviceId(deviceId)
             .map(deviceMapper::toDto);
     }
 
