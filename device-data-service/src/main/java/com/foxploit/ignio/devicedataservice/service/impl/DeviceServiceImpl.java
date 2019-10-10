@@ -5,7 +5,6 @@ import com.foxploit.ignio.devicedataservice.repository.DeviceRepository;
 import com.foxploit.ignio.devicedataservice.service.DeviceService;
 import com.foxploit.ignio.devicedataservice.service.dto.DeviceDTO;
 import com.foxploit.ignio.devicedataservice.service.mapper.DeviceMapper;
-import com.foxploit.ignio.devicedataservice.web.rest.errors.BadRequestAlertException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.data.domain.Page;
@@ -42,8 +41,7 @@ public class DeviceServiceImpl implements DeviceService {
         log.debug("Request to save Device : {}", deviceDTO);
         Optional<Device> deviceOptional = deviceRepository.findByDeviceId(deviceDTO.getDeviceId());
         if (deviceOptional.isPresent()) {
-            log.error("Save Device failed! : {}", deviceDTO);
-            throw new BadRequestAlertException("Invalid deviceId", deviceDTO.getDeviceId(), "idexists");
+            log.error("Save Device failed! : {}, idexists", deviceDTO);
         }
         Device device = deviceMapper.toEntity(deviceDTO);
         device = deviceRepository.save(device);
@@ -112,8 +110,7 @@ public class DeviceServiceImpl implements DeviceService {
         log.debug("Request to update Device : {}", deviceDTO);
         Optional<Device> deviceOptional = deviceRepository.findByDeviceId(deviceDTO.getDeviceId());
         if (!deviceOptional.isPresent()) {
-            log.error("Update Device failed! : {}", deviceDTO);
-            throw new BadRequestAlertException("Invalid deviceId", deviceDTO.getDeviceId(), "iddoesn'texists");
+            log.error("Update Device failed! : {}, iddoesn'texists", deviceDTO);
         }
         Device updatedDevice = deviceMapper.toEntity(deviceDTO);
         Device device = deviceOptional.get();

@@ -1,19 +1,17 @@
 package com.foxploit.ignio.devicedataservice.service.impl;
 
 import com.foxploit.ignio.devicedataservice.domain.Device;
+import com.foxploit.ignio.devicedataservice.domain.DeviceData;
 import com.foxploit.ignio.devicedataservice.domain.SensorData;
+import com.foxploit.ignio.devicedataservice.repository.DeviceDataRepository;
 import com.foxploit.ignio.devicedataservice.repository.DeviceRepository;
 import com.foxploit.ignio.devicedataservice.repository.SensorDataRepository;
 import com.foxploit.ignio.devicedataservice.service.DeviceDataService;
-import com.foxploit.ignio.devicedataservice.domain.DeviceData;
-import com.foxploit.ignio.devicedataservice.repository.DeviceDataRepository;
 import com.foxploit.ignio.devicedataservice.service.dto.DeviceDataDTO;
 import com.foxploit.ignio.devicedataservice.service.mapper.DeviceDataMapper;
 import com.foxploit.ignio.devicedataservice.service.mapper.SensorDataMapper;
-import com.foxploit.ignio.devicedataservice.web.rest.errors.BadRequestAlertException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
@@ -56,8 +54,7 @@ public class DeviceDataServiceImpl implements DeviceDataService {
         log.debug("Request to save DeviceData : {}", deviceDataDTO);
         Optional<Device> deviceOptional = deviceRepository.findByDeviceId(deviceDataDTO.getDeviceId());
         if (!deviceOptional.isPresent()) {
-            log.error("Save DeviceData failed! : {}", deviceDataDTO);
-            throw new BadRequestAlertException("Invalid deviceId! Doesn't exist", deviceDataDTO.getDeviceId(), "invalidid");
+            log.error("Save DeviceData failed! : {}, invalidid", deviceDataDTO);
         }
         Set<SensorData> sensorDataSet = new HashSet<>();
         DeviceData deviceData = deviceDataMapper.toEntity(deviceDataDTO);
