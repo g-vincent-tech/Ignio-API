@@ -1,13 +1,12 @@
 package com.foxploit.ignio.deviceanalysisservice.service;
 
+import java.util.List;
+
 /**
  * Service Interface for managing Analysis Service.
  */
 public interface AnalysisService {
 
-    /**
-     * Approximate regression line for the given data (Y values)
-     */
-    void approximateRegression(int[] x, int[] y);
+    abstract float approximateRegression(List<Float> y);
 
 }
