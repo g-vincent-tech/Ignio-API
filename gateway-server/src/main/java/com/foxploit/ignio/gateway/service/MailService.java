@@ -1,6 +1,7 @@
 package com.foxploit.ignio.gateway.service;
 
 import com.foxploit.ignio.gateway.domain.User;
+import com.foxploit.ignio.gateway.service.dto.Alert;
 import io.github.jhipster.config.JHipsterProperties;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -25,6 +26,7 @@ import java.util.Locale;
 public class MailService {
 
     private static final String USER = "user";
+    private static final String ALERT = "alert";
     private static final String BASE_URL = "baseUrl";
     private final Logger log = LoggerFactory.getLogger(MailService.class);
     private final JHipsterProperties jHipsterProperties;
@@ -78,6 +80,17 @@ public class MailService {
     }
 
     @Async
+    public void sendEmailFromTemplate(User user, Alert alert, String templateName, String titleKey) {
+        Locale locale = Locale.forLanguageTag(user.getLangKey());
+        Context context = new Context(locale);
+        context.setVariable(ALERT, alert);
+        context.setVariable(BASE_URL, jHipsterProperties.getMail().getBaseUrl());
+        String content = templateEngine.process(templateName, context);
+        String subject = messageSource.getMessage(titleKey, null, locale);
+        sendEmail(user.getEmail(), subject, content, false, true);
+    }
+
+    @Async
     public void sendActivationEmail(User user) {
         log.debug("Sending activation email to '{}'", user.getEmail());
         sendEmailFromTemplate(user, "mail/activationEmail", "email.activation.title");
@@ -99,5 +112,11 @@ public class MailService {
     public void sendPasswordResetMail(User user) {
         log.debug("Sending password reset email to '{}'", user.getEmail());
         sendEmailFromTemplate(user, "mail/passwordResetEmail", "email.reset.title");
+    }
+
+    @Async
+    public void sendAlertMail(User user, Alert alert) {
+        log.debug("Sending alert email to '{}'", user.getEmail());
+        sendEmailFromTemplate(user, alert, "mail/alertEmail", "email.alert.title");
     }
 }

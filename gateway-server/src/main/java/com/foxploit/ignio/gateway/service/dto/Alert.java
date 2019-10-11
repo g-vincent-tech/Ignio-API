@@ -1,4 +1,4 @@
-package com.foxploit.ignio.deviceanalysisservice.service.dto;
+package com.foxploit.ignio.gateway.service.dto;
 
 import java.time.LocalDateTime;
 

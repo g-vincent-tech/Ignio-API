@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title th:text="#{email.alert.title}">Potential Fire Alert!</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <link rel="shortcut icon" th:href="@{|${baseUrl}/favicon.ico|}" />
+    </head>
+    <body>
+        <p th:text="#{email.alert.greeting}">
+            Dear Ignio User,
+        </p>
+        <p th:text="#{email.alert.text1}">
+            There's been some unusual activity regarding your sensor reading from the device associated with the ID :
+        </p>
+        <p>
+            <ul>
+                <li th:text="#{email.alert.report.device(${alert.deviceId})}">
+                </li>
+                <li>
+                    <strong th:text="#{email.alert.report.alertType(${alert.alertType})}">
+                    </strong>
+                </li>
+                <li th:text="#{email.alert.report.timestamp(${alert.timestamp})}">
+                </li>
+            </ul>
+        </p>
+        <p>
+            Login to <a href="https://ignio-web.herokuapp.com/auth/login">Ignio portal</a> for more details!
+        </p>
+        <p th:text="#{email.alert.text3}">
+        </p>
+        <p>
+            If you have any questions regarding your Ignio Account or Devices, please contact us at contact@foxploit.com.
+        </p >
+        <p th:text="#{email.alert.text4}">
+        </p>
+        <p>
+            <span>Regards, </span>
+            <br/>
+            <em th:text="#{email.signature}">Ignio@Foxploit Team.</em>
+        </p>
+    </body>
+</html>

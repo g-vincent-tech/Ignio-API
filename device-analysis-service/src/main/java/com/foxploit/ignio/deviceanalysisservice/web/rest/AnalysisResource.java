@@ -35,6 +35,8 @@ public class AnalysisResource {
 
     private final String DEVICE_DATA_SERVICE = "devicedataservice";
 
+    private final String GATEWAY_SERVICE = "igniogateway";
+
     private final String DEVICEID = "NODEIGNIOF101";
 
     @Autowired
@@ -58,7 +60,7 @@ public class AnalysisResource {
     }
 
     // Default 2 min 120000
-    @Scheduled(fixedRate = 10000)
+    @Scheduled(fixedRate = 120000)
     public void analyze() {
 
         URI uri = UriComponentsBuilder.fromUriString("//" + DEVICE_DATA_SERVICE + "/api/sensor-data/all/" + DEVICEID + "?size=8").build().toUri();
@@ -109,7 +111,7 @@ public class AnalysisResource {
 
     public void alert(int alertType, String deviceId) {
 
-        URI uri = UriComponentsBuilder.fromUriString("//" + "/api/alert/").build().toUri();
+        URI uri = UriComponentsBuilder.fromUriString("//" + GATEWAY_SERVICE + "/api/alert").build().toUri();
 
         log.info("The Alert Task Initiated {} for {}", dateFormat.format(new Date()), deviceId);
 
