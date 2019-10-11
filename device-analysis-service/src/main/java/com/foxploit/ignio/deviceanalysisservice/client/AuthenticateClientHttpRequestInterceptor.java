@@ -24,7 +24,7 @@ public class AuthenticateClientHttpRequestInterceptor implements ClientHttpReque
      */
     @Override
     public ClientHttpResponse intercept(HttpRequest httpRequest, byte[] bytes, ClientHttpRequestExecution clientHttpRequestExecution) throws IOException {
-        String token = "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImF1dGgiOiJST0xFX0FETUlOLFJPTEVfVVNFUiIsImV4cCI6MTU3MDc3OTg1Nn0.AlyWGAzdk6WRN0_YCNFNzYzGhYcffaaUdHD6_kKa8L15kW2PPTNnQ_hfmQT81eh8BrNlQjgo8hAKcXs52QCHVQ";
+        String token = "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImF1dGgiOiJST0xFX0FETUlOLFJPTEVfVVNFUiIsImV4cCI6MTU3MzM3MjE3NX0.-ggtAchgzPVdO4yMaWwkjwLKth3U0nvFMCmxW45h3H2j0CCeF3zN47u_ociWuEi95stmZLVKN3C33WBqjard4w";
         httpRequest.getHeaders().add("Authorization","Bearer "+token);
         return clientHttpRequestExecution.execute( httpRequest, bytes );
     }
