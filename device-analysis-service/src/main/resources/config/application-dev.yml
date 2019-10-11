@@ -44,7 +44,7 @@ spring:
   data:
     mongodb:
       uri: mongodb://localhost:27017
-      database: deviceanalysisservice
+      database: Ignio-DeviceStore
   mail:
     host: localhost
     port: 25
