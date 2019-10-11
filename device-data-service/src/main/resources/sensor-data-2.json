@@ -1,0 +1,3477 @@
+{
+  "deviceId": "NODEIGNIOF101",
+  "sensorData": [
+    {
+      "temperature": 28.4375,
+      "co_ppm": 230.0,
+      "lp_gas_ppm": 92.0,
+      "particle_ppm": 9.0,
+      "epoch": "2019-08-28 19:34:22"
+    },
+    {
+      "temperature": 30.9375,
+      "co_ppm": 226.0,
+      "lp_gas_ppm": 91.0,
+      "particle_ppm": 12.0,
+      "epoch": "2019-08-28 19:34:38"
+    },
+    {
+      "temperature": 33.0625,
+      "co_ppm": 225.0,
+      "lp_gas_ppm": 90.0,
+      "particle_ppm": 9.0,
+      "epoch": "2019-08-28 19:34:54"
+    },
+    {
+      "temperature": 33.5625,
+      "co_ppm": 224.0,
+      "lp_gas_ppm": 90.0,
+      "particle_ppm": 9.0,
+      "epoch": "2019-08-28 19:35:10"
+    },
+    {
+      "temperature": 34.1875,
+      "co_ppm": 223.0,
+      "lp_gas_ppm": 90.0,
+      "particle_ppm": 9.0,
+      "epoch": "2019-08-28 19:35:26"
+    },
+    {
+      "temperature": 34.375,
+      "co_ppm": 223.0,
+      "lp_gas_ppm": 90.0,
+      "particle_ppm": 8.0,
+      "epoch": "2019-08-28 19:35:42"
+    },
+    {
+      "temperature": 34.0625,
+      "co_ppm": 223.0,
+      "lp_gas_ppm": 90.0,
+      "particle_ppm": 10.0,
+      "epoch": "2019-08-28 19:36:01"
+    },
+    {
+      "temperature": 33.5,
+      "co_ppm": 221.0,
+      "lp_gas_ppm": 90.0,
+      "particle_ppm": 8.0,
+      "epoch": "2019-08-28 19:36:17"
+    },
+    {
+      "temperature": 32.75,
+      "co_ppm": 221.0,
+      "lp_gas_ppm": 90.0,
+      "particle_ppm": 8.0,
+      "epoch": "2019-08-28 19:36:36"
+    },
+    {
+      "temperature": 32.1875,
+      "co_ppm": 221.0,
+      "lp_gas_ppm": 89.0,
+      "particle_ppm": 9.0,
+      "epoch": "2019-08-28 19:36:53"
+    },
+    {
+      "temperature": 31.6875,
+      "co_ppm": 223.0,
+      "lp_gas_ppm": 90.0,
+      "particle_ppm": 24.0,
+      "epoch": "2019-08-28 19:37:10"
+    },
+    {
+      "temperature": 31.3125,
+      "co_ppm": 229.0,
+      "lp_gas_ppm": 91.0,
+      "particle_ppm": 8.0,
+      "epoch": "2019-08-28 19:37:26"
+    },
+    {
+      "temperature": 30.9375,
+      "co_ppm": 226.0,
+      "lp_gas_ppm": 90.0,
+      "particle_ppm": 8.0,
+      "epoch": "2019-08-28 19:37:42"
+    },
+    {
+      "temperature": 30.625,
+      "co_ppm": 224.0,
+      "lp_gas_ppm": 90.0,
+      "particle_ppm": 8.0,
+      "epoch": "2019-08-28 19:37:58"
+    },
+    {
+      "temperature": 30.3125,
+      "co_ppm": 223.0,
+      "lp_gas_ppm": 90.0,
+      "particle_ppm": 8.0,
+      "epoch": "2019-08-28 19:38:14"
+    },
+    {
+      "temperature": 30.0,
+      "co_ppm": 220.0,
+      "lp_gas_ppm": 89.0,
+      "particle_ppm": 8.0,
+      "epoch": "2019-08-28 19:38:34"
+    },
+    {
+      "temperature": 29.8125,
+      "co_ppm": 220.0,
+      "lp_gas_ppm": 89.0,
+      "particle_ppm": 8.0,
+      "epoch": "2019-08-28 19:38:50"
+    },
+    {
+      "temperature": 29.75,
+      "co_ppm": 219.0,
+      "lp_gas_ppm": 89.0,
+      "particle_ppm": 8.0,
+      "epoch": "2019-08-28 19:39:06"
+    },
+    {
+      "temperature": 29.625,
+      "co_ppm": 225.0,
+      "lp_gas_ppm": 89.0,
+      "particle_ppm": 9.0,
+      "epoch": "2019-08-28 19:39:22"
+    },
+    {
+      "temperature": 29.5,
+      "co_ppm": 224.0,
+      "lp_gas_ppm": 90.0,
+      "particle_ppm": 8.0,
+      "epoch": "2019-08-28 19:39:37"
+    },
+    {
+      "temperature": 29.4375,
+      "co_ppm": 221.0,
+      "lp_gas_ppm": 89.0,
+      "particle_ppm": 8.0,
+      "epoch": "2019-08-28 19:39:53"
+    },
+    {
+      "temperature": 29.375,
+      "co_ppm": 220.0,
+      "lp_gas_ppm": 89.0,
+      "particle_ppm": 8.0,
+      "epoch": "2019-08-28 19:40:09"
+    },
+    {
+      "temperature": 29.25,
+      "co_ppm": 218.0,
+      "lp_gas_ppm": 89.0,
+      "particle_ppm": 8.0,
+      "epoch": "2019-08-28 19:40:26"
+    },
+    {
+      "temperature": 29.1875,
+      "co_ppm": 218.0,
+      "lp_gas_ppm": 88.0,
+      "particle_ppm": 8.0,
+      "epoch": "2019-08-28 19:40:41"
+    },
+    {
+      "temperature": 29.0625,
+      "co_ppm": 217.0,
+      "lp_gas_ppm": 88.0,
+      "particle_ppm": 8.0,
+      "epoch": "2019-08-28 19:40:57"
+    },
+    {
+      "temperature": 29.0,
+      "co_ppm": 217.0,
+      "lp_gas_ppm": 89.0,
+      "particle_ppm": 8.0,
+      "epoch": "2019-08-28 19:41:13"
+    },
+    {
+      "temperature": 28.875,
+      "co_ppm": 217.0,
+      "lp_gas_ppm": 88.0,
+      "particle_ppm": 10.0,
+      "epoch": "2019-08-28 19:41:29"
+    },
+    {
+      "temperature": 28.8125,
+      "co_ppm": 217.0,
+      "lp_gas_ppm": 88.0,
+      "particle_ppm": 8.0,
+      "epoch": "2019-08-28 19:41:45"
+    },
+    {
+      "temperature": 28.75,
+      "co_ppm": 216.0,
+      "lp_gas_ppm": 88.0,
+      "particle_ppm": 8.0,
+      "epoch": "2019-08-28 19:42:00"
+    },
+    {
+      "temperature": 28.625,
+      "co_ppm": 216.0,
+      "lp_gas_ppm": 88.0,
+      "particle_ppm": 8.0,
+      "epoch": "2019-08-28 19:42:16"
+    },
+    {
+      "temperature": 28.5,
+      "co_ppm": 216.0,
+      "lp_gas_ppm": 88.0,
+      "particle_ppm": 14.0,
+      "epoch": "2019-08-28 19:42:33"
+    },
+    {
+      "temperature": 28.375,
+      "co_ppm": 216.0,
+      "lp_gas_ppm": 88.0,
+      "particle_ppm": 8.0,
+      "epoch": "2019-08-28 19:42:35"
+    },
+    {
+      "temperature": 28.3125,
+      "co_ppm": 214.0,
+      "lp_gas_ppm": 88.0,
+      "particle_ppm": 8.0,
+      "epoch": "2019-08-28 19:42:50"
+    },
+    {
+      "temperature": 28.1875,
+      "co_ppm": 214.0,
+      "lp_gas_ppm": 87.0,
+      "particle_ppm": 9.0,
+      "epoch": "2019-08-28 19:43:06"
+    },
+    {
+      "temperature": 28.0625,
+      "co_ppm": 214.0,
+      "lp_gas_ppm": 88.0,
+      "particle_ppm": 9.0,
+      "epoch": "2019-08-28 19:43:22"
+    },
+    {
+      "temperature": 28.0,
+      "co_ppm": 214.0,
+      "lp_gas_ppm": 88.0,
+      "particle_ppm": 8.0,
+      "epoch": "2019-08-28 19:42:51"
+    },
+    {
+      "temperature": 27.9375,
+      "co_ppm": 214.0,
+      "lp_gas_ppm": 87.0,
+      "particle_ppm": 8.0,
+      "epoch": "2019-08-28 19:43:06"
+    },
+    {
+      "temperature": 27.875,
+      "co_ppm": 214.0,
+      "lp_gas_ppm": 87.0,
+      "particle_ppm": 22.0,
+      "epoch": "2019-08-28 19:43:22"
+    },
+    {
+      "temperature": 27.75,
+      "co_ppm": 213.0,
+      "lp_gas_ppm": 87.0,
+      "particle_ppm": 8.0,
+      "epoch": "2019-08-28 19:43:38"
+    },
+    {
+      "temperature": 27.75,
+      "co_ppm": 213.0,
+      "lp_gas_ppm": 87.0,
+      "particle_ppm": 8.0,
+      "epoch": "2019-08-28 19:43:55"
+    },
+    {
+      "temperature": 27.6875,
+      "co_ppm": 213.0,
+      "lp_gas_ppm": 87.0,
+      "particle_ppm": 20.0,
+      "epoch": "2019-08-28 19:44:10"
+    },
+    {
+      "temperature": 27.75,
+      "co_ppm": 213.0,
+      "lp_gas_ppm": 90.0,
+      "particle_ppm": 13.0,
+      "epoch": "2019-08-28 19:44:26"
+    },
+    {
+      "temperature": 27.75,
+      "co_ppm": 214.0,
+      "lp_gas_ppm": 88.0,
+      "particle_ppm": 8.0,
+      "epoch": "2019-08-28 19:44:42"
+    },
+    {
+      "temperature": 27.75,
+      "co_ppm": 217.0,
+      "lp_gas_ppm": 87.0,
+      "particle_ppm": 9.0,
+      "epoch": "2019-08-28 19:44:59"
+    },
+    {
+      "temperature": 27.6875,
+      "co_ppm": 217.0,
+      "lp_gas_ppm": 88.0,
+      "particle_ppm": 8.0,
+      "epoch": "2019-08-28 19:45:14"
+    },
+    {
+      "temperature": 27.625,
+      "co_ppm": 216.0,
+      "lp_gas_ppm": 87.0,
+      "particle_ppm": 9.0,
+      "epoch": "2019-08-28 19:45:30"
+    },
+    {
+      "temperature": 27.5625,
+      "co_ppm": 216.0,
+      "lp_gas_ppm": 87.0,
+      "particle_ppm": 9.0,
+      "epoch": "2019-08-28 19:45:46"
+    },
+    {
+      "temperature": 27.5,
+      "co_ppm": 214.0,
+      "lp_gas_ppm": 87.0,
+      "particle_ppm": 8.0,
+      "epoch": "2019-08-28 19:46:03"
+    },
+    {
+      "temperature": 27.5,
+      "co_ppm": 214.0,
+      "lp_gas_ppm": 87.0,
+      "particle_ppm": 8.0,
+      "epoch": "2019-08-28 19:46:18"
+    },
+    {
+      "temperature": 27.4375,
+      "co_ppm": 214.0,
+      "lp_gas_ppm": 87.0,
+      "particle_ppm": 8.0,
+      "epoch": "2019-08-28 19:46:34"
+    },
+    {
+      "temperature": 27.375,
+      "co_ppm": 216.0,
+      "lp_gas_ppm": 87.0,
+      "particle_ppm": 8.0,
+      "epoch": "2019-08-28 19:46:50"
+    },
+    {
+      "temperature": 27.375,
+      "co_ppm": 214.0,
+      "lp_gas_ppm": 87.0,
+      "particle_ppm": 8.0,
+      "epoch": "2019-08-28 19:47:06"
+    },
+    {
+      "temperature": 27.3125,
+      "co_ppm": 214.0,
+      "lp_gas_ppm": 87.0,
+      "particle_ppm": 10.0,
+      "epoch": "2019-08-28 19:47:21"
+    },
+    {
+      "temperature": 27.3125,
+      "co_ppm": 214.0,
+      "lp_gas_ppm": 87.0,
+      "particle_ppm": 8.0,
+      "epoch": "2019-08-28 19:47:37"
+    },
+    {
+      "temperature": 27.25,
+      "co_ppm": 214.0,
+      "lp_gas_ppm": 87.0,
+      "particle_ppm": 8.0,
+      "epoch": "2019-08-28 19:47:53"
+    },
+    {
+      "temperature": 27.25,
+      "co_ppm": 214.0,
+      "lp_gas_ppm": 87.0,
+      "particle_ppm": 13.0,
+      "epoch": "2019-08-28 19:48:10"
+    },
+    {
+      "temperature": 27.1875,
+      "co_ppm": 211.0,
+      "lp_gas_ppm": 87.0,
+      "particle_ppm": 8.0,
+      "epoch": "2019-08-28 19:48:25"
+    },
+    {
+      "temperature": 27.1875,
+      "co_ppm": 211.0,
+      "lp_gas_ppm": 87.0,
+      "particle_ppm": 10.0,
+      "epoch": "2019-08-28 19:48:41"
+    },
+    {
+      "temperature": 27.1875,
+      "co_ppm": 211.0,
+      "lp_gas_ppm": 87.0,
+      "particle_ppm": 9.0,
+      "epoch": "2019-08-28 19:48:57"
+    },
+    {
+      "temperature": 27.125,
+      "co_ppm": 211.0,
+      "lp_gas_ppm": 87.0,
+      "particle_ppm": 9.0,
+      "epoch": "2019-08-28 19:49:13"
+    },
+    {
+      "temperature": 27.125,
+      "co_ppm": 211.0,
+      "lp_gas_ppm": 87.0,
+      "particle_ppm": 9.0,
+      "epoch": "2019-08-28 19:49:28"
+    },
+    {
+      "temperature": 27.0625,
+      "co_ppm": 210.0,
+      "lp_gas_ppm": 86.0,
+      "particle_ppm": 8.0,
+      "epoch": "2019-08-28 19:49:44"
+    },
+    {
+      "temperature": 27.0625,
+      "co_ppm": 210.0,
+      "lp_gas_ppm": 86.0,
+      "particle_ppm": 12.0,
+      "epoch": "2019-08-28 19:50:00"
+    },
+    {
+      "temperature": 27.0,
+      "co_ppm": 210.0,
+      "lp_gas_ppm": 86.0,
+      "particle_ppm": 8.0,
+      "epoch": "2019-08-28 19:50:17"
+    },
+    {
+      "temperature": 27.0,
+      "co_ppm": 210.0,
+      "lp_gas_ppm": 86.0,
+      "particle_ppm": 8.0,
+      "epoch": "2019-08-28 19:50:33"
+    },
+    {
+      "temperature": 26.9375,
+      "co_ppm": 209.0,
+      "lp_gas_ppm": 86.0,
+      "particle_ppm": 8.0,
+      "epoch": "2019-08-28 19:50:51"
+    },
+    {
+      "temperature": 26.9375,
+      "co_ppm": 209.0,
+      "lp_gas_ppm": 86.0,
+      "particle_ppm": 8.0,
+      "epoch": "2019-08-28 19:51:07"
+    },
+    {
+      "temperature": 26.9375,
+      "co_ppm": 209.0,
+      "lp_gas_ppm": 86.0,
+      "particle_ppm": 8.0,
+      "epoch": "2019-08-28 19:51:21"
+    },
+    {
+      "temperature": 26.875,
+      "co_ppm": 209.0,
+      "lp_gas_ppm": 86.0,
+      "particle_ppm": 8.0,
+      "epoch": "2019-08-28 19:51:36"
+    },
+    {
+      "temperature": 26.875,
+      "co_ppm": 209.0,
+      "lp_gas_ppm": 86.0,
+      "particle_ppm": 9.0,
+      "epoch": "2019-08-28 19:51:52"
+    },
+    {
+      "temperature": 26.875,
+      "co_ppm": 209.0,
+      "lp_gas_ppm": 86.0,
+      "particle_ppm": 16.0,
+      "epoch": "2019-08-28 19:52:08"
+    },
+    {
+      "temperature": 26.8125,
+      "co_ppm": 209.0,
+      "lp_gas_ppm": 86.0,
+      "particle_ppm": 8.0,
+      "epoch": "2019-08-28 19:52:27"
+    },
+    {
+      "temperature": 26.8125,
+      "co_ppm": 209.0,
+      "lp_gas_ppm": 86.0,
+      "particle_ppm": 8.0,
+      "epoch": "2019-08-28 19:52:43"
+    },
+    {
+      "temperature": 26.8125,
+      "co_ppm": 208.0,
+      "lp_gas_ppm": 85.0,
+      "particle_ppm": 10.0,
+      "epoch": "2019-08-28 19:52:59"
+    },
+    {
+      "temperature": 26.75,
+      "co_ppm": 208.0,
+      "lp_gas_ppm": 85.0,
+      "particle_ppm": 8.0,
+      "epoch": "2019-08-28 19:53:15"
+    },
+    {
+      "temperature": 26.75,
+      "co_ppm": 209.0,
+      "lp_gas_ppm": 86.0,
+      "particle_ppm": 9.0,
+      "epoch": "2019-08-28 19:53:32"
+    },
+    {
+      "temperature": 26.75,
+      "co_ppm": 209.0,
+      "lp_gas_ppm": 86.0,
+      "particle_ppm": 8.0,
+      "epoch": "2019-08-28 19:53:48"
+    },
+    {
+      "temperature": 26.75,
+      "co_ppm": 208.0,
+      "lp_gas_ppm": 85.0,
+      "particle_ppm": 8.0,
+      "epoch": "2019-08-28 19:54:04"
+    },
+    {
+      "temperature": 26.75,
+      "co_ppm": 208.0,
+      "lp_gas_ppm": 85.0,
+      "particle_ppm": 8.0,
+      "epoch": "2019-08-28 19:54:20"
+    },
+    {
+      "temperature": 26.6875,
+      "co_ppm": 208.0,
+      "lp_gas_ppm": 85.0,
+      "particle_ppm": 10.0,
+      "epoch": "2019-08-28 19:54:37"
+    },
+    {
+      "temperature": 26.6875,
+      "co_ppm": 208.0,
+      "lp_gas_ppm": 85.0,
+      "particle_ppm": 13.0,
+      "epoch": "2019-08-28 19:54:52"
+    },
+    {
+      "temperature": 26.6875,
+      "co_ppm": 208.0,
+      "lp_gas_ppm": 85.0,
+      "particle_ppm": 10.0,
+      "epoch": "2019-08-28 19:55:08"
+    },
+    {
+      "temperature": 26.6875,
+      "co_ppm": 208.0,
+      "lp_gas_ppm": 85.0,
+      "particle_ppm": 8.0,
+      "epoch": "2019-08-28 19:55:24"
+    },
+    {
+      "temperature": 26.6875,
+      "co_ppm": 207.0,
+      "lp_gas_ppm": 85.0,
+      "particle_ppm": 8.0,
+      "epoch": "2019-08-28 19:55:41"
+    },
+    {
+      "temperature": 26.6875,
+      "co_ppm": 207.0,
+      "lp_gas_ppm": 85.0,
+      "particle_ppm": 10.0,
+      "epoch": "2019-08-28 19:55:58"
+    },
+    {
+      "temperature": 26.625,
+      "co_ppm": 207.0,
+      "lp_gas_ppm": 85.0,
+      "particle_ppm": 8.0,
+      "epoch": "2019-08-28 19:56:14"
+    },
+    {
+      "temperature": 26.625,
+      "co_ppm": 207.0,
+      "lp_gas_ppm": 85.0,
+      "particle_ppm": 12.0,
+      "epoch": "2019-08-28 19:56:30"
+    },
+    {
+      "temperature": 26.625,
+      "co_ppm": 207.0,
+      "lp_gas_ppm": 85.0,
+      "particle_ppm": 14.0,
+      "epoch": "2019-08-28 19:56:45"
+    },
+    {
+      "temperature": 26.625,
+      "co_ppm": 207.0,
+      "lp_gas_ppm": 85.0,
+      "particle_ppm": 14.0,
+      "epoch": "2019-08-28 19:57:00"
+    },
+    {
+      "temperature": 26.625,
+      "co_ppm": 207.0,
+      "lp_gas_ppm": 85.0,
+      "particle_ppm": 8.0,
+      "epoch": "2019-08-28 19:57:16"
+    },
+    {
+      "temperature": 26.625,
+      "co_ppm": 207.0,
+      "lp_gas_ppm": 85.0,
+      "particle_ppm": 9.0,
+      "epoch": "2019-08-28 19:57:32"
+    },
+    {
+      "temperature": 26.5625,
+      "co_ppm": 208.0,
+      "lp_gas_ppm": 85.0,
+      "particle_ppm": 8.0,
+      "epoch": "2019-08-28 19:57:50"
+    },
+    {
+      "temperature": 26.5625,
+      "co_ppm": 208.0,
+      "lp_gas_ppm": 85.0,
+      "particle_ppm": 8.0,
+      "epoch": "2019-08-28 19:58:05"
+    },
+    {
+      "temperature": -127.0,
+      "co_ppm": 0.0,
+      "lp_gas_ppm": 0.0,
+      "particle_ppm": 0.0,
+      "epoch": "2019-08-28 22:33:33"
+    },
+    {
+      "temperature": -127.0,
+      "co_ppm": 3.0,
+      "lp_gas_ppm": 3.0,
+      "particle_ppm": 2.0,
+      "epoch": "2019-08-28 22:33:50"
+    },
+    {
+      "temperature": -127.0,
+      "co_ppm": 0.0,
+      "lp_gas_ppm": 0.0,
+      "particle_ppm": 0.0,
+      "epoch": "2019-08-28 22:34:05"
+    },
+    {
+      "temperature": -127.0,
+      "co_ppm": 3.0,
+      "lp_gas_ppm": 2.0,
+      "particle_ppm": 1.0,
+      "epoch": "2019-08-28 22:34:20"
+    },
+    {
+      "temperature": -127.0,
+      "co_ppm": 0.0,
+      "lp_gas_ppm": 0.0,
+      "particle_ppm": 0.0,
+      "epoch": "2019-08-28 22:34:36"
+    },
+    {
+      "temperature": -127.0,
+      "co_ppm": 0.0,
+      "lp_gas_ppm": 0.0,
+      "particle_ppm": 0.0,
+      "epoch": "2019-08-28 22:34:51"
+    },
+    {
+      "temperature": -127.0,
+      "co_ppm": 20.0,
+      "lp_gas_ppm": 19.0,
+      "particle_ppm": 15.0,
+      "epoch": "2019-08-28 22:35:06"
+    },
+    {
+      "temperature": -127.0,
+      "co_ppm": 75.0,
+      "lp_gas_ppm": 42.0,
+      "particle_ppm": 22.0,
+      "epoch": "2019-08-28 22:35:21"
+    },
+    {
+      "temperature": -127.0,
+      "co_ppm": 0.0,
+      "lp_gas_ppm": 0.0,
+      "particle_ppm": 0.0,
+      "epoch": "2019-08-28 22:35:37"
+    },
+    {
+      "temperature": -127.0,
+      "co_ppm": 14.0,
+      "lp_gas_ppm": 14.0,
+      "particle_ppm": 9.0,
+      "epoch": "2019-08-28 22:35:52"
+    },
+    {
+      "temperature": -127.0,
+      "co_ppm": 13.0,
+      "lp_gas_ppm": 14.0,
+      "particle_ppm": 12.0,
+      "epoch": "2019-08-28 22:36:07"
+    },
+    {
+      "temperature": -127.0,
+      "co_ppm": 117.0,
+      "lp_gas_ppm": 110.0,
+      "particle_ppm": 100.0,
+      "epoch": "2019-08-28 22:36:22"
+    },
+    {
+      "temperature": -127.0,
+      "co_ppm": 151.0,
+      "lp_gas_ppm": 144.0,
+      "particle_ppm": 132.0,
+      "epoch": "2019-08-28 22:36:38"
+    },
+    {
+      "temperature": -127.0,
+      "co_ppm": 0.0,
+      "lp_gas_ppm": 0.0,
+      "particle_ppm": 0.0,
+      "epoch": "2019-08-28 22:36:53"
+    },
+    {
+      "temperature": -127.0,
+      "co_ppm": 138.0,
+      "lp_gas_ppm": 147.0,
+      "particle_ppm": 135.0,
+      "epoch": "2019-08-28 22:37:08"
+    },
+    {
+      "temperature": -127.0,
+      "co_ppm": 303.0,
+      "lp_gas_ppm": 34.0,
+      "particle_ppm": 0.0,
+      "epoch": "2019-08-28 22:37:23"
+    },
+    {
+      "temperature": -127.0,
+      "co_ppm": 341.0,
+      "lp_gas_ppm": 106.0,
+      "particle_ppm": 1.0,
+      "epoch": "2019-08-28 22:37:39"
+    },
+    {
+      "temperature": -127.0,
+      "co_ppm": 321.0,
+      "lp_gas_ppm": 115.0,
+      "particle_ppm": 1.0,
+      "epoch": "2019-08-28 22:37:54"
+    },
+    {
+      "temperature": -127.0,
+      "co_ppm": 306.0,
+      "lp_gas_ppm": 110.0,
+      "particle_ppm": 16.0,
+      "epoch": "2019-08-28 22:38:09"
+    },
+    {
+      "temperature": -127.0,
+      "co_ppm": 294.0,
+      "lp_gas_ppm": 106.0,
+      "particle_ppm": 3.0,
+      "epoch": "2019-08-28 22:38:24"
+    },
+    {
+      "temperature": -127.0,
+      "co_ppm": 285.0,
+      "lp_gas_ppm": 103.0,
+      "particle_ppm": 0.0,
+      "epoch": "2019-08-28 22:38:40"
+    },
+    {
+      "temperature": -127.0,
+      "co_ppm": 277.0,
+      "lp_gas_ppm": 101.0,
+      "particle_ppm": 14.0,
+      "epoch": "2019-08-28 22:38:55"
+    },
+    {
+      "temperature": -127.0,
+      "co_ppm": 272.0,
+      "lp_gas_ppm": 100.0,
+      "particle_ppm": 14.0,
+      "epoch": "2019-08-28 22:39:10"
+    },
+    {
+      "temperature": 25.625,
+      "co_ppm": 75.0,
+      "lp_gas_ppm": 193.0,
+      "particle_ppm": 9.0,
+      "epoch": "2019-08-28 23:41:41"
+    },
+    {
+      "temperature": 25.625,
+      "co_ppm": 6.0,
+      "lp_gas_ppm": 6.0,
+      "particle_ppm": 2.0,
+      "epoch": "2019-08-28 23:41:56"
+    },
+    {
+      "temperature": 25.625,
+      "co_ppm": 186.0,
+      "lp_gas_ppm": 58.0,
+      "particle_ppm": 8.0,
+      "epoch": "2019-08-28 23:42:12"
+    },
+    {
+      "temperature": 25.5625,
+      "co_ppm": 196.0,
+      "lp_gas_ppm": 75.0,
+      "particle_ppm": 8.0,
+      "epoch": "2019-08-28 23:42:28"
+    },
+    {
+      "temperature": 25.5625,
+      "co_ppm": 197.0,
+      "lp_gas_ppm": 77.0,
+      "particle_ppm": 8.0,
+      "epoch": "2019-08-28 23:42:45"
+    },
+    {
+      "temperature": 25.5625,
+      "co_ppm": 196.0,
+      "lp_gas_ppm": 77.0,
+      "particle_ppm": 8.0,
+      "epoch": "2019-08-28 23:43:00"
+    },
+    {
+      "temperature": 25.5625,
+      "co_ppm": 195.0,
+      "lp_gas_ppm": 77.0,
+      "particle_ppm": 8.0,
+      "epoch": "2019-08-28 23:43:16"
+    },
+    {
+      "temperature": 25.5625,
+      "co_ppm": 196.0,
+      "lp_gas_ppm": 77.0,
+      "particle_ppm": 8.0,
+      "epoch": "2019-08-28 23:43:32"
+    },
+    {
+      "temperature": 25.5625,
+      "co_ppm": 195.0,
+      "lp_gas_ppm": 76.0,
+      "particle_ppm": 8.0,
+      "epoch": "2019-08-28 23:43:49"
+    },
+    {
+      "temperature": 25.5625,
+      "co_ppm": 195.0,
+      "lp_gas_ppm": 76.0,
+      "particle_ppm": 12.0,
+      "epoch": "2019-08-28 23:44:04"
+    },
+    {
+      "temperature": 25.5625,
+      "co_ppm": 194.0,
+      "lp_gas_ppm": 76.0,
+      "particle_ppm": 8.0,
+      "epoch": "2019-08-28 23:44:20"
+    },
+    {
+      "temperature": 25.5625,
+      "co_ppm": 190.0,
+      "lp_gas_ppm": 76.0,
+      "particle_ppm": 13.0,
+      "epoch": "2019-08-28 23:45:54"
+    },
+    {
+      "temperature": 25.5625,
+      "co_ppm": 190.0,
+      "lp_gas_ppm": 76.0,
+      "particle_ppm": 9.0,
+      "epoch": "2019-08-28 23:46:09"
+    },
+    {
+      "temperature": 25.5625,
+      "co_ppm": 190.0,
+      "lp_gas_ppm": 76.0,
+      "particle_ppm": 8.0,
+      "epoch": "2019-08-28 23:46:25"
+    },
+    {
+      "temperature": 25.5625,
+      "co_ppm": 189.0,
+      "lp_gas_ppm": 76.0,
+      "particle_ppm": 8.0,
+      "epoch": "2019-08-28 23:46:41"
+    },
+    {
+      "temperature": 25.5625,
+      "co_ppm": 189.0,
+      "lp_gas_ppm": 76.0,
+      "particle_ppm": 8.0,
+      "epoch": "2019-08-28 23:46:58"
+    },
+    {
+      "temperature": 25.5625,
+      "co_ppm": 189.0,
+      "lp_gas_ppm": 76.0,
+      "particle_ppm": 8.0,
+      "epoch": "2019-08-28 23:47:14"
+    },
+    {
+      "temperature": 25.5625,
+      "co_ppm": 189.0,
+      "lp_gas_ppm": 76.0,
+      "particle_ppm": 8.0,
+      "epoch": "2019-08-28 23:47:29"
+    },
+    {
+      "temperature": 25.5625,
+      "co_ppm": 189.0,
+      "lp_gas_ppm": 75.0,
+      "particle_ppm": 8.0,
+      "epoch": "2019-08-28 23:47:45"
+    },
+    {
+      "temperature": 25.5625,
+      "co_ppm": 189.0,
+      "lp_gas_ppm": 76.0,
+      "particle_ppm": 13.0,
+      "epoch": "2019-08-28 23:48:02"
+    },
+    {
+      "temperature": 25.5625,
+      "co_ppm": 190.0,
+      "lp_gas_ppm": 75.0,
+      "particle_ppm": 8.0,
+      "epoch": "2019-08-28 23:48:18"
+    },
+    {
+      "temperature": 25.5625,
+      "co_ppm": 189.0,
+      "lp_gas_ppm": 75.0,
+      "particle_ppm": 8.0,
+      "epoch": "2019-08-28 23:48:33"
+    },
+    {
+      "temperature": 25.5625,
+      "co_ppm": 189.0,
+      "lp_gas_ppm": 75.0,
+      "particle_ppm": 8.0,
+      "epoch": "2019-08-28 23:48:49"
+    },
+    {
+      "temperature": 25.5625,
+      "co_ppm": 188.0,
+      "lp_gas_ppm": 75.0,
+      "particle_ppm": 10.0,
+      "epoch": "2019-08-28 23:49:32"
+    },
+    {
+      "temperature": 25.5625,
+      "co_ppm": 196.0,
+      "lp_gas_ppm": 75.0,
+      "particle_ppm": 10.0,
+      "epoch": "2019-08-28 23:49:47"
+    },
+    {
+      "temperature": 25.5625,
+      "co_ppm": 218.0,
+      "lp_gas_ppm": 76.0,
+      "particle_ppm": 8.0,
+      "epoch": "2019-08-28 23:50:03"
+    },
+    {
+      "temperature": 25.5625,
+      "co_ppm": 213.0,
+      "lp_gas_ppm": 76.0,
+      "particle_ppm": 8.0,
+      "epoch": "2019-08-28 23:50:19"
+    },
+    {
+      "temperature": 25.5625,
+      "co_ppm": 210.0,
+      "lp_gas_ppm": 77.0,
+      "particle_ppm": 8.0,
+      "epoch": "2019-08-28 23:50:36"
+    },
+    {
+      "temperature": 25.5625,
+      "co_ppm": 207.0,
+      "lp_gas_ppm": 76.0,
+      "particle_ppm": 8.0,
+      "epoch": "2019-08-28 23:50:52"
+    },
+    {
+      "temperature": 25.5,
+      "co_ppm": 206.0,
+      "lp_gas_ppm": 76.0,
+      "particle_ppm": 8.0,
+      "epoch": "2019-08-28 23:51:08"
+    },
+    {
+      "temperature": 25.5625,
+      "co_ppm": 205.0,
+      "lp_gas_ppm": 76.0,
+      "particle_ppm": 20.0,
+      "epoch": "2019-08-28 23:51:24"
+    },
+    {
+      "temperature": 25.5625,
+      "co_ppm": 208.0,
+      "lp_gas_ppm": 77.0,
+      "particle_ppm": 10.0,
+      "epoch": "2019-08-28 23:51:40"
+    },
+    {
+      "temperature": 25.5625,
+      "co_ppm": 205.0,
+      "lp_gas_ppm": 77.0,
+      "particle_ppm": 8.0,
+      "epoch": "2019-08-28 23:51:56"
+    },
+    {
+      "temperature": 25.5625,
+      "co_ppm": 201.0,
+      "lp_gas_ppm": 76.0,
+      "particle_ppm": 8.0,
+      "epoch": "2019-08-28 23:52:12"
+    },
+    {
+      "temperature": 25.5625,
+      "co_ppm": 200.0,
+      "lp_gas_ppm": 76.0,
+      "particle_ppm": 8.0,
+      "epoch": "2019-08-28 23:52:28"
+    },
+    {
+      "temperature": 25.5625,
+      "co_ppm": 199.0,
+      "lp_gas_ppm": 76.0,
+      "particle_ppm": 8.0,
+      "epoch": "2019-08-28 23:52:44"
+    },
+    {
+      "temperature": 25.5625,
+      "co_ppm": 198.0,
+      "lp_gas_ppm": 76.0,
+      "particle_ppm": 9.0,
+      "epoch": "2019-08-28 23:53:00"
+    },
+    {
+      "temperature": 25.5625,
+      "co_ppm": 197.0,
+      "lp_gas_ppm": 76.0,
+      "particle_ppm": 8.0,
+      "epoch": "2019-08-28 23:53:15"
+    },
+    {
+      "temperature": 25.625,
+      "co_ppm": 196.0,
+      "lp_gas_ppm": 76.0,
+      "particle_ppm": 8.0,
+      "epoch": "2019-08-28 23:53:31"
+    },
+    {
+      "temperature": 25.625,
+      "co_ppm": 195.0,
+      "lp_gas_ppm": 75.0,
+      "particle_ppm": 8.0,
+      "epoch": "2019-08-28 23:53:48"
+    },
+    {
+      "temperature": 25.625,
+      "co_ppm": 196.0,
+      "lp_gas_ppm": 75.0,
+      "particle_ppm": 8.0,
+      "epoch": "2019-08-28 23:54:04"
+    },
+    {
+      "temperature": 25.625,
+      "co_ppm": 196.0,
+      "lp_gas_ppm": 75.0,
+      "particle_ppm": 8.0,
+      "epoch": "2019-08-28 23:54:19"
+    },
+    {
+      "temperature": 25.625,
+      "co_ppm": 195.0,
+      "lp_gas_ppm": 75.0,
+      "particle_ppm": 8.0,
+      "epoch": "2019-08-28 23:54:35"
+    },
+    {
+      "temperature": 25.625,
+      "co_ppm": 195.0,
+      "lp_gas_ppm": 75.0,
+      "particle_ppm": 8.0,
+      "epoch": "2019-08-28 23:54:51"
+    },
+    {
+      "temperature": 25.625,
+      "co_ppm": 195.0,
+      "lp_gas_ppm": 76.0,
+      "particle_ppm": 8.0,
+      "epoch": "2019-08-28 23:55:07"
+    },
+    {
+      "temperature": 25.625,
+      "co_ppm": 195.0,
+      "lp_gas_ppm": 75.0,
+      "particle_ppm": 8.0,
+      "epoch": "2019-08-28 23:55:22"
+    },
+    {
+      "temperature": 25.625,
+      "co_ppm": 193.0,
+      "lp_gas_ppm": 75.0,
+      "particle_ppm": 8.0,
+      "epoch": "2019-08-28 23:55:38"
+    },
+    {
+      "temperature": 25.625,
+      "co_ppm": 192.0,
+      "lp_gas_ppm": 75.0,
+      "particle_ppm": 8.0,
+      "epoch": "2019-08-28 23:55:55"
+    },
+    {
+      "temperature": 25.625,
+      "co_ppm": 190.0,
+      "lp_gas_ppm": 75.0,
+      "particle_ppm": 8.0,
+      "epoch": "2019-08-28 23:56:10"
+    },
+    {
+      "temperature": 25.625,
+      "co_ppm": 190.0,
+      "lp_gas_ppm": 75.0,
+      "particle_ppm": 19.0,
+      "epoch": "2019-08-28 23:56:26"
+    },
+    {
+      "temperature": 25.625,
+      "co_ppm": 190.0,
+      "lp_gas_ppm": 75.0,
+      "particle_ppm": 8.0,
+      "epoch": "2019-08-28 23:56:42"
+    },
+    {
+      "temperature": 25.625,
+      "co_ppm": 190.0,
+      "lp_gas_ppm": 75.0,
+      "particle_ppm": 10.0,
+      "epoch": "2019-08-28 23:56:59"
+    },
+    {
+      "temperature": 25.625,
+      "co_ppm": 189.0,
+      "lp_gas_ppm": 75.0,
+      "particle_ppm": 8.0,
+      "epoch": "2019-08-28 23:57:14"
+    },
+    {
+      "temperature": 25.625,
+      "co_ppm": 189.0,
+      "lp_gas_ppm": 75.0,
+      "particle_ppm": 8.0,
+      "epoch": "2019-08-28 23:57:30"
+    },
+    {
+      "temperature": 25.5625,
+      "co_ppm": 189.0,
+      "lp_gas_ppm": 75.0,
+      "particle_ppm": 9.0,
+      "epoch": "2019-08-28 23:57:46"
+    },
+    {
+      "temperature": 25.5625,
+      "co_ppm": 189.0,
+      "lp_gas_ppm": 75.0,
+      "particle_ppm": 8.0,
+      "epoch": "2019-08-28 23:58:02"
+    },
+    {
+      "temperature": 25.5625,
+      "co_ppm": 190.0,
+      "lp_gas_ppm": 74.0,
+      "particle_ppm": 8.0,
+      "epoch": "2019-08-28 23:58:18"
+    },
+    {
+      "temperature": 25.5625,
+      "co_ppm": 190.0,
+      "lp_gas_ppm": 75.0,
+      "particle_ppm": 8.0,
+      "epoch": "2019-08-28 23:58:33"
+    },
+    {
+      "temperature": 25.5625,
+      "co_ppm": 189.0,
+      "lp_gas_ppm": 74.0,
+      "particle_ppm": 8.0,
+      "epoch": "2019-08-28 23:58:49"
+    },
+    {
+      "temperature": 25.5625,
+      "co_ppm": 190.0,
+      "lp_gas_ppm": 75.0,
+      "particle_ppm": 21.0,
+      "epoch": "2019-08-28 23:59:06"
+    },
+    {
+      "temperature": 25.5625,
+      "co_ppm": 189.0,
+      "lp_gas_ppm": 74.0,
+      "particle_ppm": 8.0,
+      "epoch": "2019-08-28 23:59:22"
+    },
+    {
+      "temperature": 25.5625,
+      "co_ppm": 190.0,
+      "lp_gas_ppm": 75.0,
+      "particle_ppm": 8.0,
+      "epoch": "2019-08-28 23:59:37"
+    },
+    {
+      "temperature": 25.5625,
+      "co_ppm": 190.0,
+      "lp_gas_ppm": 74.0,
+      "particle_ppm": 8.0,
+      "epoch": "2019-08-28 23:59:53"
+    },
+    {
+      "temperature": 25.5625,
+      "co_ppm": 189.0,
+      "lp_gas_ppm": 75.0,
+      "particle_ppm": 8.0,
+      "epoch": "2019-08-29 00:00:10"
+    },
+    {
+      "temperature": 25.5625,
+      "co_ppm": 189.0,
+      "lp_gas_ppm": 75.0,
+      "particle_ppm": 8.0,
+      "epoch": "2019-08-29 00:00:26"
+    },
+    {
+      "temperature": 25.5625,
+      "co_ppm": 189.0,
+      "lp_gas_ppm": 74.0,
+      "particle_ppm": 8.0,
+      "epoch": "2019-08-29 00:00:42"
+    },
+    {
+      "temperature": 25.5625,
+      "co_ppm": 190.0,
+      "lp_gas_ppm": 75.0,
+      "particle_ppm": 8.0,
+      "epoch": "2019-08-29 00:00:57"
+    },
+    {
+      "temperature": 25.5625,
+      "co_ppm": 189.0,
+      "lp_gas_ppm": 74.0,
+      "particle_ppm": 10.0,
+      "epoch": "2019-08-29 00:01:13"
+    },
+    {
+      "temperature": 25.5625,
+      "co_ppm": 189.0,
+      "lp_gas_ppm": 74.0,
+      "particle_ppm": 8.0,
+      "epoch": "2019-08-29 00:01:29"
+    },
+    {
+      "temperature": 25.5,
+      "co_ppm": 190.0,
+      "lp_gas_ppm": 74.0,
+      "particle_ppm": 8.0,
+      "epoch": "2019-08-29 00:06:12"
+    },
+    {
+      "temperature": 25.5,
+      "co_ppm": 190.0,
+      "lp_gas_ppm": 74.0,
+      "particle_ppm": 8.0,
+      "epoch": "2019-08-29 00:06:28"
+    },
+    {
+      "temperature": 25.5625,
+      "co_ppm": 189.0,
+      "lp_gas_ppm": 74.0,
+      "particle_ppm": 14.0,
+      "epoch": "1970-01-01 05:30:09"
+    },
+    {
+      "temperature": 25.5625,
+      "co_ppm": 188.0,
+      "lp_gas_ppm": 74.0,
+      "particle_ppm": 8.0,
+      "epoch": "2019-08-29 00:07:30"
+    },
+    {
+      "temperature": 25.5,
+      "co_ppm": 188.0,
+      "lp_gas_ppm": 73.0,
+      "particle_ppm": 8.0,
+      "epoch": "2019-08-29 00:07:45"
+    },
+    {
+      "temperature": 25.5,
+      "co_ppm": 188.0,
+      "lp_gas_ppm": 74.0,
+      "particle_ppm": 8.0,
+      "epoch": "2019-08-29 00:08:01"
+    },
+    {
+      "temperature": 25.5,
+      "co_ppm": 188.0,
+      "lp_gas_ppm": 74.0,
+      "particle_ppm": 8.0,
+      "epoch": "2019-08-29 00:08:17"
+    },
+    {
+      "temperature": 25.5,
+      "co_ppm": 189.0,
+      "lp_gas_ppm": 74.0,
+      "particle_ppm": 9.0,
+      "epoch": "2019-08-29 00:08:34"
+    },
+    {
+      "temperature": 25.5,
+      "co_ppm": 189.0,
+      "lp_gas_ppm": 76.0,
+      "particle_ppm": 10.0,
+      "epoch": "2019-08-29 00:08:50"
+    },
+    {
+      "temperature": 25.5,
+      "co_ppm": 188.0,
+      "lp_gas_ppm": 75.0,
+      "particle_ppm": 8.0,
+      "epoch": "2019-08-29 00:09:05"
+    },
+    {
+      "temperature": 25.5,
+      "co_ppm": 188.0,
+      "lp_gas_ppm": 75.0,
+      "particle_ppm": 8.0,
+      "epoch": "2019-08-29 00:09:21"
+    },
+    {
+      "temperature": 25.5,
+      "co_ppm": 189.0,
+      "lp_gas_ppm": 75.0,
+      "particle_ppm": 8.0,
+      "epoch": "2019-08-29 00:09:37"
+    },
+    {
+      "temperature": 25.5,
+      "co_ppm": 189.0,
+      "lp_gas_ppm": 75.0,
+      "particle_ppm": 9.0,
+      "epoch": "2019-08-29 00:09:52"
+    },
+    {
+      "temperature": 25.5,
+      "co_ppm": 187.0,
+      "lp_gas_ppm": 75.0,
+      "particle_ppm": 8.0,
+      "epoch": "2019-08-29 00:10:08"
+    },
+    {
+      "temperature": 25.5,
+      "co_ppm": 190.0,
+      "lp_gas_ppm": 75.0,
+      "particle_ppm": 12.0,
+      "epoch": "2019-08-29 00:10:24"
+    },
+    {
+      "temperature": 25.5,
+      "co_ppm": 195.0,
+      "lp_gas_ppm": 75.0,
+      "particle_ppm": 8.0,
+      "epoch": "2019-08-29 00:10:41"
+    },
+    {
+      "temperature": 25.5,
+      "co_ppm": 192.0,
+      "lp_gas_ppm": 75.0,
+      "particle_ppm": 13.0,
+      "epoch": "2019-08-29 00:10:56"
+    },
+    {
+      "temperature": 25.5,
+      "co_ppm": 190.0,
+      "lp_gas_ppm": 74.0,
+      "particle_ppm": 10.0,
+      "epoch": "2019-08-29 00:11:12"
+    },
+    {
+      "temperature": 25.5,
+      "co_ppm": 190.0,
+      "lp_gas_ppm": 75.0,
+      "particle_ppm": 8.0,
+      "epoch": "2019-08-29 00:11:28"
+    },
+    {
+      "temperature": 25.5,
+      "co_ppm": 190.0,
+      "lp_gas_ppm": 74.0,
+      "particle_ppm": 8.0,
+      "epoch": "2019-08-29 00:11:45"
+    },
+    {
+      "temperature": 25.5,
+      "co_ppm": 190.0,
+      "lp_gas_ppm": 74.0,
+      "particle_ppm": 8.0,
+      "epoch": "2019-08-29 00:12:01"
+    },
+    {
+      "temperature": 25.5,
+      "co_ppm": 189.0,
+      "lp_gas_ppm": 74.0,
+      "particle_ppm": 8.0,
+      "epoch": "2019-08-29 00:12:16"
+    },
+    {
+      "temperature": 25.5,
+      "co_ppm": 183.0,
+      "lp_gas_ppm": 69.0,
+      "particle_ppm": 10.0,
+      "epoch": "2019-08-29 00:12:32"
+    },
+    {
+      "temperature": 25.5,
+      "co_ppm": 176.0,
+      "lp_gas_ppm": 68.0,
+      "particle_ppm": 8.0,
+      "epoch": "2019-08-29 00:12:48"
+    },
+    {
+      "temperature": 25.5,
+      "co_ppm": 180.0,
+      "lp_gas_ppm": 68.0,
+      "particle_ppm": 8.0,
+      "epoch": "2019-08-29 00:13:03"
+    },
+    {
+      "temperature": 25.5,
+      "co_ppm": 185.0,
+      "lp_gas_ppm": 72.0,
+      "particle_ppm": 8.0,
+      "epoch": "2019-08-29 00:13:19"
+    },
+    {
+      "temperature": 25.5,
+      "co_ppm": 186.0,
+      "lp_gas_ppm": 72.0,
+      "particle_ppm": 8.0,
+      "epoch": "2019-08-29 00:13:35"
+    },
+    {
+      "temperature": 25.5,
+      "co_ppm": 187.0,
+      "lp_gas_ppm": 73.0,
+      "particle_ppm": 8.0,
+      "epoch": "2019-08-29 00:13:52"
+    },
+    {
+      "temperature": 25.5,
+      "co_ppm": 187.0,
+      "lp_gas_ppm": 73.0,
+      "particle_ppm": 8.0,
+      "epoch": "2019-08-29 00:14:07"
+    },
+    {
+      "temperature": 25.5,
+      "co_ppm": 187.0,
+      "lp_gas_ppm": 73.0,
+      "particle_ppm": 8.0,
+      "epoch": "2019-08-29 00:14:23"
+    },
+    {
+      "temperature": 25.5,
+      "co_ppm": 187.0,
+      "lp_gas_ppm": 74.0,
+      "particle_ppm": 10.0,
+      "epoch": "2019-08-29 00:14:39"
+    },
+    {
+      "temperature": 25.5,
+      "co_ppm": 186.0,
+      "lp_gas_ppm": 72.0,
+      "particle_ppm": 10.0,
+      "epoch": "2019-08-29 00:14:55"
+    },
+    {
+      "temperature": 25.5,
+      "co_ppm": 187.0,
+      "lp_gas_ppm": 72.0,
+      "particle_ppm": 8.0,
+      "epoch": "2019-08-29 00:15:11"
+    },
+    {
+      "temperature": 25.5,
+      "co_ppm": 187.0,
+      "lp_gas_ppm": 72.0,
+      "particle_ppm": 8.0,
+      "epoch": "2019-08-29 00:15:26"
+    },
+    {
+      "temperature": 25.5,
+      "co_ppm": 187.0,
+      "lp_gas_ppm": 72.0,
+      "particle_ppm": 8.0,
+      "epoch": "2019-08-29 00:15:42"
+    },
+    {
+      "temperature": 25.5,
+      "co_ppm": 187.0,
+      "lp_gas_ppm": 72.0,
+      "particle_ppm": 8.0,
+      "epoch": "2019-08-29 00:15:59"
+    },
+    {
+      "temperature": 25.5,
+      "co_ppm": 186.0,
+      "lp_gas_ppm": 72.0,
+      "particle_ppm": 8.0,
+      "epoch": "2019-08-29 00:16:14"
+    },
+    {
+      "temperature": 25.5,
+      "co_ppm": 187.0,
+      "lp_gas_ppm": 72.0,
+      "particle_ppm": 8.0,
+      "epoch": "2019-08-29 00:16:30"
+    },
+    {
+      "temperature": 25.5,
+      "co_ppm": 181.0,
+      "lp_gas_ppm": 68.0,
+      "particle_ppm": 14.0,
+      "epoch": "2019-08-29 00:16:46"
+    },
+    {
+      "temperature": 25.5,
+      "co_ppm": 182.0,
+      "lp_gas_ppm": 69.0,
+      "particle_ppm": 8.0,
+      "epoch": "2019-08-29 00:17:03"
+    },
+    {
+      "temperature": 25.5,
+      "co_ppm": 182.0,
+      "lp_gas_ppm": 69.0,
+      "particle_ppm": 9.0,
+      "epoch": "2019-08-29 00:17:18"
+    },
+    {
+      "temperature": 25.5,
+      "co_ppm": 183.0,
+      "lp_gas_ppm": 69.0,
+      "particle_ppm": 8.0,
+      "epoch": "2019-08-29 00:17:34"
+    },
+    {
+      "temperature": 25.5,
+      "co_ppm": 183.0,
+      "lp_gas_ppm": 69.0,
+      "particle_ppm": 8.0,
+      "epoch": "2019-08-29 00:17:50"
+    },
+    {
+      "temperature": 25.5,
+      "co_ppm": 184.0,
+      "lp_gas_ppm": 69.0,
+      "particle_ppm": 10.0,
+      "epoch": "2019-08-29 00:18:06"
+    },
+    {
+      "temperature": 25.5,
+      "co_ppm": 185.0,
+      "lp_gas_ppm": 69.0,
+      "particle_ppm": 8.0,
+      "epoch": "2019-08-29 00:18:21"
+    },
+    {
+      "temperature": 25.5,
+      "co_ppm": 185.0,
+      "lp_gas_ppm": 69.0,
+      "particle_ppm": 13.0,
+      "epoch": "2019-08-29 00:18:37"
+    },
+    {
+      "temperature": 25.5,
+      "co_ppm": 185.0,
+      "lp_gas_ppm": 69.0,
+      "particle_ppm": 8.0,
+      "epoch": "2019-08-29 00:18:53"
+    },
+    {
+      "temperature": 25.4375,
+      "co_ppm": 185.0,
+      "lp_gas_ppm": 69.0,
+      "particle_ppm": 8.0,
+      "epoch": "2019-08-29 00:19:10"
+    },
+    {
+      "temperature": 25.4375,
+      "co_ppm": 185.0,
+      "lp_gas_ppm": 69.0,
+      "particle_ppm": 8.0,
+      "epoch": "2019-08-29 00:19:25"
+    },
+    {
+      "temperature": 25.4375,
+      "co_ppm": 185.0,
+      "lp_gas_ppm": 69.0,
+      "particle_ppm": 8.0,
+      "epoch": "2019-08-29 00:19:41"
+    },
+    {
+      "temperature": 25.4375,
+      "co_ppm": 181.0,
+      "lp_gas_ppm": 68.0,
+      "particle_ppm": 8.0,
+      "epoch": "2019-08-29 00:19:57"
+    },
+    {
+      "temperature": 25.4375,
+      "co_ppm": 182.0,
+      "lp_gas_ppm": 68.0,
+      "particle_ppm": 8.0,
+      "epoch": "2019-08-29 00:20:14"
+    },
+    {
+      "temperature": 25.4375,
+      "co_ppm": 183.0,
+      "lp_gas_ppm": 68.0,
+      "particle_ppm": 9.0,
+      "epoch": "2019-08-29 00:20:29"
+    },
+    {
+      "temperature": 25.5,
+      "co_ppm": 183.0,
+      "lp_gas_ppm": 69.0,
+      "particle_ppm": 8.0,
+      "epoch": "2019-08-29 00:20:45"
+    },
+    {
+      "temperature": 25.5,
+      "co_ppm": 183.0,
+      "lp_gas_ppm": 69.0,
+      "particle_ppm": 17.0,
+      "epoch": "2019-08-29 00:21:01"
+    },
+    {
+      "temperature": 25.5,
+      "co_ppm": 183.0,
+      "lp_gas_ppm": 69.0,
+      "particle_ppm": 8.0,
+      "epoch": "2019-08-29 00:21:17"
+    },
+    {
+      "temperature": 25.5,
+      "co_ppm": 185.0,
+      "lp_gas_ppm": 69.0,
+      "particle_ppm": 8.0,
+      "epoch": "2019-08-29 00:21:32"
+    },
+    {
+      "temperature": 25.5,
+      "co_ppm": 184.0,
+      "lp_gas_ppm": 69.0,
+      "particle_ppm": 8.0,
+      "epoch": "2019-08-29 00:21:48"
+    },
+    {
+      "temperature": 25.4375,
+      "co_ppm": 185.0,
+      "lp_gas_ppm": 69.0,
+      "particle_ppm": 8.0,
+      "epoch": "2019-08-29 00:22:04"
+    },
+    {
+      "temperature": 25.4375,
+      "co_ppm": 184.0,
+      "lp_gas_ppm": 69.0,
+      "particle_ppm": 8.0,
+      "epoch": "2019-08-29 00:22:21"
+    },
+    {
+      "temperature": 25.4375,
+      "co_ppm": 185.0,
+      "lp_gas_ppm": 69.0,
+      "particle_ppm": 9.0,
+      "epoch": "2019-08-29 00:22:36"
+    },
+    {
+      "temperature": 25.4375,
+      "co_ppm": 185.0,
+      "lp_gas_ppm": 69.0,
+      "particle_ppm": 8.0,
+      "epoch": "2019-08-29 00:22:52"
+    },
+    {
+      "temperature": 25.4375,
+      "co_ppm": 185.0,
+      "lp_gas_ppm": 69.0,
+      "particle_ppm": 8.0,
+      "epoch": "2019-08-29 00:23:08"
+    },
+    {
+      "temperature": 25.4375,
+      "co_ppm": 184.0,
+      "lp_gas_ppm": 69.0,
+      "particle_ppm": 8.0,
+      "epoch": "2019-08-29 00:23:24"
+    },
+    {
+      "temperature": 25.4375,
+      "co_ppm": 185.0,
+      "lp_gas_ppm": 69.0,
+      "particle_ppm": 21.0,
+      "epoch": "2019-08-29 00:23:39"
+    },
+    {
+      "temperature": 25.4375,
+      "co_ppm": 185.0,
+      "lp_gas_ppm": 69.0,
+      "particle_ppm": 10.0,
+      "epoch": "2019-08-29 00:23:55"
+    },
+    {
+      "temperature": 25.4375,
+      "co_ppm": 186.0,
+      "lp_gas_ppm": 69.0,
+      "particle_ppm": 8.0,
+      "epoch": "2019-08-29 00:24:11"
+    },
+    {
+      "temperature": 25.4375,
+      "co_ppm": 185.0,
+      "lp_gas_ppm": 69.0,
+      "particle_ppm": 8.0,
+      "epoch": "2019-08-29 00:24:28"
+    },
+    {
+      "temperature": 25.5625,
+      "co_ppm": 192.0,
+      "lp_gas_ppm": 72.0,
+      "particle_ppm": 8.0,
+      "epoch": "2019-08-29 00:55:30"
+    },
+    {
+      "temperature": 25.5625,
+      "co_ppm": 190.0,
+      "lp_gas_ppm": 72.0,
+      "particle_ppm": 8.0,
+      "epoch": "2019-08-29 00:55:46"
+    },
+    {
+      "temperature": 25.5625,
+      "co_ppm": 190.0,
+      "lp_gas_ppm": 72.0,
+      "particle_ppm": 9.0,
+      "epoch": "2019-08-29 00:56:01"
+    },
+    {
+      "temperature": 25.5625,
+      "co_ppm": 190.0,
+      "lp_gas_ppm": 70.0,
+      "particle_ppm": 8.0,
+      "epoch": "2019-08-29 00:56:17"
+    },
+    {
+      "temperature": 25.5625,
+      "co_ppm": 189.0,
+      "lp_gas_ppm": 70.0,
+      "particle_ppm": 8.0,
+      "epoch": "2019-08-29 00:56:34"
+    },
+    {
+      "temperature": 25.5625,
+      "co_ppm": 189.0,
+      "lp_gas_ppm": 70.0,
+      "particle_ppm": 8.0,
+      "epoch": "2019-08-29 00:56:50"
+    },
+    {
+      "temperature": 25.5625,
+      "co_ppm": 183.0,
+      "lp_gas_ppm": 69.0,
+      "particle_ppm": 8.0,
+      "epoch": "2019-08-29 00:57:05"
+    },
+    {
+      "temperature": 25.5625,
+      "co_ppm": 185.0,
+      "lp_gas_ppm": 69.0,
+      "particle_ppm": 9.0,
+      "epoch": "2019-08-29 00:57:21"
+    },
+    {
+      "temperature": 25.5625,
+      "co_ppm": 186.0,
+      "lp_gas_ppm": 69.0,
+      "particle_ppm": 12.0,
+      "epoch": "2019-08-29 00:57:37"
+    },
+    {
+      "temperature": 25.5625,
+      "co_ppm": 186.0,
+      "lp_gas_ppm": 69.0,
+      "particle_ppm": 8.0,
+      "epoch": "2019-08-29 00:57:54"
+    },
+    {
+      "temperature": 25.5625,
+      "co_ppm": 185.0,
+      "lp_gas_ppm": 69.0,
+      "particle_ppm": 8.0,
+      "epoch": "2019-08-29 00:58:11"
+    },
+    {
+      "temperature": 25.5625,
+      "co_ppm": 183.0,
+      "lp_gas_ppm": 69.0,
+      "particle_ppm": 26.0,
+      "epoch": "2019-08-29 00:58:26"
+    },
+    {
+      "temperature": 25.5625,
+      "co_ppm": 187.0,
+      "lp_gas_ppm": 70.0,
+      "particle_ppm": 10.0,
+      "epoch": "2019-08-29 00:58:42"
+    },
+    {
+      "temperature": 25.5625,
+      "co_ppm": 187.0,
+      "lp_gas_ppm": 70.0,
+      "particle_ppm": 13.0,
+      "epoch": "2019-08-29 00:58:58"
+    },
+    {
+      "temperature": 25.5625,
+      "co_ppm": 190.0,
+      "lp_gas_ppm": 72.0,
+      "particle_ppm": 12.0,
+      "epoch": "2019-08-29 00:59:15"
+    },
+    {
+      "temperature": 25.5625,
+      "co_ppm": 190.0,
+      "lp_gas_ppm": 72.0,
+      "particle_ppm": 10.0,
+      "epoch": "2019-08-29 00:59:31"
+    },
+    {
+      "temperature": 25.5625,
+      "co_ppm": 196.0,
+      "lp_gas_ppm": 72.0,
+      "particle_ppm": 9.0,
+      "epoch": "2019-08-29 00:59:46"
+    },
+    {
+      "temperature": 25.5625,
+      "co_ppm": 196.0,
+      "lp_gas_ppm": 72.0,
+      "particle_ppm": 14.0,
+      "epoch": "2019-08-29 01:00:02"
+    },
+    {
+      "temperature": 25.625,
+      "co_ppm": 196.0,
+      "lp_gas_ppm": 72.0,
+      "particle_ppm": 10.0,
+      "epoch": "2019-08-29 01:00:18"
+    },
+    {
+      "temperature": 25.625,
+      "co_ppm": 196.0,
+      "lp_gas_ppm": 72.0,
+      "particle_ppm": 8.0,
+      "epoch": "2019-08-29 01:00:33"
+    },
+    {
+      "temperature": 25.625,
+      "co_ppm": 196.0,
+      "lp_gas_ppm": 72.0,
+      "particle_ppm": 8.0,
+      "epoch": "2019-08-29 01:00:49"
+    },
+    {
+      "temperature": 25.5625,
+      "co_ppm": 192.0,
+      "lp_gas_ppm": 70.0,
+      "particle_ppm": 8.0,
+      "epoch": "2019-08-29 01:01:05"
+    },
+    {
+      "temperature": 25.625,
+      "co_ppm": 193.0,
+      "lp_gas_ppm": 70.0,
+      "particle_ppm": 8.0,
+      "epoch": "2019-08-29 01:01:22"
+    },
+    {
+      "temperature": 25.625,
+      "co_ppm": 0.0,
+      "lp_gas_ppm": 0.0,
+      "particle_ppm": 15.0,
+      "epoch": "2019-08-29 01:01:37"
+    },
+    {
+      "temperature": 25.625,
+      "co_ppm": 6.0,
+      "lp_gas_ppm": 6.0,
+      "particle_ppm": 2.0,
+      "epoch": "2019-08-29 01:01:53"
+    },
+    {
+      "temperature": 25.625,
+      "co_ppm": 2.0,
+      "lp_gas_ppm": 3.0,
+      "particle_ppm": 2.0,
+      "epoch": "2019-08-29 01:02:09"
+    },
+    {
+      "temperature": 25.625,
+      "co_ppm": 3.0,
+      "lp_gas_ppm": 3.0,
+      "particle_ppm": 2.0,
+      "epoch": "2019-08-29 01:02:25"
+    },
+    {
+      "temperature": 25.625,
+      "co_ppm": 4.0,
+      "lp_gas_ppm": 5.0,
+      "particle_ppm": 9.0,
+      "epoch": "2019-08-29 01:02:40"
+    },
+    {
+      "temperature": 25.625,
+      "co_ppm": 4.0,
+      "lp_gas_ppm": 5.0,
+      "particle_ppm": 2.0,
+      "epoch": "2019-08-29 01:02:56"
+    },
+    {
+      "temperature": 25.625,
+      "co_ppm": 17.0,
+      "lp_gas_ppm": 6.0,
+      "particle_ppm": 7.0,
+      "epoch": "2019-08-29 01:03:12"
+    },
+    {
+      "temperature": 25.625,
+      "co_ppm": 3.0,
+      "lp_gas_ppm": 3.0,
+      "particle_ppm": 3.0,
+      "epoch": "2019-08-29 01:03:29"
+    },
+    {
+      "temperature": 25.625,
+      "co_ppm": 4.0,
+      "lp_gas_ppm": 5.0,
+      "particle_ppm": 2.0,
+      "epoch": "2019-08-29 01:03:44"
+    },
+    {
+      "temperature": 25.625,
+      "co_ppm": 3.0,
+      "lp_gas_ppm": 3.0,
+      "particle_ppm": 4.0,
+      "epoch": "2019-08-29 01:04:00"
+    },
+    {
+      "temperature": 25.625,
+      "co_ppm": 6.0,
+      "lp_gas_ppm": 7.0,
+      "particle_ppm": 2.0,
+      "epoch": "2019-08-29 01:04:16"
+    },
+    {
+      "temperature": 25.625,
+      "co_ppm": 7.0,
+      "lp_gas_ppm": 8.0,
+      "particle_ppm": 4.0,
+      "epoch": "2019-08-29 01:04:33"
+    },
+    {
+      "temperature": 25.625,
+      "co_ppm": 7.0,
+      "lp_gas_ppm": 7.0,
+      "particle_ppm": 4.0,
+      "epoch": "2019-08-29 01:04:48"
+    },
+    {
+      "temperature": 25.625,
+      "co_ppm": 0.0,
+      "lp_gas_ppm": 0.0,
+      "particle_ppm": 2.0,
+      "epoch": "2019-08-29 01:05:04"
+    },
+    {
+      "temperature": 25.625,
+      "co_ppm": 4.0,
+      "lp_gas_ppm": 5.0,
+      "particle_ppm": 2.0,
+      "epoch": "2019-08-29 01:05:20"
+    },
+    {
+      "temperature": 25.625,
+      "co_ppm": 4.0,
+      "lp_gas_ppm": 6.0,
+      "particle_ppm": 2.0,
+      "epoch": "2019-08-29 01:05:36"
+    },
+    {
+      "temperature": 25.625,
+      "co_ppm": 0.0,
+      "lp_gas_ppm": 0.0,
+      "particle_ppm": 3.0,
+      "epoch": "2019-08-29 01:05:51"
+    },
+    {
+      "temperature": 25.625,
+      "co_ppm": 5.0,
+      "lp_gas_ppm": 6.0,
+      "particle_ppm": 2.0,
+      "epoch": "2019-08-29 01:06:07"
+    },
+    {
+      "temperature": 25.625,
+      "co_ppm": 4.0,
+      "lp_gas_ppm": 4.0,
+      "particle_ppm": 3.0,
+      "epoch": "2019-08-29 01:06:23"
+    },
+    {
+      "temperature": 25.625,
+      "co_ppm": 4.0,
+      "lp_gas_ppm": 5.0,
+      "particle_ppm": 2.0,
+      "epoch": "2019-08-29 01:06:40"
+    },
+    {
+      "temperature": 25.625,
+      "co_ppm": 2.0,
+      "lp_gas_ppm": 2.0,
+      "particle_ppm": 4.0,
+      "epoch": "2019-08-29 01:06:55"
+    },
+    {
+      "temperature": 25.625,
+      "co_ppm": 3.0,
+      "lp_gas_ppm": 3.0,
+      "particle_ppm": 2.0,
+      "epoch": "2019-08-29 01:07:11"
+    },
+    {
+      "temperature": 25.625,
+      "co_ppm": 1.0,
+      "lp_gas_ppm": 0.0,
+      "particle_ppm": 3.0,
+      "epoch": "2019-08-29 01:07:27"
+    },
+    {
+      "temperature": 25.625,
+      "co_ppm": 66.0,
+      "lp_gas_ppm": 0.0,
+      "particle_ppm": 7.0,
+      "epoch": "2019-08-29 01:07:43"
+    },
+    {
+      "temperature": 25.625,
+      "co_ppm": 8.0,
+      "lp_gas_ppm": 8.0,
+      "particle_ppm": 2.0,
+      "epoch": "2019-08-29 01:07:59"
+    },
+    {
+      "temperature": 25.625,
+      "co_ppm": 4.0,
+      "lp_gas_ppm": 5.0,
+      "particle_ppm": 2.0,
+      "epoch": "2019-08-29 01:08:14"
+    },
+    {
+      "temperature": 25.625,
+      "co_ppm": 0.0,
+      "lp_gas_ppm": 0.0,
+      "particle_ppm": 2.0,
+      "epoch": "2019-08-29 01:08:30"
+    },
+    {
+      "temperature": 25.625,
+      "co_ppm": 0.0,
+      "lp_gas_ppm": 0.0,
+      "particle_ppm": 2.0,
+      "epoch": "2019-08-29 01:08:47"
+    },
+    {
+      "temperature": 25.625,
+      "co_ppm": 1.0,
+      "lp_gas_ppm": 1.0,
+      "particle_ppm": 8.0,
+      "epoch": "2019-08-29 01:09:03"
+    },
+    {
+      "temperature": 25.625,
+      "co_ppm": 3.0,
+      "lp_gas_ppm": 3.0,
+      "particle_ppm": 4.0,
+      "epoch": "2019-08-29 01:09:19"
+    },
+    {
+      "temperature": 25.625,
+      "co_ppm": 4.0,
+      "lp_gas_ppm": 4.0,
+      "particle_ppm": 3.0,
+      "epoch": "2019-08-29 01:09:35"
+    },
+    {
+      "temperature": 25.625,
+      "co_ppm": 4.0,
+      "lp_gas_ppm": 4.0,
+      "particle_ppm": 4.0,
+      "epoch": "2019-08-29 01:09:52"
+    },
+    {
+      "temperature": 25.5625,
+      "co_ppm": 3.0,
+      "lp_gas_ppm": 3.0,
+      "particle_ppm": 3.0,
+      "epoch": "2019-08-29 01:10:08"
+    },
+    {
+      "temperature": 25.5625,
+      "co_ppm": 4.0,
+      "lp_gas_ppm": 4.0,
+      "particle_ppm": 2.0,
+      "epoch": "2019-08-29 01:10:23"
+    },
+    {
+      "temperature": 25.5625,
+      "co_ppm": 3.0,
+      "lp_gas_ppm": 3.0,
+      "particle_ppm": 2.0,
+      "epoch": "2019-08-29 01:10:39"
+    },
+    {
+      "temperature": 25.625,
+      "co_ppm": 0.0,
+      "lp_gas_ppm": 0.0,
+      "particle_ppm": 3.0,
+      "epoch": "2019-08-29 01:10:55"
+    },
+    {
+      "temperature": 25.625,
+      "co_ppm": 0.0,
+      "lp_gas_ppm": 0.0,
+      "particle_ppm": 5.0,
+      "epoch": "2019-08-29 01:11:10"
+    },
+    {
+      "temperature": 25.625,
+      "co_ppm": 10.0,
+      "lp_gas_ppm": 8.0,
+      "particle_ppm": 5.0,
+      "epoch": "2019-08-29 01:11:26"
+    },
+    {
+      "temperature": 25.625,
+      "co_ppm": 0.0,
+      "lp_gas_ppm": 0.0,
+      "particle_ppm": 2.0,
+      "epoch": "2019-08-29 01:11:42"
+    },
+    {
+      "temperature": 25.625,
+      "co_ppm": 4.0,
+      "lp_gas_ppm": 4.0,
+      "particle_ppm": 3.0,
+      "epoch": "2019-08-29 01:11:59"
+    },
+    {
+      "temperature": 25.625,
+      "co_ppm": 7.0,
+      "lp_gas_ppm": 7.0,
+      "particle_ppm": 5.0,
+      "epoch": "2019-08-29 01:12:16"
+    },
+    {
+      "temperature": 25.625,
+      "co_ppm": 2.0,
+      "lp_gas_ppm": 1.0,
+      "particle_ppm": 12.0,
+      "epoch": "2019-08-29 01:12:32"
+    },
+    {
+      "temperature": 25.625,
+      "co_ppm": 6.0,
+      "lp_gas_ppm": 6.0,
+      "particle_ppm": 2.0,
+      "epoch": "2019-08-29 01:12:47"
+    },
+    {
+      "temperature": 25.625,
+      "co_ppm": 3.0,
+      "lp_gas_ppm": 3.0,
+      "particle_ppm": 4.0,
+      "epoch": "2019-08-29 01:13:03"
+    },
+    {
+      "temperature": 25.625,
+      "co_ppm": 3.0,
+      "lp_gas_ppm": 3.0,
+      "particle_ppm": 3.0,
+      "epoch": "2019-08-29 01:13:19"
+    },
+    {
+      "temperature": 25.625,
+      "co_ppm": 3.0,
+      "lp_gas_ppm": 3.0,
+      "particle_ppm": 2.0,
+      "epoch": "2019-08-29 01:13:34"
+    },
+    {
+      "temperature": 25.625,
+      "co_ppm": 4.0,
+      "lp_gas_ppm": 4.0,
+      "particle_ppm": 3.0,
+      "epoch": "2019-08-29 01:13:50"
+    },
+    {
+      "temperature": 25.625,
+      "co_ppm": 4.0,
+      "lp_gas_ppm": 4.0,
+      "particle_ppm": 4.0,
+      "epoch": "2019-08-29 01:14:06"
+    },
+    {
+      "temperature": 25.625,
+      "co_ppm": 4.0,
+      "lp_gas_ppm": 4.0,
+      "particle_ppm": 4.0,
+      "epoch": "2019-08-29 01:14:23"
+    },
+    {
+      "temperature": 25.625,
+      "co_ppm": 4.0,
+      "lp_gas_ppm": 4.0,
+      "particle_ppm": 4.0,
+      "epoch": "2019-08-29 01:14:38"
+    },
+    {
+      "temperature": 25.625,
+      "co_ppm": 3.0,
+      "lp_gas_ppm": 3.0,
+      "particle_ppm": 2.0,
+      "epoch": "2019-08-29 01:14:54"
+    },
+    {
+      "temperature": 25.625,
+      "co_ppm": 0.0,
+      "lp_gas_ppm": 0.0,
+      "particle_ppm": 2.0,
+      "epoch": "2019-08-29 01:15:10"
+    },
+    {
+      "temperature": 25.625,
+      "co_ppm": 0.0,
+      "lp_gas_ppm": 0.0,
+      "particle_ppm": 2.0,
+      "epoch": "2019-08-29 01:15:27"
+    },
+    {
+      "temperature": 25.25,
+      "co_ppm": 217.0,
+      "lp_gas_ppm": 133.0,
+      "particle_ppm": 8.0,
+      "epoch": "2019-08-29 01:39:29"
+    },
+    {
+      "temperature": 25.25,
+      "co_ppm": 211.0,
+      "lp_gas_ppm": 17.0,
+      "particle_ppm": 26.0,
+      "epoch": "2019-08-29 01:39:49"
+    },
+    {
+      "temperature": 25.25,
+      "co_ppm": 210.0,
+      "lp_gas_ppm": 57.0,
+      "particle_ppm": 8.0,
+      "epoch": "2019-08-29 01:40:05"
+    },
+    {
+      "temperature": 25.25,
+      "co_ppm": 208.0,
+      "lp_gas_ppm": 187.0,
+      "particle_ppm": 16.0,
+      "epoch": "2019-08-29 01:40:21"
+    },
+    {
+      "temperature": 25.25,
+      "co_ppm": 207.0,
+      "lp_gas_ppm": 214.0,
+      "particle_ppm": 9.0,
+      "epoch": "2019-08-29 01:40:37"
+    },
+    {
+      "temperature": 25.25,
+      "co_ppm": 204.0,
+      "lp_gas_ppm": 156.0,
+      "particle_ppm": 9.0,
+      "epoch": "2019-08-29 01:40:52"
+    },
+    {
+      "temperature": 25.3125,
+      "co_ppm": 204.0,
+      "lp_gas_ppm": 274.0,
+      "particle_ppm": 9.0,
+      "epoch": "2019-08-29 01:41:08"
+    },
+    {
+      "temperature": 25.25,
+      "co_ppm": 199.0,
+      "lp_gas_ppm": 170.0,
+      "particle_ppm": 9.0,
+      "epoch": "2019-08-29 01:41:24"
+    },
+    {
+      "temperature": 25.25,
+      "co_ppm": 200.0,
+      "lp_gas_ppm": 209.0,
+      "particle_ppm": 9.0,
+      "epoch": "2019-08-29 01:41:41"
+    },
+    {
+      "temperature": 25.25,
+      "co_ppm": 199.0,
+      "lp_gas_ppm": 6.0,
+      "particle_ppm": 28.0,
+      "epoch": "2019-08-29 01:41:56"
+    },
+    {
+      "temperature": 25.25,
+      "co_ppm": 197.0,
+      "lp_gas_ppm": 5.0,
+      "particle_ppm": 10.0,
+      "epoch": "2019-08-29 01:42:12"
+    },
+    {
+      "temperature": 25.1875,
+      "co_ppm": 196.0,
+      "lp_gas_ppm": 10.0,
+      "particle_ppm": 8.0,
+      "epoch": "2019-08-29 01:42:28"
+    },
+    {
+      "temperature": 25.1875,
+      "co_ppm": 197.0,
+      "lp_gas_ppm": 17.0,
+      "particle_ppm": 9.0,
+      "epoch": "2019-08-29 01:42:45"
+    },
+    {
+      "temperature": 25.1875,
+      "co_ppm": 197.0,
+      "lp_gas_ppm": 13.0,
+      "particle_ppm": 8.0,
+      "epoch": "2019-08-29 01:43:00"
+    },
+    {
+      "temperature": 25.25,
+      "co_ppm": 197.0,
+      "lp_gas_ppm": 12.0,
+      "particle_ppm": 9.0,
+      "epoch": "2019-08-29 01:43:16"
+    },
+    {
+      "temperature": 25.25,
+      "co_ppm": 197.0,
+      "lp_gas_ppm": 15.0,
+      "particle_ppm": 8.0,
+      "epoch": "2019-08-29 01:43:32"
+    },
+    {
+      "temperature": 25.25,
+      "co_ppm": 197.0,
+      "lp_gas_ppm": 14.0,
+      "particle_ppm": 8.0,
+      "epoch": "2019-08-29 01:43:48"
+    },
+    {
+      "temperature": 25.25,
+      "co_ppm": 196.0,
+      "lp_gas_ppm": 8.0,
+      "particle_ppm": 10.0,
+      "epoch": "2019-08-29 01:44:04"
+    },
+    {
+      "temperature": 25.25,
+      "co_ppm": 198.0,
+      "lp_gas_ppm": 37.0,
+      "particle_ppm": 15.0,
+      "epoch": "2019-08-29 01:44:19"
+    },
+    {
+      "temperature": 25.25,
+      "co_ppm": 196.0,
+      "lp_gas_ppm": 80.0,
+      "particle_ppm": 15.0,
+      "epoch": "2019-08-29 01:44:35"
+    },
+    {
+      "temperature": 25.25,
+      "co_ppm": 198.0,
+      "lp_gas_ppm": 88.0,
+      "particle_ppm": 18.0,
+      "epoch": "2019-08-29 01:44:52"
+    },
+    {
+      "temperature": 25.25,
+      "co_ppm": 197.0,
+      "lp_gas_ppm": 85.0,
+      "particle_ppm": 16.0,
+      "epoch": "2019-08-29 01:45:07"
+    },
+    {
+      "temperature": 25.3125,
+      "co_ppm": 197.0,
+      "lp_gas_ppm": 84.0,
+      "particle_ppm": 15.0,
+      "epoch": "2019-08-29 01:45:23"
+    },
+    {
+      "temperature": 25.25,
+      "co_ppm": 196.0,
+      "lp_gas_ppm": 82.0,
+      "particle_ppm": 15.0,
+      "epoch": "2019-08-29 01:45:39"
+    },
+    {
+      "temperature": 25.25,
+      "co_ppm": 196.0,
+      "lp_gas_ppm": 81.0,
+      "particle_ppm": 15.0,
+      "epoch": "2019-08-29 01:45:56"
+    },
+    {
+      "temperature": 25.3125,
+      "co_ppm": 196.0,
+      "lp_gas_ppm": 80.0,
+      "particle_ppm": 15.0,
+      "epoch": "2019-08-29 01:46:11"
+    },
+    {
+      "temperature": 25.3125,
+      "co_ppm": 196.0,
+      "lp_gas_ppm": 80.0,
+      "particle_ppm": 15.0,
+      "epoch": "2019-08-29 01:46:27"
+    },
+    {
+      "temperature": 25.3125,
+      "co_ppm": 199.0,
+      "lp_gas_ppm": 81.0,
+      "particle_ppm": 19.0,
+      "epoch": "2019-08-29 01:46:43"
+    },
+    {
+      "temperature": 25.3125,
+      "co_ppm": 197.0,
+      "lp_gas_ppm": 80.0,
+      "particle_ppm": 33.0,
+      "epoch": "2019-08-29 01:46:59"
+    },
+    {
+      "temperature": 25.3125,
+      "co_ppm": 197.0,
+      "lp_gas_ppm": 80.0,
+      "particle_ppm": 15.0,
+      "epoch": "2019-08-29 01:47:14"
+    },
+    {
+      "temperature": 25.3125,
+      "co_ppm": 196.0,
+      "lp_gas_ppm": 80.0,
+      "particle_ppm": 15.0,
+      "epoch": "2019-08-29 01:47:30"
+    },
+    {
+      "temperature": 25.3125,
+      "co_ppm": 196.0,
+      "lp_gas_ppm": 79.0,
+      "particle_ppm": 15.0,
+      "epoch": "2019-08-29 01:47:46"
+    },
+    {
+      "temperature": 25.3125,
+      "co_ppm": 196.0,
+      "lp_gas_ppm": 79.0,
+      "particle_ppm": 18.0,
+      "epoch": "2019-08-29 01:48:04"
+    },
+    {
+      "temperature": 25.3125,
+      "co_ppm": 195.0,
+      "lp_gas_ppm": 79.0,
+      "particle_ppm": 15.0,
+      "epoch": "2019-08-29 01:48:19"
+    },
+    {
+      "temperature": 25.3125,
+      "co_ppm": 195.0,
+      "lp_gas_ppm": 78.0,
+      "particle_ppm": 15.0,
+      "epoch": "2019-08-29 01:48:35"
+    },
+    {
+      "temperature": 25.3125,
+      "co_ppm": 195.0,
+      "lp_gas_ppm": 79.0,
+      "particle_ppm": 17.0,
+      "epoch": "2019-08-29 01:48:51"
+    },
+    {
+      "temperature": 25.3125,
+      "co_ppm": 199.0,
+      "lp_gas_ppm": 80.0,
+      "particle_ppm": 15.0,
+      "epoch": "2019-08-29 01:49:07"
+    },
+    {
+      "temperature": 25.3125,
+      "co_ppm": 197.0,
+      "lp_gas_ppm": 78.0,
+      "particle_ppm": 28.0,
+      "epoch": "2019-08-29 01:49:23"
+    },
+    {
+      "temperature": 25.3125,
+      "co_ppm": 197.0,
+      "lp_gas_ppm": 79.0,
+      "particle_ppm": 29.0,
+      "epoch": "2019-08-29 01:49:38"
+    },
+    {
+      "temperature": 25.3125,
+      "co_ppm": 196.0,
+      "lp_gas_ppm": 78.0,
+      "particle_ppm": 15.0,
+      "epoch": "2019-08-29 01:49:54"
+    },
+    {
+      "temperature": 25.3125,
+      "co_ppm": 196.0,
+      "lp_gas_ppm": 78.0,
+      "particle_ppm": 15.0,
+      "epoch": "2019-08-29 01:50:11"
+    },
+    {
+      "temperature": 25.375,
+      "co_ppm": 195.0,
+      "lp_gas_ppm": 78.0,
+      "particle_ppm": 15.0,
+      "epoch": "2019-08-29 01:50:26"
+    },
+    {
+      "temperature": 25.375,
+      "co_ppm": 195.0,
+      "lp_gas_ppm": 78.0,
+      "particle_ppm": 18.0,
+      "epoch": "2019-08-29 01:50:42"
+    },
+    {
+      "temperature": 25.375,
+      "co_ppm": 195.0,
+      "lp_gas_ppm": 78.0,
+      "particle_ppm": 15.0,
+      "epoch": "2019-08-29 01:50:58"
+    },
+    {
+      "temperature": 25.375,
+      "co_ppm": 193.0,
+      "lp_gas_ppm": 78.0,
+      "particle_ppm": 15.0,
+      "epoch": "2019-08-29 01:51:15"
+    },
+    {
+      "temperature": 25.375,
+      "co_ppm": 192.0,
+      "lp_gas_ppm": 77.0,
+      "particle_ppm": 15.0,
+      "epoch": "2019-08-29 01:51:30"
+    },
+    {
+      "temperature": 25.375,
+      "co_ppm": 192.0,
+      "lp_gas_ppm": 77.0,
+      "particle_ppm": 15.0,
+      "epoch": "2019-08-29 01:51:46"
+    },
+    {
+      "temperature": 25.375,
+      "co_ppm": 192.0,
+      "lp_gas_ppm": 77.0,
+      "particle_ppm": 17.0,
+      "epoch": "2019-08-29 01:52:02"
+    },
+    {
+      "temperature": 25.375,
+      "co_ppm": 192.0,
+      "lp_gas_ppm": 77.0,
+      "particle_ppm": 15.0,
+      "epoch": "2019-08-29 01:52:18"
+    },
+    {
+      "temperature": 25.375,
+      "co_ppm": 192.0,
+      "lp_gas_ppm": 77.0,
+      "particle_ppm": 18.0,
+      "epoch": "2019-08-29 01:52:34"
+    },
+    {
+      "temperature": 25.375,
+      "co_ppm": 192.0,
+      "lp_gas_ppm": 77.0,
+      "particle_ppm": 28.0,
+      "epoch": "2019-08-29 01:52:49"
+    },
+    {
+      "temperature": 25.375,
+      "co_ppm": 192.0,
+      "lp_gas_ppm": 77.0,
+      "particle_ppm": 15.0,
+      "epoch": "2019-08-29 01:53:05"
+    },
+    {
+      "temperature": 25.375,
+      "co_ppm": 192.0,
+      "lp_gas_ppm": 77.0,
+      "particle_ppm": 15.0,
+      "epoch": "2019-08-29 01:53:22"
+    },
+    {
+      "temperature": 25.4375,
+      "co_ppm": 104.0,
+      "lp_gas_ppm": 45.0,
+      "particle_ppm": 15.0,
+      "epoch": "2019-08-29 01:56:57"
+    },
+    {
+      "temperature": 25.4375,
+      "co_ppm": 199.0,
+      "lp_gas_ppm": 76.0,
+      "particle_ppm": 16.0,
+      "epoch": "2019-08-29 01:57:12"
+    },
+    {
+      "temperature": 25.4375,
+      "co_ppm": 208.0,
+      "lp_gas_ppm": 80.0,
+      "particle_ppm": 15.0,
+      "epoch": "2019-08-29 01:57:28"
+    },
+    {
+      "temperature": 25.4375,
+      "co_ppm": 207.0,
+      "lp_gas_ppm": 80.0,
+      "particle_ppm": 15.0,
+      "epoch": "2019-08-29 01:57:44"
+    },
+    {
+      "temperature": 25.4375,
+      "co_ppm": 204.0,
+      "lp_gas_ppm": 80.0,
+      "particle_ppm": 15.0,
+      "epoch": "2019-08-29 01:58:01"
+    },
+    {
+      "temperature": 25.4375,
+      "co_ppm": 201.0,
+      "lp_gas_ppm": 79.0,
+      "particle_ppm": 15.0,
+      "epoch": "2019-08-29 01:58:16"
+    },
+    {
+      "temperature": 25.375,
+      "co_ppm": 201.0,
+      "lp_gas_ppm": 79.0,
+      "particle_ppm": 15.0,
+      "epoch": "2019-08-29 01:58:32"
+    },
+    {
+      "temperature": 25.375,
+      "co_ppm": 200.0,
+      "lp_gas_ppm": 78.0,
+      "particle_ppm": 15.0,
+      "epoch": "2019-08-29 01:58:48"
+    },
+    {
+      "temperature": 25.375,
+      "co_ppm": 199.0,
+      "lp_gas_ppm": 79.0,
+      "particle_ppm": 15.0,
+      "epoch": "2019-08-29 01:59:05"
+    },
+    {
+      "temperature": 25.4375,
+      "co_ppm": 199.0,
+      "lp_gas_ppm": 78.0,
+      "particle_ppm": 15.0,
+      "epoch": "2019-08-29 01:59:20"
+    },
+    {
+      "temperature": 25.4375,
+      "co_ppm": 198.0,
+      "lp_gas_ppm": 78.0,
+      "particle_ppm": 15.0,
+      "epoch": "2019-08-29 01:59:36"
+    },
+    {
+      "temperature": 25.4375,
+      "co_ppm": 198.0,
+      "lp_gas_ppm": 78.0,
+      "particle_ppm": 19.0,
+      "epoch": "2019-08-29 01:59:52"
+    },
+    {
+      "temperature": 25.4375,
+      "co_ppm": 197.0,
+      "lp_gas_ppm": 78.0,
+      "particle_ppm": 32.0,
+      "epoch": "2019-08-29 02:00:08"
+    },
+    {
+      "temperature": 25.4375,
+      "co_ppm": 197.0,
+      "lp_gas_ppm": 78.0,
+      "particle_ppm": 15.0,
+      "epoch": "2019-08-29 02:00:23"
+    },
+    {
+      "temperature": 25.4375,
+      "co_ppm": 197.0,
+      "lp_gas_ppm": 77.0,
+      "particle_ppm": 16.0,
+      "epoch": "2019-08-29 02:00:39"
+    },
+    {
+      "temperature": 25.5,
+      "co_ppm": 190.0,
+      "lp_gas_ppm": 76.0,
+      "particle_ppm": 28.0,
+      "epoch": "2019-08-29 02:07:51"
+    },
+    {
+      "temperature": 25.5,
+      "co_ppm": 190.0,
+      "lp_gas_ppm": 76.0,
+      "particle_ppm": 20.0,
+      "epoch": "2019-08-29 02:08:11"
+    },
+    {
+      "temperature": 25.5625,
+      "co_ppm": 190.0,
+      "lp_gas_ppm": 76.0,
+      "particle_ppm": 18.0,
+      "epoch": "2019-08-29 02:08:26"
+    },
+    {
+      "temperature": 25.5,
+      "co_ppm": 195.0,
+      "lp_gas_ppm": 78.0,
+      "particle_ppm": 20.0,
+      "epoch": "2019-08-29 02:08:42"
+    },
+    {
+      "temperature": 25.5,
+      "co_ppm": 195.0,
+      "lp_gas_ppm": 78.0,
+      "particle_ppm": 18.0,
+      "epoch": "2019-08-29 02:08:58"
+    },
+    {
+      "temperature": 25.5,
+      "co_ppm": 196.0,
+      "lp_gas_ppm": 79.0,
+      "particle_ppm": 21.0,
+      "epoch": "2019-08-29 02:09:15"
+    },
+    {
+      "temperature": 25.5,
+      "co_ppm": 196.0,
+      "lp_gas_ppm": 78.0,
+      "particle_ppm": 18.0,
+      "epoch": "2019-08-29 02:09:30"
+    },
+    {
+      "temperature": 25.5,
+      "co_ppm": 223.0,
+      "lp_gas_ppm": 123.0,
+      "particle_ppm": 72.0,
+      "epoch": "2019-08-29 02:11:00"
+    },
+    {
+      "temperature": 25.5,
+      "co_ppm": 245.0,
+      "lp_gas_ppm": 152.0,
+      "particle_ppm": 101.0,
+      "epoch": "2019-08-29 02:11:15"
+    },
+    {
+      "temperature": 25.5,
+      "co_ppm": 228.0,
+      "lp_gas_ppm": 127.0,
+      "particle_ppm": 77.0,
+      "epoch": "2019-08-29 02:11:31"
+    },
+    {
+      "temperature": 25.5,
+      "co_ppm": 226.0,
+      "lp_gas_ppm": 120.0,
+      "particle_ppm": 66.0,
+      "epoch": "2019-08-29 02:11:47"
+    },
+    {
+      "temperature": 25.5,
+      "co_ppm": 249.0,
+      "lp_gas_ppm": 148.0,
+      "particle_ppm": 94.0,
+      "epoch": "2019-08-29 02:12:04"
+    },
+    {
+      "temperature": 25.5,
+      "co_ppm": 221.0,
+      "lp_gas_ppm": 110.0,
+      "particle_ppm": 58.0,
+      "epoch": "2019-08-29 02:12:19"
+    },
+    {
+      "temperature": 25.5,
+      "co_ppm": 224.0,
+      "lp_gas_ppm": 113.0,
+      "particle_ppm": 60.0,
+      "epoch": "2019-08-29 02:12:35"
+    },
+    {
+      "temperature": 25.5,
+      "co_ppm": 230.0,
+      "lp_gas_ppm": 120.0,
+      "particle_ppm": 64.0,
+      "epoch": "2019-08-29 02:12:51"
+    },
+    {
+      "temperature": 25.5,
+      "co_ppm": 221.0,
+      "lp_gas_ppm": 106.0,
+      "particle_ppm": 48.0,
+      "epoch": "2019-08-29 02:13:07"
+    },
+    {
+      "temperature": 25.5,
+      "co_ppm": 211.0,
+      "lp_gas_ppm": 106.0,
+      "particle_ppm": 56.0,
+      "epoch": "2019-08-29 02:15:16"
+    },
+    {
+      "temperature": 25.5,
+      "co_ppm": 234.0,
+      "lp_gas_ppm": 124.0,
+      "particle_ppm": 75.0,
+      "epoch": "2019-08-29 02:15:31"
+    },
+    {
+      "temperature": 25.4375,
+      "co_ppm": 245.0,
+      "lp_gas_ppm": 137.0,
+      "particle_ppm": 86.0,
+      "epoch": "2019-08-29 02:15:47"
+    },
+    {
+      "temperature": 25.5,
+      "co_ppm": 240.0,
+      "lp_gas_ppm": 128.0,
+      "particle_ppm": 76.0,
+      "epoch": "2019-08-29 02:16:23"
+    },
+    {
+      "temperature": 25.5,
+      "co_ppm": 229.0,
+      "lp_gas_ppm": 113.0,
+      "particle_ppm": 60.0,
+      "epoch": "2019-08-29 02:16:38"
+    },
+    {
+      "temperature": 25.5,
+      "co_ppm": 243.0,
+      "lp_gas_ppm": 130.0,
+      "particle_ppm": 81.0,
+      "epoch": "2019-08-29 02:16:54"
+    },
+    {
+      "temperature": 25.5,
+      "co_ppm": 238.0,
+      "lp_gas_ppm": 126.0,
+      "particle_ppm": 74.0,
+      "epoch": "2019-08-29 02:17:10"
+    },
+    {
+      "temperature": 25.5,
+      "co_ppm": 264.0,
+      "lp_gas_ppm": 157.0,
+      "particle_ppm": 101.0,
+      "epoch": "2019-08-29 02:17:27"
+    },
+    {
+      "temperature": 25.5,
+      "co_ppm": 243.0,
+      "lp_gas_ppm": 133.0,
+      "particle_ppm": 80.0,
+      "epoch": "2019-08-29 02:17:42"
+    },
+    {
+      "temperature": 25.6875,
+      "co_ppm": 172.0,
+      "lp_gas_ppm": 109.0,
+      "particle_ppm": 82.0,
+      "epoch": "2019-08-29 02:19:14"
+    },
+    {
+      "temperature": 25.75,
+      "co_ppm": 207.0,
+      "lp_gas_ppm": 113.0,
+      "particle_ppm": 78.0,
+      "epoch": "2019-08-29 02:19:19"
+    },
+    {
+      "temperature": 25.8125,
+      "co_ppm": 249.0,
+      "lp_gas_ppm": 132.0,
+      "particle_ppm": 78.0,
+      "epoch": "2019-08-29 02:19:34"
+    },
+    {
+      "temperature": 25.875,
+      "co_ppm": 256.0,
+      "lp_gas_ppm": 136.0,
+      "particle_ppm": 81.0,
+      "epoch": "2019-08-29 02:19:50"
+    },
+    {
+      "temperature": 26.0,
+      "co_ppm": 260.0,
+      "lp_gas_ppm": 144.0,
+      "particle_ppm": 88.0,
+      "epoch": "2019-08-29 02:20:06"
+    },
+    {
+      "temperature": 26.1875,
+      "co_ppm": 266.0,
+      "lp_gas_ppm": 151.0,
+      "particle_ppm": 96.0,
+      "epoch": "2019-08-29 02:20:49"
+    },
+    {
+      "temperature": 26.3125,
+      "co_ppm": 244.0,
+      "lp_gas_ppm": 123.0,
+      "particle_ppm": 67.0,
+      "epoch": "2019-08-29 02:21:05"
+    },
+    {
+      "temperature": 26.9375,
+      "co_ppm": 257.0,
+      "lp_gas_ppm": 104.0,
+      "particle_ppm": 5.0,
+      "epoch": "2019-08-29 09:17:57"
+    },
+    {
+      "temperature": 26.9375,
+      "co_ppm": 256.0,
+      "lp_gas_ppm": 105.0,
+      "particle_ppm": 34.0,
+      "epoch": "2019-08-29 09:18:15"
+    },
+    {
+      "temperature": 27.0,
+      "co_ppm": 255.0,
+      "lp_gas_ppm": 105.0,
+      "particle_ppm": 34.0,
+      "epoch": "2019-08-29 09:18:31"
+    },
+    {
+      "temperature": 27.0,
+      "co_ppm": 255.0,
+      "lp_gas_ppm": 105.0,
+      "particle_ppm": 38.0,
+      "epoch": "2019-08-29 09:18:47"
+    },
+    {
+      "temperature": 27.0,
+      "co_ppm": 254.0,
+      "lp_gas_ppm": 104.0,
+      "particle_ppm": 42.0,
+      "epoch": "2019-08-29 09:19:03"
+    },
+    {
+      "temperature": 27.0,
+      "co_ppm": 253.0,
+      "lp_gas_ppm": 104.0,
+      "particle_ppm": 38.0,
+      "epoch": "2019-08-29 09:19:18"
+    },
+    {
+      "temperature": 27.0625,
+      "co_ppm": 252.0,
+      "lp_gas_ppm": 104.0,
+      "particle_ppm": 38.0,
+      "epoch": "2019-08-29 09:19:34"
+    },
+    {
+      "temperature": 27.0625,
+      "co_ppm": 249.0,
+      "lp_gas_ppm": 103.0,
+      "particle_ppm": 33.0,
+      "epoch": "2019-08-29 09:19:50"
+    },
+    {
+      "temperature": 27.0625,
+      "co_ppm": 248.0,
+      "lp_gas_ppm": 103.0,
+      "particle_ppm": 36.0,
+      "epoch": "2019-08-29 09:20:07"
+    },
+    {
+      "temperature": 27.0625,
+      "co_ppm": 248.0,
+      "lp_gas_ppm": 103.0,
+      "particle_ppm": 33.0,
+      "epoch": "2019-08-29 09:20:22"
+    },
+    {
+      "temperature": 27.0625,
+      "co_ppm": 254.0,
+      "lp_gas_ppm": 112.0,
+      "particle_ppm": 5.0,
+      "epoch": "2019-08-29 09:21:04"
+    },
+    {
+      "temperature": 27.0625,
+      "co_ppm": 248.0,
+      "lp_gas_ppm": 109.0,
+      "particle_ppm": 42.0,
+      "epoch": "2019-08-29 09:21:19"
+    },
+    {
+      "temperature": 27.125,
+      "co_ppm": 249.0,
+      "lp_gas_ppm": 110.0,
+      "particle_ppm": 43.0,
+      "epoch": "2019-08-29 09:21:35"
+    },
+    {
+      "temperature": 27.125,
+      "co_ppm": 250.0,
+      "lp_gas_ppm": 111.0,
+      "particle_ppm": 43.0,
+      "epoch": "2019-08-29 09:21:51"
+    },
+    {
+      "temperature": 27.125,
+      "co_ppm": 236.0,
+      "lp_gas_ppm": 89.0,
+      "particle_ppm": 17.0,
+      "epoch": "2019-08-29 09:22:07"
+    },
+    {
+      "temperature": 27.125,
+      "co_ppm": 235.0,
+      "lp_gas_ppm": 89.0,
+      "particle_ppm": 17.0,
+      "epoch": "2019-08-29 09:22:22"
+    },
+    {
+      "temperature": 27.125,
+      "co_ppm": 234.0,
+      "lp_gas_ppm": 88.0,
+      "particle_ppm": 20.0,
+      "epoch": "2019-08-29 09:22:38"
+    },
+    {
+      "temperature": 27.125,
+      "co_ppm": 233.0,
+      "lp_gas_ppm": 88.0,
+      "particle_ppm": 17.0,
+      "epoch": "2019-08-29 09:22:54"
+    },
+    {
+      "temperature": 27.1875,
+      "co_ppm": 206.0,
+      "lp_gas_ppm": 78.0,
+      "particle_ppm": 5.0,
+      "epoch": "2019-08-29 09:23:13"
+    },
+    {
+      "temperature": 27.1875,
+      "co_ppm": 231.0,
+      "lp_gas_ppm": 88.0,
+      "particle_ppm": 18.0,
+      "epoch": "2019-08-29 09:23:29"
+    },
+    {
+      "temperature": 27.1875,
+      "co_ppm": 233.0,
+      "lp_gas_ppm": 89.0,
+      "particle_ppm": 19.0,
+      "epoch": "2019-08-29 09:23:44"
+    },
+    {
+      "temperature": 27.1875,
+      "co_ppm": 230.0,
+      "lp_gas_ppm": 89.0,
+      "particle_ppm": 20.0,
+      "epoch": "2019-08-29 09:24:04"
+    },
+    {
+      "temperature": 27.1875,
+      "co_ppm": 229.0,
+      "lp_gas_ppm": 88.0,
+      "particle_ppm": 19.0,
+      "epoch": "2019-08-29 09:24:20"
+    },
+    {
+      "temperature": 27.1875,
+      "co_ppm": 229.0,
+      "lp_gas_ppm": 89.0,
+      "particle_ppm": 19.0,
+      "epoch": "2019-08-29 09:24:35"
+    },
+    {
+      "temperature": 27.1875,
+      "co_ppm": 226.0,
+      "lp_gas_ppm": 88.0,
+      "particle_ppm": 31.0,
+      "epoch": "2019-08-29 09:25:18"
+    },
+    {
+      "temperature": 27.25,
+      "co_ppm": 226.0,
+      "lp_gas_ppm": 88.0,
+      "particle_ppm": 20.0,
+      "epoch": "2019-08-29 09:25:33"
+    },
+    {
+      "temperature": 27.25,
+      "co_ppm": 225.0,
+      "lp_gas_ppm": 88.0,
+      "particle_ppm": 19.0,
+      "epoch": "2019-08-29 09:25:49"
+    },
+    {
+      "temperature": 27.25,
+      "co_ppm": 226.0,
+      "lp_gas_ppm": 88.0,
+      "particle_ppm": 19.0,
+      "epoch": "2019-08-29 09:26:05"
+    },
+    {
+      "temperature": 27.3125,
+      "co_ppm": 225.0,
+      "lp_gas_ppm": 88.0,
+      "particle_ppm": 29.0,
+      "epoch": "2019-08-29 09:26:22"
+    },
+    {
+      "temperature": 27.3125,
+      "co_ppm": 225.0,
+      "lp_gas_ppm": 89.0,
+      "particle_ppm": 29.0,
+      "epoch": "2019-08-29 09:26:37"
+    },
+    {
+      "temperature": 27.3125,
+      "co_ppm": 225.0,
+      "lp_gas_ppm": 89.0,
+      "particle_ppm": 20.0,
+      "epoch": "2019-08-29 09:26:53"
+    },
+    {
+      "temperature": 27.3125,
+      "co_ppm": 224.0,
+      "lp_gas_ppm": 89.0,
+      "particle_ppm": 21.0,
+      "epoch": "2019-08-29 09:27:09"
+    },
+    {
+      "temperature": 27.3125,
+      "co_ppm": 224.0,
+      "lp_gas_ppm": 89.0,
+      "particle_ppm": 21.0,
+      "epoch": "2019-08-29 09:27:26"
+    },
+    {
+      "temperature": 27.3125,
+      "co_ppm": 225.0,
+      "lp_gas_ppm": 89.0,
+      "particle_ppm": 21.0,
+      "epoch": "2019-08-29 09:27:41"
+    },
+    {
+      "temperature": 27.3125,
+      "co_ppm": 229.0,
+      "lp_gas_ppm": 90.0,
+      "particle_ppm": 21.0,
+      "epoch": "2019-08-29 09:27:57"
+    },
+    {
+      "temperature": 27.3125,
+      "co_ppm": 226.0,
+      "lp_gas_ppm": 90.0,
+      "particle_ppm": 21.0,
+      "epoch": "2019-08-29 09:28:13"
+    },
+    {
+      "temperature": 27.3125,
+      "co_ppm": 225.0,
+      "lp_gas_ppm": 90.0,
+      "particle_ppm": 21.0,
+      "epoch": "2019-08-29 09:28:29"
+    },
+    {
+      "temperature": 27.3125,
+      "co_ppm": 225.0,
+      "lp_gas_ppm": 90.0,
+      "particle_ppm": 34.0,
+      "epoch": "2019-08-29 09:28:44"
+    },
+    {
+      "temperature": 85.0,
+      "co_ppm": 237.0,
+      "lp_gas_ppm": 93.0,
+      "particle_ppm": 46.0,
+      "epoch": "2019-08-29 09:54:27"
+    },
+    {
+      "temperature": 27.5625,
+      "co_ppm": 223.0,
+      "lp_gas_ppm": 91.0,
+      "particle_ppm": 27.0,
+      "epoch": "2019-08-29 09:57:09"
+    },
+    {
+      "temperature": 27.5625,
+      "co_ppm": 207.0,
+      "lp_gas_ppm": 87.0,
+      "particle_ppm": 27.0,
+      "epoch": "2019-08-29 09:59:32"
+    },
+    {
+      "temperature": 27.5,
+      "co_ppm": 218.0,
+      "lp_gas_ppm": 94.0,
+      "particle_ppm": 30.0,
+      "epoch": "2019-08-29 10:01:45"
+    },
+    {
+      "temperature": 27.75,
+      "co_ppm": 213.0,
+      "lp_gas_ppm": 93.0,
+      "particle_ppm": 31.0,
+      "epoch": "2019-08-29 10:02:00"
+    },
+    {
+      "temperature": 32.5,
+      "co_ppm": 214.0,
+      "lp_gas_ppm": 92.0,
+      "particle_ppm": 33.0,
+      "epoch": "2019-08-29 10:02:16"
+    },
+    {
+      "temperature": 32.5625,
+      "co_ppm": 213.0,
+      "lp_gas_ppm": 92.0,
+      "particle_ppm": 30.0,
+      "epoch": "2019-08-29 10:02:32"
+    },
+    {
+      "temperature": 32.0,
+      "co_ppm": 211.0,
+      "lp_gas_ppm": 91.0,
+      "particle_ppm": 29.0,
+      "epoch": "2019-08-29 10:02:49"
+    },
+    {
+      "temperature": 31.5625,
+      "co_ppm": 211.0,
+      "lp_gas_ppm": 91.0,
+      "particle_ppm": 29.0,
+      "epoch": "2019-08-29 10:03:04"
+    },
+    {
+      "temperature": 31.1875,
+      "co_ppm": 210.0,
+      "lp_gas_ppm": 91.0,
+      "particle_ppm": 29.0,
+      "epoch": "2019-08-29 10:03:20"
+    },
+    {
+      "temperature": 30.875,
+      "co_ppm": 210.0,
+      "lp_gas_ppm": 90.0,
+      "particle_ppm": 31.0,
+      "epoch": "2019-08-29 10:03:36"
+    },
+    {
+      "temperature": 30.5625,
+      "co_ppm": 209.0,
+      "lp_gas_ppm": 90.0,
+      "particle_ppm": 29.0,
+      "epoch": "2019-08-29 10:03:52"
+    },
+    {
+      "temperature": 30.3125,
+      "co_ppm": 209.0,
+      "lp_gas_ppm": 90.0,
+      "particle_ppm": 29.0,
+      "epoch": "2019-08-29 10:04:07"
+    },
+    {
+      "temperature": 30.125,
+      "co_ppm": 209.0,
+      "lp_gas_ppm": 90.0,
+      "particle_ppm": 33.0,
+      "epoch": "2019-08-29 10:04:23"
+    },
+    {
+      "temperature": 29.875,
+      "co_ppm": 208.0,
+      "lp_gas_ppm": 90.0,
+      "particle_ppm": 30.0,
+      "epoch": "2019-08-29 10:04:39"
+    },
+    {
+      "temperature": 29.6875,
+      "co_ppm": 210.0,
+      "lp_gas_ppm": 90.0,
+      "particle_ppm": 29.0,
+      "epoch": "2019-08-29 10:04:56"
+    },
+    {
+      "temperature": 29.5,
+      "co_ppm": 208.0,
+      "lp_gas_ppm": 90.0,
+      "particle_ppm": 29.0,
+      "epoch": "2019-08-29 10:05:11"
+    },
+    {
+      "temperature": 29.3125,
+      "co_ppm": 207.0,
+      "lp_gas_ppm": 90.0,
+      "particle_ppm": 54.0,
+      "epoch": "2019-08-29 10:05:27"
+    },
+    {
+      "temperature": 29.125,
+      "co_ppm": 207.0,
+      "lp_gas_ppm": 90.0,
+      "particle_ppm": 30.0,
+      "epoch": "2019-08-29 10:05:43"
+    },
+    {
+      "temperature": 29.0,
+      "co_ppm": 209.0,
+      "lp_gas_ppm": 90.0,
+      "particle_ppm": 30.0,
+      "epoch": "2019-08-29 10:05:59"
+    },
+    {
+      "temperature": 28.875,
+      "co_ppm": 207.0,
+      "lp_gas_ppm": 90.0,
+      "particle_ppm": 29.0,
+      "epoch": "2019-08-29 10:06:14"
+    },
+    {
+      "temperature": 28.75,
+      "co_ppm": 207.0,
+      "lp_gas_ppm": 90.0,
+      "particle_ppm": 37.0,
+      "epoch": "2019-08-29 10:06:30"
+    },
+    {
+      "temperature": 28.6875,
+      "co_ppm": 208.0,
+      "lp_gas_ppm": 90.0,
+      "particle_ppm": 46.0,
+      "epoch": "2019-08-29 10:06:46"
+    },
+    {
+      "temperature": 28.5625,
+      "co_ppm": 209.0,
+      "lp_gas_ppm": 90.0,
+      "particle_ppm": 34.0,
+      "epoch": "2019-08-29 10:07:03"
+    },
+    {
+      "temperature": 28.5,
+      "co_ppm": 207.0,
+      "lp_gas_ppm": 90.0,
+      "particle_ppm": 30.0,
+      "epoch": "2019-08-29 10:07:18"
+    },
+    {
+      "temperature": 28.375,
+      "co_ppm": 207.0,
+      "lp_gas_ppm": 90.0,
+      "particle_ppm": 31.0,
+      "epoch": "2019-08-29 10:07:34"
+    },
+    {
+      "temperature": 28.3125,
+      "co_ppm": 207.0,
+      "lp_gas_ppm": 90.0,
+      "particle_ppm": 30.0,
+      "epoch": "2019-08-29 10:07:50"
+    },
+    {
+      "temperature": 28.25,
+      "co_ppm": 209.0,
+      "lp_gas_ppm": 90.0,
+      "particle_ppm": 30.0,
+      "epoch": "2019-08-29 10:08:07"
+    },
+    {
+      "temperature": 28.1875,
+      "co_ppm": 207.0,
+      "lp_gas_ppm": 90.0,
+      "particle_ppm": 30.0,
+      "epoch": "2019-08-29 10:08:22"
+    }
+  ]
+}
