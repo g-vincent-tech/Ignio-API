@@ -9,7 +9,18 @@ import org.springframework.http.client.ClientHttpResponse;
 import java.io.IOException;
 
 @Configuration
+//@Component
 public class AuthenticateClientHttpRequestInterceptor implements ClientHttpRequestInterceptor {
+
+//    private static final Logger log = LoggerFactory.getLogger(AnalysisService.class);
+//
+//    private static final SimpleDateFormat dateFormat = new SimpleDateFormat("dd-M-yyyy HH:mm:ss");
+//
+//    private final String GATEWAY_SERVICE = "igniogateway";
+//
+//    @Autowired
+//    @LoadBalanced
+//    private RestTemplate restTemplate;
 
     /**
      * Generate token headers for requests made using restTemplate Bean created in {@link com.foxploit.ignio.deviceanalysisservice.DeviceAnalysisServiceApp} class

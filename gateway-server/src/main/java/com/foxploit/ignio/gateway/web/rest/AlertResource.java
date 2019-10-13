@@ -41,6 +41,8 @@ public class AlertResource {
         if(user.isPresent()){
             log.info("Alert owner of the device {} with appropriate details", alert.getDeviceId());
             mailService.sendAlertMail(user.get(), alert);
+        }else{
+            log.info("User associated with the id {} does not exists", alert.getOwnerId());
         }
     }
 
