@@ -1,9 +1,10 @@
 package com.foxploit.ignio.deviceanalysisservice.web.rest;
 
+import com.foxploit.ignio.deviceanalysisservice.domain.Alert;
+import com.foxploit.ignio.deviceanalysisservice.repository.AlertRepository;
 import com.foxploit.ignio.deviceanalysisservice.repository.DeviceRepository;
 import com.foxploit.ignio.deviceanalysisservice.service.AnalysisService;
 import com.foxploit.ignio.deviceanalysisservice.service.DeviceService;
-import com.foxploit.ignio.deviceanalysisservice.service.dto.Alert;
 import com.foxploit.ignio.deviceanalysisservice.service.dto.DeviceDTO;
 import com.foxploit.ignio.deviceanalysisservice.service.dto.SensorDataDTO;
 import com.foxploit.ignio.deviceanalysisservice.service.impl.AlertTypeImpl;
@@ -50,13 +51,17 @@ public class AnalysisResource {
     private DeviceRepository deviceRepository;
 
     @Autowired
+    private AlertRepository alertRepository;
+
+    @Autowired
     private DeviceService deviceService;
 
-    public AnalysisResource(RestTemplate restTemplate, AnalysisServiceImpl analysisService, DeviceRepository deviceRepository, DeviceService deviceService) {
+    public AnalysisResource(RestTemplate restTemplate, AnalysisServiceImpl analysisService, DeviceRepository deviceRepository, AlertRepository alertRepository, DeviceService deviceService) {
         this.restTemplate = restTemplate;
         this.analysisService = analysisService;
         this.deviceRepository = deviceRepository;
         this.deviceService = deviceService;
+        this.alertRepository = alertRepository;
     }
 
     // Default 2 min 120000
@@ -115,19 +120,16 @@ public class AnalysisResource {
 
         log.info("The Alert Task Initiated {} for {}", dateFormat.format(new Date()), deviceId);
 
-        Optional<DeviceDTO> d = deviceService.findOneByDeviceId(deviceId);
+        Optional<DeviceDTO> device = deviceService.findOneByDeviceId(deviceId);
 
-        if (d.isPresent()) {
-            Alert alert = new Alert(d.get().getDeviceId(), d.get().getOwnerId(), AlertTypeImpl.alertMessageResolve(alertType), LocalDateTime.now());
-
+        if (device.isPresent()) {
+            Alert alert = new Alert(device.get().getDeviceId(), device.get().getOwnerId(), AlertTypeImpl.alertMessageResolve(alertType), LocalDateTime.now());
+            alertRepository.save(alert);
             try{
                 restTemplate.put(uri, alert);
             } catch (ResourceAccessException exception) {
                 log.error("Request call was not successful! Might be due to invalid token or unavailable resource ", exception);
             }
-
-            System.out.println(d);
-
         }
     }
 

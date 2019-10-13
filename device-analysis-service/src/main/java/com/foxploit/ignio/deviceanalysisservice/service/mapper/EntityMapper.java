@@ -1,5 +1,7 @@
 package com.foxploit.ignio.deviceanalysisservice.service.mapper;
 
+import java.util.List;
+
 /**
  * Contract for a generic dto to entity mapper.
  *
@@ -13,4 +15,7 @@ public interface EntityMapper <D, E> {
 
     D toDto(E entity);
 
+    List <E> toEntity(List<D> dtoList);
+
+    List <D> toDto(List<E> entityList);
 }
