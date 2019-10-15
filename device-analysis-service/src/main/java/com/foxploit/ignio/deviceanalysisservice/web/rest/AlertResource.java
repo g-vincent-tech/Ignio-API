@@ -13,8 +13,10 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.ResponseEntity;
+import org.springframework.util.MultiValueMap;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
+import org.springframework.web.util.UriComponentsBuilder;
 
 import javax.validation.Valid;
 import java.net.URI;
@@ -29,14 +31,14 @@ import java.util.Optional;
 @RequestMapping("/api")
 public class AlertResource {
 
+    private static final String ENTITY_NAME = "deviceanalysisserviceAlert";
+
     private final Logger log = LoggerFactory.getLogger(AlertResource.class);
 
-    private static final String ENTITY_NAME = "deviceanalysisserviceAlert";
+    private final AlertService alertService;
 
     @Value("${jhipster.clientApp.name}")
     private String applicationName;
-
-    private final AlertService alertService;
 
     public AlertResource(AlertService alertService) {
         this.alertService = alertService;
@@ -56,9 +58,7 @@ public class AlertResource {
             throw new BadRequestAlertException("A new alert cannot already have an ID", ENTITY_NAME, "idexists");
         }
         AlertDTO result = alertService.save(alertDTO);
-        return ResponseEntity.created(new URI("/api/alerts/" + result.getId()))
-            .headers(HeaderUtil.createEntityCreationAlert(applicationName, false, ENTITY_NAME, result.getId().toString()))
-            .body(result);
+        return ResponseEntity.created(new URI("/api/alerts/" + result.getId())).headers(HeaderUtil.createEntityCreationAlert(applicationName, false, ENTITY_NAME, result.getId().toString())).body(result);
     }
 
     /**
@@ -77,17 +77,13 @@ public class AlertResource {
             throw new BadRequestAlertException("Invalid id", ENTITY_NAME, "idnull");
         }
         AlertDTO result = alertService.save(alertDTO);
-        return ResponseEntity.ok()
-            .headers(HeaderUtil.createEntityUpdateAlert(applicationName, false, ENTITY_NAME, alertDTO.getId().toString()))
-            .body(result);
+        return ResponseEntity.ok().headers(HeaderUtil.createEntityUpdateAlert(applicationName, false, ENTITY_NAME, alertDTO.getId().toString())).body(result);
     }
 
     /**
      * {@code GET  /alerts} : get all the alerts.
      *
-
      * @param pageable the pagination information.
-
      * @return the {@link ResponseEntity} with status {@code 200 (OK)} and the list of alerts in body.
      */
     @GetMapping("/alerts")
@@ -95,6 +91,23 @@ public class AlertResource {
         log.debug("REST request to get a page of Alerts");
         Page<AlertDTO> page = alertService.findAll(pageable);
         HttpHeaders headers = PaginationUtil.generatePaginationHttpHeaders(ServletUriComponentsBuilder.fromCurrentRequest(), page);
+        return ResponseEntity.ok().headers(headers).body(page.getContent());
+    }
+
+    /**
+     * {@code GET  /alerts/all/:ownerId} : get all the alerts.
+     *
+     * @param pageable the pagination information.
+     * @param queryParams a {@link MultiValueMap} query parameters.
+     * @param uriBuilder a {@link UriComponentsBuilder} URI builder.
+     * @param ownerId the ownerId of the alertDTO to retrieve.
+     * @return the {@link ResponseEntity} with status {@code 200 (OK)} and the list of alerts in body.
+     */
+    @GetMapping("/alerts/all/{ownerId}")
+    public ResponseEntity<List<AlertDTO>> getAllAlertsByOwnerId(Pageable pageable, @RequestParam MultiValueMap<String, String> queryParams, UriComponentsBuilder uriBuilder, @PathVariable String ownerId) {
+        log.debug("REST request to get a page of Alerts by ownerId : {}", ownerId);
+        Page<AlertDTO> page = alertService.findAllByOwnerId(pageable, ownerId);
+        HttpHeaders headers = PaginationUtil.generatePaginationHttpHeaders(uriBuilder.queryParams(queryParams), page);
         return ResponseEntity.ok().headers(headers).body(page.getContent());
     }
 

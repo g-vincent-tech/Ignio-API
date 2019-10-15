@@ -53,10 +53,21 @@ public class AlertServiceImpl implements AlertService {
     @Override
     public Page<AlertDTO> findAll(Pageable pageable) {
         log.debug("Request to get all Alerts");
-        return alertRepository.findAll(pageable)
-            .map(alertMapper::toDto);
+        return alertRepository.findAll(pageable).map(alertMapper::toDto);
     }
 
+    /**
+     * Get all the alerts by ownerId.
+     *
+     * @param pageable the pagination information.
+     * @param ownerId  the ownerId of alerts.
+     * @return the list of entities.
+     */
+    @Override
+    public Page<AlertDTO> findAllByOwnerId(Pageable pageable, String ownerId) {
+        log.debug("Request to get all Alerts by OwnerId : {}", ownerId);
+        return alertRepository.findAllByOwnerId(pageable, ownerId).map(alertMapper::toDto);
+    }
 
     /**
      * Get one alert by id.
@@ -67,8 +78,7 @@ public class AlertServiceImpl implements AlertService {
     @Override
     public Optional<AlertDTO> findOne(String id) {
         log.debug("Request to get Alert : {}", id);
-        return alertRepository.findById(id)
-            .map(alertMapper::toDto);
+        return alertRepository.findById(id).map(alertMapper::toDto);
     }
 
     /**
@@ -81,4 +91,5 @@ public class AlertServiceImpl implements AlertService {
         log.debug("Request to delete Alert : {}", id);
         alertRepository.deleteById(id);
     }
+
 }

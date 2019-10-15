@@ -27,6 +27,14 @@ public interface AlertService {
      */
     Page<AlertDTO> findAll(Pageable pageable);
 
+    /**
+     * Get all the alerts by ownerId.
+     *
+     * @param pageable the pagination information.
+     * @param ownerId  the ownerId of alerts.
+     * @return the list of entities.
+     */
+    Page<AlertDTO> findAllByOwnerId(Pageable pageable, String ownerId);
 
     /**
      * Get the "id" alert.
@@ -42,4 +50,5 @@ public interface AlertService {
      * @param id the id of the entity.
      */
     void delete(String id);
+
 }

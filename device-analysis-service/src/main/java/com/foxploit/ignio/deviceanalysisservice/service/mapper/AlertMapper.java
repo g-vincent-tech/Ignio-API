@@ -10,8 +10,6 @@ import org.mapstruct.Mapper;
 @Mapper(componentModel = "spring", uses = {})
 public interface AlertMapper extends EntityMapper<AlertDTO, Alert> {
 
-
-
     default Alert fromId(String id) {
         if (id == null) {
             return null;
@@ -20,4 +18,5 @@ public interface AlertMapper extends EntityMapper<AlertDTO, Alert> {
         alert.setId(id);
         return alert;
     }
+
 }

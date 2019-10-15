@@ -54,8 +54,7 @@ public class SensorDataServiceImpl implements SensorDataService {
     @Override
     public Page<SensorDataDTO> findAll(Pageable pageable) {
         log.debug("Request to get all SensorData");
-        return sensorDataRepository.findAll(pageable)
-            .map(sensorDataMapper::toDto);
+        return sensorDataRepository.findAll(pageable).map(sensorDataMapper::toDto);
     }
 
 
@@ -68,13 +67,11 @@ public class SensorDataServiceImpl implements SensorDataService {
     @Override
     public Optional<SensorDataDTO> findOne(String id) {
         log.debug("Request to get SensorData : {}", id);
-        return sensorDataRepository.findById(id)
-            .map(sensorDataMapper::toDto);
+        return sensorDataRepository.findById(id).map(sensorDataMapper::toDto);
     }
 
     /**
      * Get all sensorData by deviceId.
-     *
      *
      * @param pageable the pagination information.
      * @param deviceId the deviceId of the entity.
@@ -83,8 +80,7 @@ public class SensorDataServiceImpl implements SensorDataService {
     @Override
     public Page<SensorDataDTO> findByDeviceId(Pageable pageable, String deviceId) {
         log.debug("Request to get all SensorData by deviceId");
-        return sensorDataRepository.findByDeviceId(pageable, deviceId)
-            .map(sensorDataMapper::toDto);
+        return sensorDataRepository.findByDeviceId(pageable, deviceId).map(sensorDataMapper::toDto);
     }
 
     /**

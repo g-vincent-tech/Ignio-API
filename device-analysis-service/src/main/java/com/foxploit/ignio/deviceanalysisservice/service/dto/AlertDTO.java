@@ -22,7 +22,6 @@ public class AlertDTO implements Serializable {
 
     private @NotNull LocalDateTime timestamp;
 
-
     public String getId() {
         return id;
     }

@@ -1,4 +1,5 @@
 package com.foxploit.ignio.deviceanalysisservice.domain;
+
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.data.mongodb.core.mapping.Field;
@@ -35,17 +36,6 @@ public class Alert implements Serializable {
 
     // jhipster-needle-entity-add-field - JHipster will add fields here, do not remove
 
-
-    public Alert() {
-    }
-
-    public Alert(String deviceId, String ownerId, String alertType, LocalDateTime timestamp) {
-        this.deviceId = deviceId;
-        this.ownerId = ownerId;
-        this.alertType = alertType;
-        this.timestamp = timestamp;
-    }
-
     public String getId() {
         return id;
     }
@@ -58,17 +48,21 @@ public class Alert implements Serializable {
         return deviceId;
     }
 
+    public void setDeviceId(String deviceId) {
+        this.deviceId = deviceId;
+    }
+
     public Alert deviceId(String deviceId) {
         this.deviceId = deviceId;
         return this;
     }
 
-    public void setDeviceId(String deviceId) {
-        this.deviceId = deviceId;
-    }
-
     public String getOwnerId() {
         return ownerId;
+    }
+
+    public void setOwnerId(String ownerId) {
+        this.ownerId = ownerId;
     }
 
     public Alert ownerId(String ownerId) {
@@ -76,12 +70,12 @@ public class Alert implements Serializable {
         return this;
     }
 
-    public void setOwnerId(String ownerId) {
-        this.ownerId = ownerId;
-    }
-
     public String getAlertType() {
         return alertType;
+    }
+
+    public void setAlertType(String alertType) {
+        this.alertType = alertType;
     }
 
     public Alert alertType(String alertType) {
@@ -89,21 +83,17 @@ public class Alert implements Serializable {
         return this;
     }
 
-    public void setAlertType(String alertType) {
-        this.alertType = alertType;
-    }
-
     public @NotNull LocalDateTime getTimestamp() {
         return timestamp;
+    }
+
+    public void setTimestamp(@NotNull LocalDateTime timestamp) {
+        this.timestamp = timestamp;
     }
 
     public Alert timestamp(@NotNull LocalDateTime timestamp) {
         this.timestamp = timestamp;
         return this;
-    }
-
-    public void setTimestamp(@NotNull LocalDateTime timestamp) {
-        this.timestamp = timestamp;
     }
     // jhipster-needle-entity-add-getters-setters - JHipster will add getters and setters here, do not remove
 
@@ -125,12 +115,6 @@ public class Alert implements Serializable {
 
     @Override
     public String toString() {
-        return "Alert{" +
-            "id=" + getId() +
-            ", deviceId='" + getDeviceId() + "'" +
-            ", ownerId='" + getOwnerId() + "'" +
-            ", alertType='" + getAlertType() + "'" +
-            ", timestamp='" + getTimestamp() + "'" +
-            "}";
+        return "Alert{" + "id=" + getId() + ", deviceId='" + getDeviceId() + "'" + ", ownerId='" + getOwnerId() + "'" + ", alertType='" + getAlertType() + "'" + ", timestamp='" + getTimestamp() + "'" + "}";
     }
 }

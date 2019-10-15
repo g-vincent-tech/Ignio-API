@@ -123,7 +123,11 @@ public class AnalysisResource {
         Optional<DeviceDTO> device = deviceService.findOneByDeviceId(deviceId);
 
         if (device.isPresent()) {
-            Alert alert = new Alert(device.get().getDeviceId(), device.get().getOwnerId(), AlertTypeImpl.alertMessageResolve(alertType), LocalDateTime.now());
+            Alert alert = new Alert()
+                .deviceId(device.get().getDeviceId())
+                .ownerId(device.get().getOwnerId())
+                .alertType(AlertTypeImpl.alertMessageResolve(alertType))
+                .timestamp(LocalDateTime.now());
             alertRepository.save(alert);
             try{
                 restTemplate.put(uri, alert);
