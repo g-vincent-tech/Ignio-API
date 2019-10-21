@@ -2,33 +2,47 @@
   "deviceId": "NODEIGNIOF101",
   "sensorData": [
     {
-      "temperature": 30.24,
-      "co_percentage": 10.34,
-      "lp_gas_percentage": 29.12,
-      "particle_percentage": 12.34,
-      "epoch": 328102338956
+      "temperature": 25.3125,
+      "co_ppm": 254.0,
+      "lp_gas_ppm": 44.0,
+      "particle_ppm": 12.3400001525879,
+      "epoch": "2019-08-27 23:20:11"
     },
     {
-      "temperature": 31.23,
-      "co_percentage": 11.14,
-      "lp_gas_percentage": 29.10,
-      "particle_percentage": 12.13,
-      "epoch": 328102338958
+      "temperature": 25.3125,
+      "co_ppm": 254.0,
+      "lp_gas_ppm": 44.0,
+      "particle_ppm": 12.3400001525879,
+      "epoch": "2019-08-27 23:20:11"
     },
     {
-      "temperature": 31.04,
-      "co_percentage": 11.11,
-      "lp_gas_percentage": 29.11,
-      "particle_percentage": 12.14,
-      "epoch": 328102338960
+      "temperature": 25.3125,
+      "co_ppm": 254.0,
+      "lp_gas_ppm": 44.0,
+      "particle_ppm": 12.3400001525879,
+      "epoch": "2019-08-27 23:20:11"
     },
     {
-      "temperature": 31.07,
-      "co_percentage": 11.14,
-      "lp_gas_percentage": 29.09,
-      "particle_percentage": 12.04,
-      "epoch": 328102338962
+      "temperature": 25.3125,
+      "co_ppm": 254.0,
+      "lp_gas_ppm": 44.0,
+      "particle_ppm": 12.3400001525879,
+      "epoch": "2019-08-27 23:20:11"
+    },
+    {
+      "temperature": 25.3125,
+      "co_ppm": 254.0,
+      "lp_gas_ppm": 44.0,
+      "particle_ppm": 12.3400001525879,
+      "epoch": "2019-08-27 23:20:11"
+    },
+    {
+      "temperature": 25.3125,
+      "co_ppm": 254.0,
+      "lp_gas_ppm": 44.0,
+      "particle_ppm": 12.3400001525879,
+      "epoch": "2019-08-27 23:20:11"
     }
   ],
-  "epoch": 328102338964
+  "epoch" : "2019-08-27 23:20:11"
 }

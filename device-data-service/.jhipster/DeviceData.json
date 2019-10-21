@@ -1,0 +1,36 @@
+{
+    "fluentMethods": true,
+    "clientRootFolder": "devicedataservice",
+    "relationships": [
+        {
+            "relationshipName": "sensorData",
+            "otherEntityName": "sensorData",
+            "relationshipType": "one-to-many",
+            "otherEntityRelationshipName": "deviceData"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "deviceId",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "epoch",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        }
+    ],
+    "dto": "mapstruct",
+    "searchEngine": false,
+    "service": "serviceImpl",
+    "entityTableName": "device_data",
+    "databaseType": "mongodb",
+    "jpaMetamodelFiltering": false,
+    "pagination": "pagination",
+    "microserviceName": "devicedataservice"
+}

@@ -1,7 +1,7 @@
 {
   "temperature": 31.23,
-  "co_percentage": 11.14,
-  "lp_gas_percentage": 29.10,
-  "particle_percentage": 12.13,
+  "co_ppm": 11.14,
+  "lp_gas_ppm": 29.10,
+  "particle_ppm": 12.13,
   "epoch": 328102338958
 }

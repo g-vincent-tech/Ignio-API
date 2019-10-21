@@ -1,4 +1,5 @@
 *.zip
 .idea/
+target/
 */releases/
 logs/

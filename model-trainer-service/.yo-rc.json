@@ -1,0 +1,37 @@
+{
+  "generator-jhipster": {
+    "promptValues": {
+      "packageName": "com.foxploit.ignio.modeltrainer"
+    },
+    "jhipsterVersion": "6.3.1",
+    "applicationType": "microservice",
+    "baseName": "modeltrainerservice",
+    "packageName": "com.foxploit.ignio.modeltrainer",
+    "packageFolder": "com/foxploit/ignio/modeltrainer",
+    "serverPort": "8083",
+    "authenticationType": "jwt",
+    "cacheProvider": "no",
+    "enableHibernateCache": false,
+    "websocket": false,
+    "databaseType": "mongodb",
+    "devDatabaseType": "mongodb",
+    "prodDatabaseType": "mongodb",
+    "searchEngine": false,
+    "messageBroker": false,
+    "serviceDiscoveryType": "eureka",
+    "buildTool": "maven",
+    "enableSwaggerCodegen": false,
+    "jwtSecretKey": "MTgwNDkwNDRhNDg4ZWRhOTQ4MjBhYjQyODZiZGRjMTA2MGM0MjU5NzM1MzZiYWVjNWZhYzhkNTQ3NDMzMWMxMzJkM2YwY2U3NmQ5NDUyOWMyODQ5MmM0YTMwMWMxYWQxMTA3OTc4MGYyZjNiYTliYTljNWFkMjZiZDc2YjkyODM=",
+    "embeddableLaunchScript": false,
+    "testFrameworks": [],
+    "jhiPrefix": "jhi",
+    "entitySuffix": "",
+    "dtoSuffix": "DTO",
+    "otherModules": [],
+    "enableTranslation": false,
+    "clientPackageManager": "npm",
+    "blueprints": [],
+    "skipClient": true,
+    "skipUserManagement": true
+  }
+}
