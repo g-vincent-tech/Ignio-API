@@ -11,9 +11,9 @@ services:
       - 'SPRING_DATA_MONGODB_URI=mongodb://deviceanalysisservice-mongodb:27017'
       - SPRING_DATA_MONGODB_DATABASE=deviceanalysisservice
       - JHIPSTER_SLEEP=30
-      - JHIPSTER_REGISTRY_PASSWORD=ignioadmin
+      - JHIPSTER_REGISTRY_PASSWORD=admin
   deviceanalysisservice-mongodb:
-    image: 'mongo:4.0.10'
+    image: 'mongo:4.0.12'
 
   devicedataservice-app:
     image: devicedataservice
@@ -26,9 +26,9 @@ services:
       - 'SPRING_DATA_MONGODB_URI=mongodb://devicedataservice-mongodb:27017'
       - SPRING_DATA_MONGODB_DATABASE=devicedataservice
       - JHIPSTER_SLEEP=30
-      - JHIPSTER_REGISTRY_PASSWORD=ignioadmin
+      - JHIPSTER_REGISTRY_PASSWORD=admin
   devicedataservice-mongodb:
-    image: 'mongo:4.0.10'
+    image: 'mongo:4.0.12'
 
   igniogateway-app:
     image: igniogateway
@@ -41,42 +41,13 @@ services:
       - 'SPRING_DATA_MONGODB_URI=mongodb://igniogateway-mongodb:27017'
       - SPRING_DATA_MONGODB_DATABASE=igniogateway
       - JHIPSTER_SLEEP=30
-      - JHIPSTER_REGISTRY_PASSWORD=ignioadmin
+      - JHIPSTER_REGISTRY_PASSWORD=admin
     ports:
       - '8080:8080'
   igniogateway-mongodb:
-    image: 'mongo:4.0.10'
+    image: 'mongo:4.0.12'
 
   jhipster-registry:
     extends:
       file: jhipster-registry.yml
       service: jhipster-registry
-
-  jhipster-elasticsearch:
-    extends:
-      file: jhipster-console.yml
-      service: jhipster-elasticsearch
-  jhipster-logstash:
-    extends:
-      file: jhipster-console.yml
-      service: jhipster-logstash
-    depends_on:
-      - jhipster-elasticsearch
-  jhipster-console:
-    extends:
-      file: jhipster-console.yml
-      service: jhipster-console
-    depends_on:
-      - jhipster-elasticsearch
-  jhipster-import-dashboards:
-    extends:
-      file: jhipster-console.yml
-      service: jhipster-import-dashboards
-    depends_on:
-      - jhipster-elasticsearch
-  jhipster-zipkin:
-    extends:
-      file: jhipster-console.yml
-      service: jhipster-zipkin
-    depends_on:
-      - jhipster-elasticsearch

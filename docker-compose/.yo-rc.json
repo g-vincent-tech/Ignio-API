@@ -8,10 +8,8 @@
     "directoryPath": "../",
     "gatewayType": "zuul",
     "clusteredDbApps": [],
-    "monitoring": "elk",
-    "consoleOptions": [
-      "zipkin"
-    ],
+    "monitoring": "no",
+    "consoleOptions": [],
     "serviceDiscoveryType": "eureka",
     "jwtSecretKey": "MmViNWFmMjQ4ZmUwN2FjM2NmZTdlOTU4M2RjNWYzNmRkMWNkYzVhNDAxMzZiZjFmMDY2NDBmZTk1MTk2OGI3NjhkN2U4NDlmYjAxMGM2YzQ4MjRhZTAyNzkzNGQ1MDBhN2IyZA=="
   }
