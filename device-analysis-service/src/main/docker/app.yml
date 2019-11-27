@@ -8,13 +8,13 @@ services:
       - MANAGEMENT_METRICS_EXPORT_PROMETHEUS_ENABLED=true
       - EUREKA_CLIENT_SERVICE_URL_DEFAULTZONE=http://admin:$${jhipster.registry.password}@jhipster-registry:8761/eureka
       - SPRING_CLOUD_CONFIG_URI=http://admin:$${jhipster.registry.password}@jhipster-registry:8761/config
-      - SPRING_DATA_MONGODB_URI=mongodb://devicedataservice-mongodb:27017
-      - SPRING_DATA_MONGODB_DATABASE=devicedataservice
+      - SPRING_DATA_MONGODB_URI=mongodb://deviceanalysisservice-mongodb:27017
+      - SPRING_DATA_MONGODB_DATABASE=deviceanalysisservice
       - JHIPSTER_SLEEP=30 # gives time for other services to boot before the application
-  devicedataservice-mongodb:
+  deviceanalysisservice-mongodb:
     extends:
       file: mongodb.yml
-      service: devicedataservice-mongodb
+      service: deviceanalysisservice-mongodb
   jhipster-registry:
     extends:
       file: jhipster-registry.yml
