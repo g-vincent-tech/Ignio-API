@@ -9,6 +9,7 @@ import com.foxploit.ignio.deviceanalysisservice.service.dto.DeviceDTO;
 import com.foxploit.ignio.deviceanalysisservice.service.dto.SensorDataDTO;
 import com.foxploit.ignio.deviceanalysisservice.service.impl.AlertTypeImpl;
 import com.foxploit.ignio.deviceanalysisservice.service.impl.AnalysisServiceImpl;
+import com.foxploit.ignio.deviceanalysisservice.service.mapper.DeviceMapper;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -55,6 +56,7 @@ public class AnalysisResource {
 
     @Autowired
     private DeviceService deviceService;
+    private DeviceMapper deviceMapper;
 
     public AnalysisResource(RestTemplate restTemplate, AnalysisServiceImpl analysisService, DeviceRepository deviceRepository, AlertRepository alertRepository, DeviceService deviceService) {
         this.restTemplate = restTemplate;
@@ -155,6 +157,5 @@ public class AnalysisResource {
         return deviceDTO;
 
     }
-
 
 }
