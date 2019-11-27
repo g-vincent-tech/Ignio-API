@@ -1,5 +1,6 @@
 package com.foxploit.ignio.deviceanalysisservice.client;
 
+import com.foxploit.ignio.deviceanalysisservice.DeviceanalysisserviceApp;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.HttpRequest;
 import org.springframework.http.client.ClientHttpRequestExecution;
@@ -9,35 +10,23 @@ import org.springframework.http.client.ClientHttpResponse;
 import java.io.IOException;
 
 @Configuration
-//@Component
 public class AuthenticateClientHttpRequestInterceptor implements ClientHttpRequestInterceptor {
 
-//    private static final Logger log = LoggerFactory.getLogger(AnalysisService.class);
-//
-//    private static final SimpleDateFormat dateFormat = new SimpleDateFormat("dd-M-yyyy HH:mm:ss");
-//
-//    private final String GATEWAY_SERVICE = "igniogateway";
-//
-//    @Autowired
-//    @LoadBalanced
-//    private RestTemplate restTemplate;
-
     /**
-     * Generate token headers for requests made using restTemplate Bean created in {@link com.foxploit.ignio.deviceanalysisservice.DeviceAnalysisServiceApp} class
-     *
-     * @apiNote Change "token" value accordingly "if not valid"
+     * Generate token headers for requests made using restTemplate Bean created in {@link DeviceanalysisserviceApp} class
      *
      * @param httpRequest
      * @param bytes
      * @param clientHttpRequestExecution
      * @return ClientHttpResponse
      * @throws IOException
+     * @apiNote Change "token" value accordingly "if not valid"
      */
     @Override
     public ClientHttpResponse intercept(HttpRequest httpRequest, byte[] bytes, ClientHttpRequestExecution clientHttpRequestExecution) throws IOException {
-        String token = "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImF1dGgiOiJST0xFX0FETUlOLFJPTEVfVVNFUiIsImV4cCI6MTU3MzM3MjE3NX0.-ggtAchgzPVdO4yMaWwkjwLKth3U0nvFMCmxW45h3H2j0CCeF3zN47u_ociWuEi95stmZLVKN3C33WBqjard4w";
-        httpRequest.getHeaders().add("Authorization","Bearer "+token);
-        return clientHttpRequestExecution.execute( httpRequest, bytes );
+        String token = "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImF1dGgiOiJST0xFX0FETUlOLFJPTEVfVVNFUiIsImV4cCI6MTU3NzMzMDU5Nn0.gf8ymdFN2WpFkUp_tAa28mzdwuhEuYe4jNULg-KBdOjVkoi_JVvMcF4s9Xd_aiFHWYC-lUIkoMixv2uQJj7-SA";
+        httpRequest.getHeaders().add("Authorization", "Bearer " + token);
+        return clientHttpRequestExecution.execute(httpRequest, bytes);
     }
 
 }

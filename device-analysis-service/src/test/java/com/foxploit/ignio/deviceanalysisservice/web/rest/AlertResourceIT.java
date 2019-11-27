@@ -1,6 +1,6 @@
 package com.foxploit.ignio.deviceanalysisservice.web.rest;
 
-import com.foxploit.ignio.deviceanalysisservice.DeviceAnalysisServiceApp;
+import com.foxploit.ignio.deviceanalysisservice.DeviceanalysisserviceApp;
 import com.foxploit.ignio.deviceanalysisservice.domain.Alert;
 import com.foxploit.ignio.deviceanalysisservice.repository.AlertRepository;
 import com.foxploit.ignio.deviceanalysisservice.service.AlertService;
@@ -32,7 +32,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 /**
  * Integration tests for the {@link AlertResource} REST controller.
  */
-@SpringBootTest(classes = DeviceAnalysisServiceApp.class)
+@SpringBootTest(classes = DeviceanalysisserviceApp.class)
 public class AlertResourceIT {
 
     private static final String DEFAULT_DEVICE_ID = "NODEIGNIOF101";

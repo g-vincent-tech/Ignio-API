@@ -51,7 +51,7 @@ public class InitialSetupMigration {
         try{
             // System.out.println(System.getProperty("user.dir") + "\\device-data-service\\src\\main\\resources\\initial-sensor-data.json");
 
-            File file = new File(System.getProperty("user.dir") + "\\device-data-service\\src\\main\\resources\\initial-sensor-data.json");
+            File file = new File(System.getProperty("user.dir") + "/device-data-service/src/main/resources/initial-sensor-data.json");
             DeviceDataDTO deviceDataDTO = mapper.readValue(file, DeviceDataDTO.class);
             System.out.println(deviceDataDTO.getDeviceId());
             log.info("Found SensorData: {} from deviceID: {}", deviceDataDTO.getSensorData().size(), deviceDataDTO.getDeviceId());

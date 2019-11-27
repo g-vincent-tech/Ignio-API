@@ -9,6 +9,7 @@ import com.foxploit.ignio.deviceanalysisservice.service.dto.DeviceDTO;
 import com.foxploit.ignio.deviceanalysisservice.service.dto.SensorDataDTO;
 import com.foxploit.ignio.deviceanalysisservice.service.impl.AlertTypeImpl;
 import com.foxploit.ignio.deviceanalysisservice.service.impl.AnalysisServiceImpl;
+import com.foxploit.ignio.deviceanalysisservice.service.mapper.DeviceMapper;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,6 +17,7 @@ import org.springframework.cloud.client.loadbalancer.LoadBalanced;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
 import org.springframework.web.client.ResourceAccessException;
+import org.springframework.web.client.RestClientException;
 import org.springframework.web.client.RestTemplate;
 import org.springframework.web.util.UriComponentsBuilder;
 
@@ -25,7 +27,6 @@ import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
-import java.util.Optional;
 
 @Component
 public class AnalysisResource {
@@ -55,6 +56,7 @@ public class AnalysisResource {
 
     @Autowired
     private DeviceService deviceService;
+    private DeviceMapper deviceMapper;
 
     public AnalysisResource(RestTemplate restTemplate, AnalysisServiceImpl analysisService, DeviceRepository deviceRepository, AlertRepository alertRepository, DeviceService deviceService) {
         this.restTemplate = restTemplate;
@@ -120,14 +122,10 @@ public class AnalysisResource {
 
         log.info("The Alert Task Initiated {} for {}", dateFormat.format(new Date()), deviceId);
 
-        Optional<DeviceDTO> device = deviceService.findOneByDeviceId(deviceId);
+        DeviceDTO deviceDTO = findDeviceByDeviceId(deviceId);
 
-        if (device.isPresent()) {
-            Alert alert = new Alert()
-                .deviceId(device.get().getDeviceId())
-                .ownerId(device.get().getOwnerId())
-                .alertType(AlertTypeImpl.alertMessageResolve(alertType))
-                .timestamp(LocalDateTime.now());
+        if (deviceDTO != null) {
+            Alert alert = new Alert().deviceId(deviceDTO.getDeviceId()).ownerId(deviceDTO.getOwnerId()).alertType(AlertTypeImpl.alertMessageResolve(alertType)).timestamp(LocalDateTime.now());
             alertRepository.save(alert);
             try{
                 restTemplate.put(uri, alert);
@@ -135,6 +133,29 @@ public class AnalysisResource {
                 log.error("Request call was not successful! Might be due to invalid token or unavailable resource ", exception);
             }
         }
+    }
+
+    public DeviceDTO findDeviceByDeviceId(String deviceId) {
+
+        URI uri = UriComponentsBuilder.fromUriString("//" + DEVICE_DATA_SERVICE + "/api/device/" + deviceId).build().toUri();
+
+        log.info("The Analysis Task Initiated {}", dateFormat.format(new Date()));
+
+        DeviceDTO deviceDTO = null;
+
+        try{
+            deviceDTO = restTemplate.getForObject(uri, DeviceDTO.class);
+
+            log.debug("DeviceDTO Response : {}", deviceDTO);
+
+            assert deviceDTO != null;
+
+        } catch (RestClientException e) {
+            log.error("Request call was not successful! Might be due to invalid token or unavailable resource in separate method", e);
+        }
+
+        return deviceDTO;
+
     }
 
 }

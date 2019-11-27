@@ -29,13 +29,13 @@ import java.util.Collections;
 @EnableConfigurationProperties({ApplicationProperties.class})
 @EnableDiscoveryClient
 @EnableScheduling
-public class DeviceAnalysisServiceApp implements InitializingBean {
+public class DeviceanalysisserviceApp implements InitializingBean {
 
-    private static final Logger log = LoggerFactory.getLogger(DeviceAnalysisServiceApp.class);
+    private static final Logger log = LoggerFactory.getLogger(DeviceanalysisserviceApp.class);
 
     private final Environment env;
 
-    public DeviceAnalysisServiceApp(Environment env) {
+    public DeviceanalysisserviceApp(Environment env) {
         this.env = env;
     }
 
@@ -60,7 +60,7 @@ public class DeviceAnalysisServiceApp implements InitializingBean {
      * @param args the command line arguments.
      */
     public static void main(String[] args) {
-        SpringApplication app = new SpringApplication(DeviceAnalysisServiceApp.class);
+        SpringApplication app = new SpringApplication(DeviceanalysisserviceApp.class);
         DefaultProfileUtil.addDefaultProfile(app);
         Environment env = app.run(args).getEnvironment();
         logApplicationStartup(env);

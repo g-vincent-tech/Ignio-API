@@ -1,6 +1,6 @@
 package com.foxploit.ignio.deviceanalysisservice.web.rest.errors;
 
-import com.foxploit.ignio.deviceanalysisservice.DeviceAnalysisServiceApp;
+import com.foxploit.ignio.deviceanalysisservice.DeviceanalysisserviceApp;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,7 +19,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 /**
  * Integration tests {@link ExceptionTranslator} controller advice.
  */
-@SpringBootTest(classes = DeviceAnalysisServiceApp.class)
+@SpringBootTest(classes = DeviceanalysisserviceApp.class)
 public class ExceptionTranslatorIT {
 
     @Autowired
