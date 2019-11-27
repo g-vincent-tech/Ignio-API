@@ -1,5 +1,6 @@
 package com.foxploit.ignio.deviceanalysisservice.client;
 
+import com.foxploit.ignio.deviceanalysisservice.DeviceanalysisserviceApp;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.HttpRequest;
 import org.springframework.http.client.ClientHttpRequestExecution;
@@ -12,7 +13,7 @@ import java.io.IOException;
 public class AuthenticateClientHttpRequestInterceptor implements ClientHttpRequestInterceptor {
 
     /**
-     * Generate token headers for requests made using restTemplate Bean created in {@link com.foxploit.ignio.deviceanalysisservice.DeviceAnalysisServiceApp} class
+     * Generate token headers for requests made using restTemplate Bean created in {@link DeviceanalysisserviceApp} class
      *
      * @param httpRequest
      * @param bytes
