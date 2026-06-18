@@ -8,7 +8,7 @@ import static java.lang.Math.pow;
 /**
  * Service to find 'Slope'(m) and 'Y-Intercept'(c) for a straight line given, x and y values
  *
- * @author g-vincent-tech
+ * @author George Vincent
  */
 public class RegressionAnalysisService {
 
