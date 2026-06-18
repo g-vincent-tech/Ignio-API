@@ -1,135 +1,184 @@
 # Ignio-API
-The back-end for Ignio leveraged by spring boot microservices
 
-## Built With
+Backend for **Ignio**, an IoT monitoring platform built with Spring Boot microservices. The system collects sensor data from devices, runs regression-based analysis to detect anomalies, and raises alerts through a central API gateway with an Angular web UI.
 
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [JDK](https://www.oracle.com/technetwork/java/javase/downloads/jdk11-downloads-5066655.html) - Java™ Platform, Standard Edition Development Kit 
-* [Spring Boot](https://spring.io/projects/spring-boot) - Framework to ease the bootstrapping and development of new Spring Applications
-* [MongoDB](https://docs.mongodb.com/) - Open-Source Relational Database Management System
-* [git](https://git-scm.com/) - Free and Open-Source distributed version control system 
-* [Thymeleaf](https://www.thymeleaf.org/) - Modern server-side Java template engine for both web and standalone environments.
-* [Prometheus](https://prometheus.io/) - Monitoring system and time series database
-* [Postman](https://www.getpostman.com/) - API Development Environment (Testing Docmentation)
+## Architecture
 
-## To-Do
-
-- [x] Service Discovery (Eureka)
-- [ ] Actuator
-- [ ] Logger (Console, File, Mail)
-- [ ] RESTful Web Service (CRUD) / Endpoints
-- [ ] HATEOS
-- [ ] Spring Boot Admin
-- [ ] MongoDB Integration
-- [ ] Micrometer
-- [ ] Grafna
-- [ ] Content Negotiation
-- [ ] Security
-- [ ] Dynamic API tokens
-- [ ] Docker configurations
-- [ ] Kubernetes deployment
-- [ ] Production Ops
-
-## Running the application locally
-
-There are several ways to run a Spring Boot application on your local machine. One way is to execute the `main` method in each services for `com.foxploit.ignio.<service>.<MainApplication>` classes from your IDE.
-
-- Download the zip or clone the Git repository.
-- Unzip the zip file (if you downloaded one)
-- Open Command Prompt and Change directory (cd) to each service folders
-- Open Eclipse 
-   - File -> Import -> Existing Maven Project -> Navigate to the folder where you unzipped the zip
-   - Select the project
-- Choose the Spring Boot Application file (search for @SpringBootApplication)
-- Right Click on the file and Run as Java Application
-
-Alternatively you can use the [Spring Boot Maven plugin](https://docs.spring.io/spring-boot/docs/current/reference/html/build-tool-plugins-maven-plugin.html) like so:
-
-```shell
-  $ mvn spring-boot:run
-```
-
-## Building the app
-```
-  $ mvn clean install
-```
-
-## Documentation
-
-* [Postman Collection](https://documenter.getpostman.com/view/2449187/RWTiwzb2) - online, with code auto-generated snippets in cURL, jQuery, Ruby,Python Requests, Node, PHP and Go programming languages
-* [Postman Collection](https://github.com/AnanthaRajuC/Spring-Boot-Application-Template/blob/master/Spring%20Boot%20Template.postman_collection.json) - offline
-* [Swagger](http://localhost:8088/swagger-ui.html) - Documentation & Testing
-
-## Files and Directories
-
-The project (a.k.a. project directory) has a particular directory structure. A representative project is shown below:
-
-```
-.
-├── Spring Elements
-├── src
-│   └── main
-│       └── java
-│           ├── com.arc.application
-│           ├── com.arc.application.config
-│           ├── com.arc.application.controller
-│           ├── com.arc.application.exception
-│           ├── com.arc.application.model
-│           ├── com.arc.application.util
-│           └── com.arc.application.repository
-├── src
-│   └── main
-│       └── resources
-│           └── static
-│           │   ├── css
-│           │   │   └── bootstrap.css
-│           │   ├── images
-│           │   ├── js
-│           │   ├── favicon.ico
-│           │   └── index.html
-│           ├── templates
-│           │   └── view.html
-│           ├── application.properties
-│           ├── banner.txt
-│           └── log4j2.xml
-├── src
-│   └── test
-│       └── java
-├── JRE System Library
-├── Maven Dependencies
-├── bin
-├── logs
-│   └── application.log
-├── src
-├── target
-│   └──application-0.0.1-SNAPSHOT
-├── mvnw
-├── mvnw.cmd
-├── pom.xml
-└── README.md
+```mermaid
+flowchart LR
+    Client[Web / API Client] --> Gateway[gateway-server :8080]
+    Gateway --> Registry[JHipster Registry :8761]
+    Gateway --> Data[device-data-service :8081]
+    Gateway --> Analysis[device-analysis-service :8082]
+    Data --> MongoDB1[(MongoDB)]
+    Analysis --> MongoDB2[(MongoDB)]
+    Gateway --> MongoDB3[(MongoDB)]
+    Analysis -->|scheduled analysis| Data
+    Analysis -->|alert notifications| Gateway
 ```
 
 ## Services
-- `discovery-server` -- Provide service discovery of between microservices
 
-## packages
+| Service | Port | Description |
+|---------|------|-------------|
+| **gateway-server** | 8080 | API gateway, user management, billing, alert delivery, Angular UI |
+| **device-data-service** | 8081 | Device registry and sensor data ingestion (temperature, CO, LP gas, particles) |
+| **device-analysis-service** | 8082 | Scheduled regression analysis and alert generation |
+| **model-trainer-service** | 8083 | Legacy ML training service (optional) |
+| **JHipster Registry** | 8761 | Service discovery and centralized configuration |
 
-- `models` — to hold our entities;
-- `repositories` — to communicate with the database;
-- `services` — to hold our business logic;
-- `controllers` — to listen to the client;
+Each service is a standalone Maven project generated with [JHipster 6.3.1](https://www.jhipster.tech/documentation-archive/v6.3.1).
 
-- `resources/` - Contains all the static resources, templates and property files.
-- `resources/static` - contains static resources such as css, js and images.
-- `resources/templates` - contains server-side templates which are rendered by Spring.
-- `resources/application.properties` - It contains application-wide properties. Spring reads the properties defined in this file to configure your application. You can define server’s default port, server’s context path, database URLs etc, in this file.
+## Features
 
-- `test/` - contains unit and integration tests
+- **Microservice architecture** with Eureka service discovery and Spring Cloud Config
+- **MongoDB** persistence per service
+- **Sensor data API** for device readings (temperature, CO ppm, LP gas ppm, particle ppm)
+- **Regression analysis** on sensor trends to classify info, warning, and danger alert levels
+- **Alert pipeline** from analysis service through the gateway (including email support)
+- **JWT-based security** and user/account management via the gateway
+- **Swagger UI** for API exploration
+- **Docker Compose** for running the full stack locally
+- **Prometheus metrics** and monitoring hooks
 
-- `pom.xml` - contains all the project dependencies
- 
-## Resources
+## Tech Stack
 
-* [My API Lifecycle Checklist and Scorecard](https://dzone.com/articles/my-api-lifecycle-checklist-and-scorecard)
-* [HTTP Status Codes](https://www.restapitutorial.com/httpstatuscodes.html)
-* [Common application properties](https://docs.spring.io/spring-boot/docs/current/reference/html/common-application-properties.html)
+- Java 8, Spring Boot 2.1, Spring Cloud
+- MongoDB
+- Angular 8 (gateway UI)
+- Maven, Webpack, Node.js (gateway frontend build)
+- JHipster Registry
+- Docker & Docker Compose
+
+## Prerequisites
+
+- JDK 8+
+- Maven 3.x (or use the included `./mvnw` wrapper)
+- Node.js & npm (required for `gateway-server` frontend)
+- MongoDB (local or via Docker)
+- [JHipster Registry](http://localhost:8761) running before any service starts
+
+## Getting Started
+
+### 1. Start infrastructure
+
+Start the JHipster Registry (required by all services):
+
+```bash
+cd docker-compose
+docker-compose -f jhipster-registry.yml up -d
+```
+
+Optionally start MongoDB instances via the full compose stack (see [Docker](#docker) below).
+
+### 2. Run services locally
+
+Start each service from its directory. Services must connect to the registry at `http://localhost:8761`.
+
+**Gateway** (includes Angular dev server):
+
+```bash
+cd gateway-server
+npm install
+./mvnw          # terminal 1
+npm start       # terminal 2
+```
+
+**Device Data Service:**
+
+```bash
+cd device-data-service
+./mvnw
+```
+
+**Device Analysis Service:**
+
+```bash
+cd device-analysis-service
+./mvnw
+```
+
+**Model Trainer Service** (optional):
+
+```bash
+cd model-trainer-service
+./mvnw
+```
+
+On Windows, use `mvnw.cmd` instead of `./mvnw`.
+
+### 3. Access the application
+
+| Resource | URL |
+|----------|-----|
+| Gateway UI | http://localhost:8080 |
+| Swagger UI | http://localhost:8080/swagger-ui.html |
+| JHipster Registry | http://localhost:8761 |
+| Registry credentials | `admin` / `admin` (default) |
+
+Default user credentials are defined in each service's Liquibase/MongoDB seed data. Check the gateway migration files for the initial admin account.
+
+## Docker
+
+Build Docker images for each service, then launch the full stack:
+
+```bash
+cd docker-compose
+docker-compose up -d
+```
+
+This starts the gateway, device-data-service, device-analysis-service, their MongoDB databases, and the JHipster Registry. See [docker-compose/README-DOCKER-COMPOSE.md](docker-compose/README-DOCKER-COMPOSE.md) for details.
+
+## Building
+
+Build a single service:
+
+```bash
+cd <service-directory>
+./mvnw -Pprod clean verify
+```
+
+Production JAR:
+
+```bash
+java -jar target/*.jar
+```
+
+## API Documentation
+
+- **Swagger** — http://localhost:8080/swagger-ui.html (aggregated gateway docs)
+- **Postman Collection** — [Online docs](https://documenter.getpostman.com/view/2449187/RWTiwzb2)
+
+## Project Structure
+
+```
+Ignio-API/
+├── gateway-server/           # API gateway + Angular UI
+├── device-data-service/      # Devices & sensor data
+├── device-analysis-service/  # Regression analysis & alerts
+├── model-trainer-service/    # ML model training (legacy)
+├── docker-compose/           # Docker Compose & registry config
+└── central-config/           # Sample Spring Cloud Config files
+```
+
+Each service follows the standard JHipster layout:
+
+```
+src/main/java/.../config/       # Spring configuration
+src/main/java/.../domain/       # MongoDB entities
+src/main/java/.../repository/   # Data access
+src/main/java/.../service/      # Business logic
+src/main/java/.../web/rest/     # REST controllers
+src/main/resources/config/      # application.yml profiles
+```
+
+## Analysis Flow
+
+1. **device-data-service** stores incoming sensor readings per device.
+2. **device-analysis-service** runs on a schedule (~every 2 minutes), fetches recent sensor data, and computes linear regression slopes for each metric.
+3. Slopes are weighted and mapped to alert levels (info, warning, danger).
+4. When the threshold is met, an alert is persisted and forwarded to the **gateway-server** for notification (including email).
+
+## Author
+
+**George Vincent** — [g-vincent-tech](https://github.com/g-vincent-tech)
